@@ -27,6 +27,6 @@ GitHub: @nicholascar
 The modelling lead is:
 
 **Steve Richard**
-U.S. Geoscience Information Netowork    
+U.S. Geoscience Information Network    
 smrTucson@gmail.com  
 GitHub: @smrgeoinfo  
