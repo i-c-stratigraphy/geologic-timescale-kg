@@ -6,6 +6,15 @@ This is the official data for the [International Commission on Stratigraphy (ICS
 
 This Knowledge Graph (KG) is presented as a [Semantic Web](https://en.wikipedia.org/wiki/Semantic_Web), multi-part, dataset in which the multiple models and also the data created according to those models are formulated in in [RDF](https://www.w3.org/RDF/).
 
+
+## Content
+
+This repository contains both the content of the GT KG and supporting materials. The content is arranged like this:
+
+* `docs/` - documentation
+* `rdf/` - the RDF Seamntic Web content of the models and data of the GT KG
+* `resources/` - supporting resources of multiple sorts
+
 ## Contact
 
 Work on this data product is coordinated by:
