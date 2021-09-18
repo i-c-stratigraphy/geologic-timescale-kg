@@ -1,0 +1,45 @@
+# baseURI: http://w3id.org/geotime/manifest
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix manifest: <http://w3id.org/geotime/manifest/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix sopbl: <https://data.surroundaustralia.com/def/standards-baseline#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://w3id.org/geotime/manifest>
+  a owl:Ontology ;
+  swa:defaultNamespace "http://w3id.org/geotime/manifest"^^xsd:anyURI ;
+  teamwork:newInstancesUserCannotModifyURI false ;
+  rdfs:comment """This Manifest contains a list of all the assets within the Geologic Timescale Knowledge Graph (GTKG). It is to be used to create an integrated multi-graph within certain multi-graph environments, such as TopQuadrant's EDG server. 
+  
+  For use of the GTKG without special purpose multi-graph tooling, see the individual items within this manifes's repository at https://github.com/i-c-stratigraphy/geologic-timescale-kg."""@en ;
+  rdfs:label "Geologic Timescale Knowledge Graph"@en ;
+  owl:imports <https://data.surroundaustralia.com/def/standards-baseline> ;
+.
+
+manifest:kg 
+    a sopbl:ManagedGraph ;
+    rdfs:label "Geologic Timescale Knowledge Graph Combined Data"@en ;
+    dcterms:provenance "This datagraph is purely a combination of the individual Timescale datagraphs within this KG."@en ;
+    teamwork:rootClass owl:Thing ;
+    rdfs:comment "This datagraph is purely a combination of the individual Timescale datagraphs within this KG."@en ;
+    sopbl:localCopyPath "datagraphs/kg.ttl" ;
+    sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+    # sopbl:include "" ; -- nothing yet included
+    sopbl:proxy "http://w3id.org/geotime"^^xsd:anyURI ;
+.
+
+:dcterms
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "Part of the well-known Dublin Core Metadata Initiative, presented here as an OWL ontology"@en ;
+  dcterms:source "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"^^xsd:anyURI ;
+  rdfs:comment "This document is an up-to-date specification of all metadata terms maintained by the Dublin Core Metadata Initiative, including properties, vocabulary encoding schemes, syntax encoding schemes, and classes"@en ;
+  rdfs:label "DCMI Metadata Terms"@en ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/ontologyprojects#ProjectType> ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/ontprez"^^xsd:anyURI ;
+  sopbl:localCopyPath "ontologies/dcterms.ttl" ;
+  sopbl:proxy "http://purl.org/dc/terms"^^xsd:anyURI ;
+.

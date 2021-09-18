@@ -1,0 +1,19 @@
+# this file will soon import all the individual timescale files which will appear in this repository
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://w3id.org/geotime>
+    a owl:Ontology ;
+    dcterms:title "Geologic Timescale Knowledge Graph"@en ;
+    dcterms:description """The Geologic Timescale Knowledge Graph (GTKG) is a packaging of the next-generation version of the [Geologic[al] Timescale](http://resource.geosciml.org/vocabulary/timescale/gts2020). Until now, multiple date-based releases of the Geologic Timescale data without integration have existed however the GTKG incorporates all releases of the Timescale within one integrated dataset. It also includes a _master_ timescale which is a version-independent, abstract version of the Timescale.
+
+This version, when complete, is expected to be endorsed as the point-of-truth geologic timescale data by the [International Commission on Stratigraphy (ICS)](https://stratigraphy.org).
+
+Currently (September, 2021) there is no data in the GTKG yet, but there will be soon!"""@en ;
+    owl:versionInfo "0.5.0 - early dev" ;
+    owl:versionIRI <http://w3id.org/geotime/0.5.0> ;
+.

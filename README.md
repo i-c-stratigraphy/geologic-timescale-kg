@@ -15,6 +15,10 @@ This repository contains both the content of the GT KG and supporting materials.
 * `rdf/` - the RDF Seamntic Web content of the models and data of the GT KG
 * `resources/` - supporting resources of multiple sorts
 
+The KG itself has an identity that is separate from the individual elements within it. The IRI for the KG itself which is also the base for structural elements of it (i.e. not the data of the KG or the ontologies used) is:
+
+* <https://w3id.org/geotime>
+
 ## Contact
 
 Work on this data product is coordinated by:
