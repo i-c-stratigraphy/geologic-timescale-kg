@@ -1,0 +1,14 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX isc: <http://resource.geosciml.org/classifier/ics/ischart/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT *
+WHERE {
+    GRAPH ?g {
+        isc:Jurassic ?p ?o .
+
+        <http://resource.geosciml.org/classifierscheme/ics/2006/ischart> dcterms:published ?publishedDate .
+
+        FILTER (?publishedDate >= "2006-01-01"^^xsd:date && ?publishedDate <= "2006-12-31"^^xsd:date)
+    }
+}

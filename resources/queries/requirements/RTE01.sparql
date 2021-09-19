@@ -1,0 +1,8 @@
+PREFIX isc: <http://resource.geosciml.org/classifier/ics/ischart/>
+
+SELECT *
+WHERE {
+    GRAPH <http://resource.geosciml.org/classifierscheme/ics/2006/ischart> {
+        isc:Jurassic ?p ?o .
+    }
+}
