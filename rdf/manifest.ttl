@@ -32,6 +32,17 @@ manifest:kg
     sopbl:proxy "http://w3id.org/geotime"^^xsd:anyURI ;
 .
 
+manifest:timescales-meta
+    a sopbl:ManagedGraph ;
+    rdfs:label "Timescales Metadata Datagraph"@en ;
+    dcterms:provenance "This datagraph is purpose built for the Geologic Timescale Knowledge Graph"@en ;
+    teamwork:rootClass owl:Thing ;
+    rdfs:comment "This datagraph contains metadata about all the Timescale dataset within the Geologic Timescale Knowledge Graph."@en ;
+    sopbl:localCopyPath "datagraphs/timescales-meta.ttl" ;
+    sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+    sopbl:proxy "http://w3id.org/geotime/timescales-meta"^^xsd:anyURI ;
+.
+
 :dcterms
   a sopbl:ManagedGraph ;
   dcterms:provenance "Part of the well-known Dublin Core Metadata Initiative, presented here as an OWL ontology"@en ;

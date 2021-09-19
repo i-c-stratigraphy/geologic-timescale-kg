@@ -1,0 +1,15 @@
+# baseURI: http://w3id.org/geotime/timescales-meta
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+<http://w3id.org/geotime/timescales-meta>
+    a owl:Ontology ;
+    dcterms:title "Timescales Metadata Datagraph"@en ;
+    dcterms:description """This datagraph contains metadata about all the Timescale dataset within the Geologic Timescale Knowledge Graph.
+    
+The purpose of this datagraph is to support queries to the Geologic Timescale Knowledge Graph that seek information from particular Timescales, based on criteria that select one or more Timescales from the total set of them. The criteria might be about when a Timescale was created or a Timescale's relative position in the set of all Timescales. """@en ;
+    owl:versionInfo "0.5.0 - early dev" ;
+    owl:versionIRI <http://w3id.org/geotime/timescales-meta/0.5.0> ;
+.
