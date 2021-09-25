@@ -1,0 +1,95 @@
+@prefix to: <https://w3id.org/temporalobjects/> .
+
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<https://w3id.org/temporalobjects>
+    a owl:Ontology ;
+    skos:prefLabel "Temporal Objects Ontology" ;
+    skos:definition """This ontology defines temporal object classes that replicate GeoSPARQL 1.1's spatial object classes that have no equivalent in the Time Ontology in OWL (OWL Time).
+
+It is intended that this ontology be used to separate temporal objects that are hitherto not separated with use of OWL Time's `TemporalEntity` class for both things with temporal extents (equivalent to spatial geometries but temporal) and things without temporal extents directly but with temporal relations (equivalent to spatial features).""" ;
+  dcterms:created "2021-09-25"^^xsd:date ;
+  dcterms:creator to:nick ;
+  dcterms:modified "2021-09-25"^^xsd:date ;
+  dcterms:publisher to:isc ;
+  dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+  dcterms:rights "(c) Nicholas Car, 2021" ;
+.
+
+to:nick
+    a sdo:Person ;
+    sdo:name "Nicholas J. Car" ;
+    sdo:affiliation "SURROUND Australia Pty Ltd" , "Australian National University", to:isc ;
+    sdo:email "nicholas.car@surroundaustralia.com"^^xsd:anyURI ;
+    sdo:url "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+.
+
+to:isc
+    a sdo:Organization ;
+    sdo:name "International Stratigraphic Commission" ;
+    sdo:url "https://stratigraphy.org"^^xsd:anyURI ;
+.
+
+to:TemporalObject
+    a rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy to: ;
+    skos:prefLabel "Temporal Object"@en ;
+    skos:definition "The class Spatial Object represents everything that can have a temporal representation. It is superclass of Temporal Feature and OWL Time's Temporal Entity."@en ;
+.
+
+to:TemporalFeature
+    a rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy to: ;
+    skos:prefLabel "Temporal Feature"@en ;
+    rdfs:subClassOf to:TemporalObject ;
+    owl:disjointWith time:TemporalEntity ;
+    skos:definition "This class represents the top-level temporal feature type. This class is equivalent to GeoSPARQL's Feature class and is the superclass of all things that have a projection in time - a relation to a Temporal Entity."@en ;
+.
+
+to:TemporalObjectCollection
+    a owl:Class ;
+    rdfs:isDefinedBy to: ;
+    skos:prefLabel "Temporal Object Collection" ;
+    skos:definition "The class Temporal Object Collection represents any collection of individual Temporal Object instances."@en ;
+    rdfs:subClassOf dcmitype:Collection ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:allValuesFrom to:TemporalObject ;
+        owl:onProperty rdfs:member ;
+    ] ;
+.
+
+to:TemporalFeatureCollection
+    a owl:Class ;
+    rdfs:isDefinedBy to: ;
+    skos:prefLabel "Temporal Entity Collection" ;
+    skos:definition "The class Temporal Entity Collection represents any collection of individual Temporal Feature instances."@en ;
+    rdfs:subClassOf to:TemporalObjectCollection ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:allValuesFrom to:TemporalFeature ;
+        owl:onProperty rdfs:member ;
+    ] ;
+.
+
+to:TemporalEntityCollection
+    a owl:Class ;
+    rdfs:isDefinedBy to: ;
+    skos:prefLabel "Temporal Entity Collection" ;
+    skos:definition "The class Temporal Entity Collection represents any collection of individual Temporal Entitie instances."@en ;
+    rdfs:subClassOf to:TemporalObjectCollection ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:allValuesFrom time:TemporalEntity ;
+        owl:onProperty rdfs:member ;
+    ] ;
+.
