@@ -21,9 +21,9 @@ WHERE {
             WHERE {
                 ?t a skos:Concept ;
                 skos:prefLabel ?pl ;
-                skos:broader ?b ;
-                skos:narrower ?n ;
-                    rdfs:comment ?com .
+                rdfs:comment ?com .
+				OPTIONAL { ?t skos:broader ?b }
+				OPTIONAL { ?t skos:narrower ?n }
             }
             ORDER BY ?t ?pl ?b ?n ?com
         }
