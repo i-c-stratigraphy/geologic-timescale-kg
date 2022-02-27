@@ -1,0 +1,1259 @@
+# baseURI: https://stratigraphy.org/data/gssps
+
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX gscn: <https://w3id.org/gso/geologiccontact/>
+PREFIX gsoc: <https://w3id.org/gso/common/>
+PREFIX gssps: <https://stratigraphy.org/data/gssps/>
+PREFIX gstime: <https://w3id.org/gso/ischart/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://stratigraphy.org/data/gssps>
+    a
+        owl:Ontology ,
+        dcat:Dataset ;
+    dcterms:identifier "gssps"^^xsd:token ;
+    dcterms:provenance "Information in this dataset is taken primarity from the ICS's GSSPs website, https://stratigraphy.org/gssps/, with some ontological structuring (particular classes and properties) taken from the 'Geologic Timescale Elements' module (dataset) within the Geoscience Ontology which is part of the Geoscience Knowledge manager program of the Loop3D initiative, see https://github.com/Loop3D/GKM."@en ;
+    dcterms:source "https://stratigraphy.org/gssps/"^^xsd:anyURI ;
+    dcterms:title "Global Boundary Stratotype Section and Points Dataset"@en ;
+    rdfs:comment "Global Boundary Stratotype Sections and Points (GSSPs) are reference points on stratigraphic sections of rock which define the lower boundaries of stages on the geologic time scale. Since 1977, the International Commission on Stratigraphy (ICS) has maintained the international GSSP register."@en ;
+.
+
+gssps:gssps
+    a geo:FeatureCollection ;
+    dcterms:identifier "gssps"^^xsd:token ;
+    dcterms:isPartOf <https://stratigraphy.org/data/gssps> ;
+    dcterms:title "GSSPs Feature Collection"@en ;
+    rdfs:comment "All Global Boundary Stratotype Sections and Points"@en ;
+    rdfs:member 
+      gstime:BaseAeronianSP1984 ,
+      gstime:BaseAlbianSP2016 ,
+      gstime:BaseBajocianSP1996 ,
+      gstime:BaseBathonianSP2008 ,
+      gstime:BaseCalabrianSP1985 ,
+      gstime:BaseCapitanianSP2001 ,
+      gstime:BaseCarboniferousSP1990 ,
+      gstime:BaseCenozoicSP1991 ,
+      gstime:BaseChanghsingianSP2005 ,
+      gstime:BaseChattianSP2016 ,
+      gstime:BaseChibanianSP2020 ,
+      gstime:BaseDarriwilianSP1987 ,
+      gstime:BaseDevonianSP1972 ,
+      gstime:BaseDrumianSP2006 ,
+      gstime:BaseEdiacaranSP1990 ,
+      gstime:BaseEmsianSP1995 ,
+      gstime:BaseEoceneSP2003 ,
+      gstime:BaseFamennianSP1993 ,
+      gstime:BaseFloianSP1996 ,
+      gstime:BaseFurongianSP2003 ,
+      gstime:BaseGelasianSP1996 ,
+      gstime:BaseGivetianSP1994 ,
+      gstime:BaseGuadalupianSP2001 ,
+      gstime:BaseGuzhangianSP2008 ,
+      gstime:BaseHauterivianSP2020 ,
+      gstime:BaseHirnantianSP2006 ,
+      gstime:BaseHoloceneSP2008 ,
+      gstime:BaseHomerianSP1980 ,
+      gstime:BaseJiangshanianSP2011 ,
+      gstime:BaseJurassicSP2010 ,
+      gstime:BaseKatianSP2006 ,
+      gstime:BaseLadinianSP2005 ,
+      gstime:BaseLopingianSP2004 ,
+      gstime:BaseLudfordianSP1980 ,
+      gstime:BaseLudlowSP1980 ,
+      gstime:BaseLutetianSP2011 ,
+      gstime:BaseMaastrichtianSP2001 ,
+      gstime:BaseMeghalayanSP2018 ,
+      gstime:BaseMesozoicSP2001 ,
+      gstime:BaseMessinianSP2000 ,
+      gstime:BaseMiddleDevonianSP1985 ,
+      gstime:BaseMiddleJurassicSP2000 ,
+      gstime:BaseMiddleMississippianSP2008 ,
+      gstime:BaseMiddleOrdovicianSP2007 ,
+      gstime:BaseNeogeneSP1996 ,
+      gstime:BaseNorthgrippianSP2020 ,
+      gstime:BaseOligoceneSP1992 ,
+      gstime:BaseOrdovicianSP2000 ,
+      gstime:BasePennsylvanianSP1996 ,
+      gstime:BasePermianSP1996 ,
+      gstime:BasePhanerozoicSP1992 ,
+      gstime:BasePiacenzianSP1997 ,
+      gstime:BasePliensbachianSP1997 ,
+      gstime:BasePlioceneSP2000 ,
+      gstime:BasePragianSP1989 ,
+      gstime:BasePridoliSP1984 ,
+      gstime:BaseSakmarianSP2020 ,
+      gstime:BaseSantonianSP2013 ,
+      gstime:BaseSelandianSP2008 ,
+      gstime:BaseSerravallianSP2007 ,
+      gstime:BaseSilurianSP1984 ,
+      gstime:BaseSinemurianSP2000 ,
+      gstime:BaseTelychianSP1984 ,
+      gstime:BaseThanetianSP2008 ,
+      gstime:BaseToarcianSP2014 ,
+      gstime:BaseTortonianSP2003 ,
+      gstime:BaseTuronianSP2003 ,
+      gstime:BaseUpperCretaceousSP2002 ,
+      gstime:BaseUpperDevonianSP1986 ,
+      gstime:BaseUpperOrdovicianSP2002 ,
+      gstime:BaseUpperTriassicSP2008 ,
+      gstime:BaseWenlockSP1980 ,
+      gstime:BaseWordianSP2001 ,
+      gstime:BaseWuliuanSP2020 ;  
+.
+
+gstime:BaseAeronianSP1984
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Aeronian"@en ;
+    dcterms:source
+        "Episodes 8/2, p. 101 103, 1985" ,
+        "Geol. Series, Nat. Mus. Wales, 9, p. 36 50, 1989" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-3.7 52.03)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Marker: The base of the Monograptus triangulatus graptolite biozone is represented by the incoming of Monograptus austerus sequens. GSSP is in Trefawr Track Section, Wales, UK"@en ;
+    rdfs:seeAlso
+        <http://stratigraphy.science.purdue.edu/references/Silurian1.pdf> ,
+        <http://www.stratigraphy.org/gssps/aeronian> ;
+    owl:versionInfo "1984" ;
+.
+
+gstime:BaseAlbianSP2016
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Albian"@en ;
+    dcterms:source "Kennedy, W.J., A.S. Gale, B.T. Huber, M.R. Petrizzo, P. Bown, H.C. Jenkyns (2017). The Global Boundary Stratotype Section and Point (GSSP) for the base of the Albian Stage, of the Cretaceous, the Col de Pré-Guittard section, Arnayon, Drôme, France. Episodes: 40, 177-188. " ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(5.3118 44.4966)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "The lowest occurrence of the planktonic foraminifer Microhedbergella renilaevis, which is 37.4 m above the base of the section and 0.4 m above the base of the laminated Niveau Kilian bed, Col de Pré-Guittard section lies 11 km northwest of Rémuzat and 19 km northwest of Rosans in the Départment of Drôme at 44 29′ 47.78″N, 5 18′ 42.36″E (Lambert coordinates 836,42;3248, 95; 1;25,000 topographic sheet Série Bleu 3138E, La Motte-Chalançon), Southeastern France"@en ;
+    rdfs:seeAlso <http://cretaceous.stratigraphy.org/gssps/gssp-of-albian-stage/> ;
+    owl:versionInfo "2016-04" ;
+.
+
+gstime:BaseBajocianSP1996
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Bajocian"@en ;
+    dcterms:source "G.Pavia and R.Enay, 1997, Definition of the Aalenian-Bajocian Stage boundarr: Episodes 20/1, p.16-22, https://stratigraphy.org/gssps/files/bajocian.pdf" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-8.9042 40.1992)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The boundary coincides with the first occurrrence of the ammonite assemblage characterized by Hyperlioceras mundum, Hyperlioceras furcatum, Braunsina aspera, and Braunsina elegantula. GSSP is at base of Bed AB 11, Murtinheira Section, Cabo Mondego, Portugal"@en ;
+    rdfs:seeAlso
+        <http://stratigraphy.science.purdue.edu/references/Bajocian.pdf> ,
+        <https://stratigraphy.org/gssps/bajocian> ;
+    owl:versionInfo "1996" ;
+.
+
+gstime:BaseBathonianSP2008
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Bathonian"@en ;
+    dcterms:source "Fernández-López, S. R., Pavia, G. Erba, E., Guiomar, M., Henriques, M. H., Lanza, R., Mangold, C., Morton, N., Olivero, D., and Tiraboschi, D., 2009. The Global Boundary Stratotype Section and Point (GSSP) for base of the Bathonian Stage (Middle Jurassic), Ravin du Bès Section, SE France. Episodes 32/4, p. 222 - 248." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(6.3153 43.9606)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The boundary coincides with the first occurrrence of the ammonites Gonolkites convergens and Morphoceras parvum. GSSP is at base of limestone bed RB07, Ravin du Bes, Bas Auran area, Alpes de Haute Provence, France"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/gssps/bathonian> ;
+    owl:versionInfo "2008" ;
+.
+
+gstime:BaseCalabrianSP1985
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Calabrian"@en ;
+    dcterms:source
+        "Aguirre, E. and Pasini, G., 1985. The Pliocene - Pleistocene Boundary. Episodes, 8/2, p. 116 - 120."@en ,
+        "Cita, M.B., Gibbard, P.L., Head, M.J., and The Subcommission on Quaternary Stratigraphy, 2012. Formal ratification of the GSSP for the base of the Calabrian Stage (second stage of the Pleistocene Series, Quaternary System). Episodes 35(3): 388–397."@en ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(17.1348 39.0385)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The base of the Calabrian Stage is defined as the base of the marine claystones conformably overlying the sapropelic Marker Bed \"e\" in the Vrica Section.  Ratified 1985 as Base of Pleistocene; Ratified 2011 as Base of Calabrian; note Gelasian is now basal unit of Pleistocene"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/calabrian> ;
+    owl:versionInfo "1985" ;
+.
+
+gstime:BaseCapitanianSP2001
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Capitanian"@en ;
+    dcterms:source
+        "Glenister, B.F., et al., 1999, Proposal of Guadalupian and component Roadian, Wordian, and Capitanian Stages as International Standards for the Middle Permian Series: Permophiles v. 34, p. 3-11." ,
+        "Wu, Qiong, Jahandar Ramezani, Hua Zhang, Dong-xun Yuan, Douglas H. Erwin, Charles M. Henderson, Lance L. Lambert, Yi-chun Zhang, and Shu-zhong Shen, 2020, High-Precision U-Pb Zircon Age Constraints on the Guadalupian in West Texas, USA. Palaeogeography, Palaeoclimatology, Palaeoecology 548 (June 15, 2020): DOI: 10.1016/j.palaeo.2020.109668." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-104.7892 31.9091)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The first occurrence of the conodont Jinogondolella postserrata coincides with the GSSP.  GSSP is located at 4.5m above the base of the outcrop section of the Pinery Limestone Member of the Bell Canyon Formation, Nipple Hill, SE Guadalupe Mountains, Texas, U.S.A"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/capitanian> ;
+    owl:versionInfo "2001" ;
+.
+
+gstime:BaseCarboniferousSP1990
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Carboniferous - Mississippian - Tournaisian"@en ;
+    dcterms:source
+        "Markus Aretz and Carlo Corradini, 2021, Global review of the Devonian-Carboniferous Boundary: an introduction: Palaeobiodiversity and Palaeoenvironments volume 101, pages285–293  https://doi.org/10.1007/s12549-021-00499-8." ,
+        "Paproth, E., Feist, R. and Flajs, G., 1991, Decision on the Devonian-Carboniferous boundary stratotype: Episodes v. 14, no. 4, p. 331-336." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(3.3573 43.5555)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment
+        "Based on new conodont data, the Devonian/Carboniferous boundary GSSP at La Serre requires re-positioning. The La Serre trench E section (Montagne Noire, France) was selected as global D/C boundary stratotype, because it was assumed to be the only section that shows the evolutionary lineage from Siphonodella praesulcata to S. sulcata. However, this section cannot be regarded as an ideal stratotype, because the boundary was fixed within an oolitic sequence, and conodonts and other fossils are reworked. New data show that the first occurrence of the index fossil S. sulcata is much earlier than previously reported, which indicates that the base of the Carboniferous has to be fixed at an older stratigraphical level. Also, the co-occurrence of S. praesulcata and S. sulcata above a facies break shows that the evolutionary lineage from S. praesulcata to S. sulcata, which was previously claimed for the definition of the D/C boundary, is obviously absent at La Serre. Consequently, the GSSP position either needs to be re-located at La Serre, or a new stratotype section must be designated. (Kaiser, Sandra I., 2009, The Devonian/Carboniferous boundary stratotype section (La Serre, France) revisited: Newsletters on Stratigraphy, 43/2, p. 195-205, https://www.schweizerbart.de/papers/nos/detail/43/72810/The_Devonian_Carboniferous_boundary_stratotype_sec )"@en ,
+        "The position of the boundary in the biostratigraphic sequence was established near the \"classic\" base of the Gattendorfia Zone: 'This new definition is at the first appearance of the conodont Siphondella sulcata within the evolutionary lineage from Siphonodella praesulcata to Siphonodella sulcata...'(Paproth and Streel,1984, p.5). This recommendation was submitted by R.H.Lane (USA), C.A.Sandberg (USA), and W.Ziegler (Germany) and was accepted in 1979 by the Working Group on the Devonian-Carboniferous Boundary. The boundary intention is to coincide with 'the end of the Devonian mass extinction and beginning of the Carboniferous radiation. (Paparoth et al., 1991)."@en ,
+        "base of Bed 89 in Trench E’, (but FAD now known to be at base of Bed 85), La Serre, France. The definition of the GSSP does not include an estimation of its temporal position (age in Ma)."@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/gssps/tournaisian> ;
+    owl:versionInfo "1990" ;
+.
+
+gstime:BaseCenozoicSP1991
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Cenozoic"@en ;
+    dcterms:source "Molina, E., Alegret, L., Arenillas, I., Arz, J. A., Gallala, N., Hardenbol, J., von Salis, K., Steurbaut, E., Vandenberghe, N, and Zaghbib-Turki, D. 2006. The Global Boundary Stratotype Section and Point for the base of the Danian Stage (Paleocene, Paleogene, 'Tertiary', Cenozoic) at El Kef, Tunisia: original definition and revision. Episodes 29/4, p. 263 - 278." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(8.6486 36.153)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The GSSP is defined at the base of the boundary clay. It is overlain by a rusty red layer containing a peak of Ni-rich spinel, which is more concentrated than the iridium anomaly. This implies that all the sediments generated by the meteorite impact belong to the Danian. This millimeter thick layer, containing the evidence of the meteorite impact and other significant geochemical changes, coincides with a sudden catastrophic mass extinction event.  GSSP located at Oued Djerfane, west of El Kef, Tunisia"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/gssps/danian> ;
+    owl:versionInfo "1991" ;
+.
+
+gstime:BaseChanghsingianSP2005
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Changhsingian"@en ;
+    dcterms:source "Jin, Y., Wang, Y., Henderson, C., Wardlaw, B. R., Shen, S., and Cao, C., 2006. The Global Boundary Stratotype Section and Point (GSSP) for the base of Changhsingian Stage (Upper Permian). Episodes 29/3, P. 175 - 182."@en ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(119.7064 31.0819)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The base of the Changhsingian Stage is defined at the FAD of the conodont species Clarkina wangi within the lineage from Clarkina longicuspidata to Clarkina wangi at the base of Bed 4a-2.  GSSP is at 88 cm above the base of the Changxing Limestone at the Meishan D Section, Meishan, Zhejiang Province, China"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/changhsingian> ;
+    owl:versionInfo "2005" ;
+.
+
+gstime:BaseChattianSP2016
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Chattian"@en ;
+    dcterms:source "Rodolfo Coccioni, Alessandro Montanari, David Bice,Graham Williams, 14 others; March 2018, The Global Stratotype Section and Point (GSSP) for the base of the Chattian Stage (Paleogene System, Oligocene Series) at Monte Cagnero, Italy; , Episodes 41(1):17-32; DOI: 10.18814/epiiugs/2018/v41i1/018003."@en ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(12.4677 43.6466)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: Highest common occurrence (HCO) of the planktonic foraminifer Chiloguembelina cubensis, at the O4/O5 planktonic foraminiferal zonal boundary of Wade et al. (2011). The GSSP for the base of the Chattian Stage (Paleogene System, Oligocene Series) is defined at meter level 197 in the Monte Cagnero section, (Urbania, central Italy: 43°38'47.81\"N – 12°28'03.83\"E)."@en ;
+    owl:versionInfo "2016-09" ;
+.
+
+gstime:BaseChibanianSP2020
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Chibanian"@en ;
+    dcterms:source """Yusuke Suganuma, Makoto Okada, Martin J. Head, Koji Kameo, Yuki Haneda, Hiroki Hayashi, Toshiaki Irizuki, Takuya Itaki, Kentaro Izumi,\r\r\r
+Yoshimi Kubota, Hiroomi Nakazato, Naohisa Nishida, Masaaki Okuda, Yasufumi Satoguchi, Quentin Simon, and Yoshihiro Takeshita, 2021, Formal ratification of the Global Boundary Stratotype Section and Point (GSSP) for the Chibanian Stage and Middle Pleistocene Subseries of the Quaternary System: the Chiba Section, Japan: Episodes, https://doi.org/10.18814/epiiugs/2020/020080.""" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT (140.14653 35.294333)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "The base of the Chibanian Stage of the Middle Pleistocene Subseries is defined at 1.1 m below the directional midpoint of the Matuyama-Brunhes reversal at the base of a regional lithostratigraphic marker, the Byk-E tephra bed in the Chiba Section, Chiba Prefecture, Japan.  The M–B boundary occurs immediately above a widespread tephra bed, the Ontake-Byakubi-E (Byk-E), found throughout the Chiba composite section (Suganuma et al., 2015; Hyodo et al., 2016; Okada et al., 2017; Haneda et al., 2020a). The Byk-E tephra has a zircon U-Pb age of 772.7 ± 7.2 ka (Suganuma et al., 2015) and represents an excellent local and regional stratigraphic marker for the Lower–Middle Pleistocene boundary. The GSSP itself is located at 35°17'39.6'' N, 140°08'47.6'' E in the Chiba section at the lower boundary of the Byk-E tephra bed."@en ;
+    owl:versionInfo "2020-01" ;
+.
+
+gstime:BaseDarriwilianSP1987
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Darriwilian"@en ;
+    dcterms:source "Mitchell, C. E., Chen Xu, Bergstroem, S. M., Zhang Yuan-dong, Wang Zhi-hao, Webby, B. D., and Finney, S. C., 1997. Definition of a global stratotype for the Darriwilian Stage of the Ordovician System. Episodes 20/3, p. 158-166. https://stratigraphy.org/gssps/files/Darriwilian.pdf" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(118.4897 28.853)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: First appearance of graptolite Undulograptus austrodentatus at the base of Bed AEP 184 of the Huangnitang Section, which is 22m below the top of the Ningkuo Formation. The first appearance of Undulograptus austrodentatus also defines the base of the Undulograptus austrodentatus Biozone. This biozone is dbvided in a lower Arienigraptus zhejiangensis Subzone and an upper Undulograptus sinicus Subzone.  GSSP is at base of Bed AEP 184, Huangnitang section, Changshan, Zhejiang Province, SE China."@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/darriwilian> ;
+    owl:versionInfo "1987" ;
+.
+
+gstime:BaseDevonianSP1972
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Devonian - Lower Devonian - Lochkovian"@en ;
+    dcterms:source "Chlupac, I. and Kukal, Z., 1977. The boundary stratotype at Klonk. The Silurian-Devonian Boundary. IUGS Series A, 5, p. 96 - 109."@en ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(14.0611 49.9008)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: First occurrence of Monograptus uniformis in Bed 20.  GSSP is within Bed 20, Klonk, near Prague, Czech Republic"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/lochkovian> ;
+    owl:versionInfo "1972" ;
+.
+
+gstime:BaseDrumianSP2006
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Drumian"@en ;
+    dcterms:source "Babcock, L. E., Robison, R. A., Rees, M. N., Peng, S., and Saltzman, M. R., 2007. The Global boundary Stratotype Section and Point (GSSP) of the Drumian Stage (Cambrian) in the Drum Mountains, Utah, USA. Episodes 30/2, p.85-95." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-112.9915 39.511)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The GSSP coincides with the lowest occurrence of the agnostoid trilobite Ptychagnostus atavus. GSSP located at the base of a dark-gray thinly laminated calcisiltite layer, 62 m above the base of the Wheeler Formation, Drum Mountains, Millard County, Utah, USA"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/drumian> ;
+    owl:versionInfo "2006" ;
+.
+
+gstime:BaseEdiacaranSP1990
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Ediacaran"@en ;
+    dcterms:source "Knoll, A. H., Walter, M. R., Narbonne, G. M., and Christie-Blick, N., 2006. The Ediacaran Period: a new addition to the geologic time scale. Lethaia 39, p. 13 -30, https://stratigraphy.org/gssps/files/Ediacaran.pdf" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(138.6334 -31.3314)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The principal observed correlation events are (1) the rapid decay of Marinoan ice sheets and onset of distinct cap carbonates throughout the world, and (2) the beginning of a distinctive pattern of secular changes in carbon isotopes. GSSP is located at the base of the Marinoan cap carbonate, Enorama Creek, Flinders Ranges, South Australia"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/ediacaran> ;
+    owl:versionInfo "1990" ;
+.
+
+gstime:BaseEmsianSP1995
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Emsian"@en ;
+    dcterms:source "Yolkin, E. A., Kim, A. I., Weddige, K., Talent, J. A., and House, M. R., 1997.Definition of the Pragian/Emsian Stage boundary. Episodes 20/4, p. 235 - 240, https://stratigraphy.org/gssps/files/Emsian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(67.3056 39.2)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The GSSP for the Emsian Stage coincides with the first occurrence of the conodont Polygnathus kitabicus within the phylogenetic succession from Polygnathus pireneae to Polygnathus kitabicus (formerly Polygnathus dehiscens). Because of uncertainties regarding the holotype of P. dehiscens a new specific name was proposed for a specimen from the GSSP section, Polygnathus kitabicus. Some conodont workers regard Polygnathus kitabicus as a junior synonym to Polygnathus dehiscens. GSSP is located at base of Bed 9/5, Zinzil'ban Gorge in the Kitab State Geological Reserve, Uzbekistan"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/emsian> ;
+    owl:versionInfo "1995" ;
+.
+
+gstime:BaseEoceneSP2003
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Eocene - Ypresian"@en ;
+    dcterms:source
+        "Aubry, M-P., Ouda, K., Dupuis, C., Berggren, W.A., Van Couvering, J.A., and the members of the Working Group on the Paleocene/Eocene Boundary, 2007. The Global Standard Stratotype-section and Point (GSSP) for the base of the Eocene Series in Dababiya section (Egypt). Episodes 30/4, p. 271 - 286, https://stratigraphy.org/gssps/files/Ypresian.pdf." ,
+        "Dupuis, C., Aubry, M., Steurbaut, E., Berggren, W.A., Ouda, K., Magioncalda, R., Cramer, B. S., Kent, D. V., Speijer, R. P., and Heilmann-Clausen, C., 2003. TheDababiya Quarry Section: Lithostratigraphy, clay mineralogy, geochemistry and paleontology. Micropaleontology 49/1, p.41 - 59." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(32.5311 25.5)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The GSSP is located at the base of a lithostratigraphic unit where the base of the so-called Carbon Isotope Excursion (CIE) is recorded. the GSSP is at the Base of Bed 1 in DBH subsection, Dababiya, near Luxor, Egypt"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/ypresian> ;
+    owl:versionInfo "2003" ;
+.
+
+gstime:BaseFamennianSP1993
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Famennian"@en ;
+    dcterms:source "Klapper, G., Feist, R. Becker, R. T., and House, M. R., 1993. Definition of the Frasnian/Famennian Stage boundary. Episodes 16/4, p. 433 - 441, https://stratigraphy.org/gssps/files/Famennian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(3.0403 43.4613)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The GSSP is defined by the abundant occurrence of the conodont species Palmatolepis triangularis in Bed 32a. The boundary corresponds to the extinction of all species of the conodonts Ancyrodella and Ozarkodina and the loss of all but a few species of Palmatolepis, Polygnathus and Ancyrognathus.  GSSP is located at Base of Bed 32a, Coumiac Quarry, near Cessenon, Montagne Noire, France"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/famennian> ;
+    owl:versionInfo "1993" ;
+.
+
+gstime:BaseFloianSP1996
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Floian"@en ;
+    dcterms:source "Stig M. Bergstrom, Anita Lofgren, and Jorg Maletz, 2004, The GSSP of the Second (Upper) Stage of the Lower Ordovician Series: Diabasbrottet at Hunneberg, Province of Västergötland, Southwestern Sweden: Episodes 27/4, p. 265-272, https://stratigraphy.org/gssps/files/floian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(12.5024 58.3589)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "The ISOS decided in 1996 that the base of the Second (Upper) Stage of the Lower Ordovician would be the level of first appearance of the graptolite Tetragraptus approximatus (Webby, 1996). Tetragraptus phyllograptoides is very abundant at the base of the Floian Stage.  The name Floan was proposed for this stage in the GSSP ratification paper (Bergstrom et al., 2004). GSSP is located in the lower Tøyen Shale, 2.1m above the top of the Cambrian, Diabasbrottet, Hunneberg, Sweden"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/floian> ;
+    owl:versionInfo "2004" ;
+.
+
+gstime:BaseFurongianSP2003
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Furongian Series - Paibian"@en ;
+    dcterms:source "Peng, S., Babcock, L. E., Robison, R. A., Lin, H., Rees, M. N., and Saltzman, M. R., 2004. Global Standard Stratotype-section and Point (GSSP) of the Furongian Series and Paibian Stage (Cambrian). Lethaia 37, p.365-379, https://stratigraphy.org/gssps/files/Paibian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(109.5257 28.389)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The GSSP is defined at the lowest occurrence of the agnostoid trilobite Glyptagnostus reticulatus. GSSP is located at 396 m in the Huaqiao Formation, Wuling Mountains, Huayuan County, NW Hunan Province, China"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/gssps/paibian> ;
+    owl:versionInfo "2003" ;
+.
+
+gstime:BaseGelasianSP1996
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Gelasian"@en ;
+    dcterms:source
+        "Gibbard, P.L., and Head, M.J., 2010. The newly-ratified definition of the Quaternary System/Period and redefinition of the Pleistocene Series/Epoch, and comparison of proposals advanced prior to formal ratification. Episodes, 33/3: 152–158, https://stratigraphy.org/gssps/Gelasian3.pdf." ,
+        "Rio, D., Sprovieri, R., Castradori, D., and Di Stefano, E., 1998. The Gelasian Stage (Upper Pliocene): A new unit of the global standard chronostratigraphic scale. Episodes 21/2, p. 82-87, https://stratigraphy.org/gssps/Gelasian7.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT (14.2035 37.1469)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  In the boundary interval a cluster of six sapropel or manganesiferous levels is recognized and correlated to coeval sections in Sicily, Calabria and Northern Italy. The single sapropels of this cluster have been coded as the Mediterranean Precession Related Sapropels (MPRS) and linked to the corresponding precessional cycle. The base of the Gelasian Stage is defined as the base of the marly layer overlying sapropel MPRS 250, According to Rio et al. (1998) the astronomical age of sapropel MPRS 250 (mid-point), is 2.588 Ma, which 'can be assumed as the age of the boundary'.  GSSP located at Monte San Nicola, Sicily, Italy Ratified 1996 as base of Gelasian; Ratified 2009 as base of Pleistocene and Quaternary"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/gelasian> ;
+    owl:versionInfo "1996" ;
+.
+
+gstime:BaseGivetianSP1994
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Givetian"@en ;
+    dcterms:source "Walliser, O. H., Bultynck, P., Weddige, K., Becker, R. T., and House, M. R., 1995. Definition of the Eifelian-Givetian Stage Boundary. Episodes 18/3, p. 107 - 115, https://stratigraphy.org/gssps/files/Givetian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-4.3541 31.2374)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The Eifelian-Givetian boundary coincides with the level (Bed 123) at which conodont Polygnathus pseudofoliatus changes to Polygnathus hemiansatus.  GSSP is located at base of Bed 123, Jebel Mech Irdane, Morocco"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/givetian> ;
+    owl:versionInfo "1994" ;
+.
+
+gstime:BaseGuadalupianSP2001
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Roadian - Guadalupian"@en ;
+    dcterms:source
+        "Hills, L.V., Henderson, C.M. & Bamber, E.W. (eds) Carboniferous and Permian of the World. Canadian Society of Petroleum Geologists, Memoirs, 19, 529–551. " ,
+        "SPENCER G. LUCAS,  SHU-ZHONG SHEN, 2018, The Permian timescale: an introduction: DOI: 10.1144/SP450.15." ,
+        "Shen, Shu-zhong, Dong-xun Yuan, Charles M. Henderson, Qiong Wu, Yi-chun Zhang, Hua Zhang, Lin Mu, et al., 2020, Progress, Problems and Prospects: An Overview of the Guadalupian Series of South China and North America: Earth-Science Reviews 211,. DOI: 10.1016/j.earscirev.2020.103412." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-104.8768 31.8767)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The GSSP is at the first occurrence of conodont Jinogondolella nankingensis, in the transitional continuum from Mesogondolella idahoensis to Jinogondolella nankingensis. GSSP is located 42.7m above the base of the Cutoff Formation, Stratotype Canyon, Texas, U.S.A."@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/roadian> ;
+    owl:versionInfo "2001" ;
+.
+
+gstime:BaseGuzhangianSP2008
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Guzhangian "@en ;
+    dcterms:source "Peng, S., Babcock, Zuo, J., Lin, H., Zhu, X., Yang, X., L. E., Robison, R. A., Qi, Y., Bagnoli, G., Chen, Y., 2009. The Global boundary Stratotype Section and Point (GSSP) of the Guzhangian Stage (Cambrian) in the Wuling Mountains, Northwestern Hunan, China. Episodes 32/1, p.41-55 https://stratigraphy.org/gssps/files/Guzhangian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(109.9647 28.72)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The GSSP coincides with the lowest occurrence of the cosmopolitan agnostoid trilobite Lejopyge laevigata at a level 121.3 m above the base of the Huaqiao Formation, Louyixi, Guzhang County, NW Hunan Province, S. China"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/guzhangian> ;
+    owl:versionInfo "2008" ;
+.
+
+gstime:BaseHauterivianSP2020
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Hauterivian"@en ;
+    dcterms:source
+        "Jorg Mutterlose, Peter F. Rawson, Stephane Reboulet, 2021, The Global Boundary Stratotype Section and Point (GSSP) for the base of the Hauterivian Stage (Lower Cretaceous), La  Charce, southeast France: Episodes, v. 44, no.2, https://doi.org/10.18814/epiiugs/2020/020072." ,
+        "https://timescalefoundation.org/gssp/detail.php?periodid=48&top_parentid=0" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(5.4437 44.4694)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment """Defined at the base of Bed 189 of the La Charce Section, Drôme, France. This level coincides with the first appearance of the ammonite genus Acanthodiscus which marks the base of the Acanthodiscus radiatus ammonite zone. The GSSP is located 550m west of the village of La Charce, Drôme, France at a latitude of 44.46944 N and a longitude of 5.44372 E.   La Charce was first proposed as the Hauterivian stratotype\r\r\r
+by Thieuloy (1977) who defined the base of the stage there by the first occurrence (FO) of the ammonite genus Acanthodiscus (essentially following Paquier, 1900). This biostratigraphic event was then recommended at Copenhagen for defining the base of the Hauterivian (Birkelund et al., 1984)."""@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/hauterivian> ;
+    owl:versionInfo "2019" ;
+    gsoc:isPartOf gstime:BaseHauterivianGuideMarker1977 ;
+    gsoc:occupiesSpaceDirectly gstime:Spatial_Region_1D_1 ;
+.
+
+gstime:BaseHirnantianSP2006
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Hirnantian"@en ;
+    dcterms:source
+        "Chen, X., Rong, J., Fan, J., Zhan, R., Mitchell, C. E., Harper, D.A.T., Melchin, M. J., Peng, P., Finney, S. C., and Wang, X., 2006. The Global Boundary Stratotype Section and Point (GSSP) for the base of the Hirnantian Stage (the uppermost of the Ordovician System). Episodes 29/3, p. 183 - 196, https://stratigraphy.org/gssps/files/Hirnantian.pdf." ,
+        "https://timescalefoundation.org/references/Hirnantian.pdf" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(111.4197 30.984)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: First appearance of graptolite Normalograptus extraordinarius 0.39 m below the base of the Kuanyinchiao Bed, Wangjiawan North section, N of Yichang city, Western Hubei Province, China"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/hirnantian> ;
+    owl:versionInfo "2006" ;
+.
+
+gstime:BaseHoloceneSP2008
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Greenlandian - Holocene"@en ;
+    dcterms:source
+        "Walker, M., Johnsen, S., Rasmussen, S. O., Popp, T., Steffensen, J.-P., Gibbard, P., Hoek, W., Lowe, J., Andrews, J., Björck, S., Cwynar, L. C., Hughen, K., Kershaw, P., Kromer, B., Litt, T., Lowe, D. J., Nakagawa, T., Newnham, R., and Schwander, J. 2009. Formal definition and dating of the GSSP (Global Stratotype Section and Point) for the base of the Holocene using the Greenland NGRIP ice core, and selected auxiliary records. J. Quaternary Sci., Vol. 24 pp. 3-17, https://timescalefoundation.org/references/HoloceneGSSP_JQuatSci090.pdf." ,
+        "Walker, M., Johnsen, S., Rasmussen, S.O., Steffensen, J-P., Popp, T., Gibbard, P., Hoek, W., Lowe, J., Andrews, J., Björck, S., Cwynar, L., Hughen, K., Kershaw, P., Kromer, B., Litt, T., Lowe, D.J., Nakagawa, T., Newnham R., and Schwande, J., 2008. The Global Stratotype Section and Point (GSSP) for the base of the Holocene Series/Epoch (Quaternary System/Period) in the NGRIP ice core. Episodes 31/2, http://www.episodes.org/index.php/epi/article/view/64299/50256." ,
+        "https://timescalefoundation.org/gssp/detail.php?periodid=5&top_parentid=0" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT (-42.3200 75.1000)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary marker: The base of the Greenlandian Stage is defined on the basis of the marked change in deuterium excess values that occurred over an interval of ca. 3 yr.  Correlation event is end of the Younger Dryas cold spell, which is reflected in a shift in deuterium excess values. The Greenlandian GSSP is located in the borehole NGRIP2 in the central Greenland ice sheet at a latitude of 75.10°N and a longitude of 42.32°W."@en ;
+    rdfs:seeAlso <http://stratigraphy.science.purdue.edu/references/HoloceneGSSP_JQuatSci090.pdf> ;
+    owl:versionInfo "2008" ;
+.
+
+gstime:BaseHomerianSP1980
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Homerian"@en ;
+    dcterms:source
+        "Bassett, M. G., 1989. The Wenlock Series in the Wenlock Area. In: Holland, C. H. and Bassett, M. G. (eds.). A global standard for the Silurian System. National Museum of Wales, Geological Series 9, p. 51-73, Cardiff." ,
+        "Holland, C. H., 1982. The state of Silurian Stratigraphy. Episodes 5/3, p. 21-23, https://timescalefoundation.org/references/Silurian2.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-2.5647 52.6156)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The base of the Homerian Stage coincides with the base of the Cyrtograptus lundgreni Graptolite Biozone. The GSSP is located within upper part of the Apedale Member of the Coalbrookdale Formation, Sheinton Brook, Homer, UK"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/homerian> ;
+    owl:versionInfo "1980" ;
+.
+
+gstime:BaseJiangshanianSP2011
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Jiangshanian"@en ;
+    dcterms:source "Peng Shanchi, Babcock L E, Zuo Jingxun, Zhu Xuejian et al., 2012. Global Standard Stratotype-section and Point (GSSP) for the base of the Jiangshanian Stage (Cambrian: Furongian) at Duibian, Jiangshan, Zhejiang, Southeast China. Episodes, 35(4): 462-477, https://stratigraphy.org/gssps/files/Jiangshanian.pdf." ;
+    rdfs:comment "Primary Markers: FAD of the cosmopolitan polymerid trilobite Irvingella angustilimbata.  Secondary Markers: The GSSP coincides near the end of a large positive carbon isotopic excursion (SPICE excursion).  Correlation Events:  FAD of agnostid trilobite Agnostotes orientalis and the FO of polymerid trilobite Irvingella angustilimbata.  GSSP is located at the base of a limestone (wackestone) layer 108.12 m above the base of the Huayansi Formation in the Duibian B section, coinciding with the first appearance of the cosmopolitan agnostoid trilobite Agnostotes orientalis (base of the A. orientalis Zone), Zhejiang province, China"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/jiangshanian> ;
+    owl:versionInfo "2011" ;
+.
+
+gstime:BaseJurassicSP2010
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Hettangian - Jurassic"@en ;
+    dcterms:source "Hillebrandt, A.v., Krystyn, L., Kürschner, W.M., Bonis, N.R., Ruhl, M., Richoz, S., Schobben, M. A. N., Urlichs, M., Bown, P.R., Kment, K., McRoberts, C.A., Simms, M., and Tomãsových, A., 2013. The Global Stratotype Sections and Point (GSSP) for the base of the Jurassic System at Kuhjoch (Karwendel Mountains, Northern Calcareous Alps, Tyrol, Austria). Episodes 36(3), p. 162-198, https://stratigraphy.org/gssps/files/Hettangian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(11.5306 47.4839)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  First occurrence  of the ammonite Psiloceras spelae tirolicum. Secondary Markers: Other bioevents include the FO of the aragonitic foraminifer Praegubkinella turgescens, and of diverse ostracod species 1.0-3.40 cm below the FO of P. spelae and 3.2 m below P. spelae occurs the continental palynomorph Cerebropollenites thiergartii.  GSSP is located 5.80 m above top of Koessen Formation, Kuhjoch section,Tyrol, Austria"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/hettangian> ;
+    owl:versionInfo "2010" ;
+.
+
+gstime:BaseKatianSP2006
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Katian"@en ;
+    dcterms:source "Goldman, D., Leslie, S.A., Nolvak, J. Young, S., Bergström, S.M., and Huff, W.D., 2007. The Global Stratotype Section and Point (GSSP) for the base of the Katian Stage of the Upper Ordovician Series at Black Knob Ridge, Southeastern Oklahoma, USA. Episodes 30/4, p. 258-270, https://stratigraphy.org/gssps/files/Katian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-96.0746 34.4305)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  First appearance of graptolite Diplacanthograptus caudatus 4.0m above the base of the Bigfork Chert. Secondary Markers: Graptolites The first occurrences of D. lanceolatus, Corynoides americanus, Orthograptus pageanus, Orthograptus quadrimucronatus, Dicranograptus hians, and Neurograptus margaritatus occur very near the FAD of Diplacanthograptus caudatus. Conodonts The GSSP is located in the uppermost part of the Amorphognathus tvaerensis conodont zone.  GSSP is located 4.0m above the base of the Bigfork Chert, Black Knob Ridge Section, Atoka, Oklahoma (USA)"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/katian> ;
+    owl:versionInfo "2006" ;
+.
+
+gstime:BaseLadinianSP2005
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Ladinian"@en ;
+    dcterms:source "Brack, P., Rieber, H., Nicora, A., and Mundil, R., 2005. The Global boundary Stratotype Section and Point (GSSP) of the Ladinian Stage (Middle Triassic) at Bagolino (Southern Alps, Northern Italy) and its implications for the Triassic time scale. Episodes 28/4, p. 233-244, https://stratigraphy.org/gssps/files/Ladinian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(10.471 45.8193)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The GSSP at Bagolino is located at the top of a distinct 20-25cm-thick interval of limestone nodules in a shaly matrix. The Anisian - Ladinian Boundary is defined by the first appearance of the ammonoid genus Eoprotrachyceras, i.e. with the species Eoprotrachyceras curionii at the lower surface of the overlying thick limestone bed. GSSP is located base of a 15 – 20cm thick limestone bed overlying a distinctive groove (“Chiesense groove”) of limestone nodules in a shaly matrix, located about 5m above the base of the Buchenstein Beds, Bagolino, Province of Brescia, Northern Italy"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/ladinian> ;
+    owl:versionInfo "2005" ;
+.
+
+gstime:BaseLopingianSP2004
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Lopingian Series and Wuchiapingian Stage"@en ;
+    dcterms:source "Jin, Y., Shen, S., Henderson, C. M., Wang, X., Wang, W., Wang, Y., Cao, C., and Shang, Q., 2006. The Global Stratotype Section and Point (GSSP) for the boundary between the Capitanian and Wuchiapingian Stage (Permian). Episodes 29/4, p. 253 - 262, https://stratigraphy.org/gssps/files/Wuchiapingian.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(109.3211 23.6953)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The GSSP is marked by the first appearance of the conodont Clarkina postbitteri postbitteri within an evolutionary linage from Clarkina postbitteri hongshuiensis to Clarkina dukouensis.  GSSP is located at base of Bed 6k in the Penglaitan Section, Penglaitan, Guanxi Province, South China"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/wuchiapingian> ;
+    owl:versionInfo "2004" ;
+.
+
+gstime:BaseLudfordianSP1980
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Ludfordian"@en ;
+    dcterms:source
+        "Holland, C. H., 1982. The state of Silurian Stratigraphy. Episodes 5/3, p. 21-23, https://stratigraphy.org/gssps/files/Ludfordian.pdf." ,
+        "Lawson, J. D. and White, D. E., 1989. The Ludlow Series in the Ludlow Area. In: Holland, C. H. and Bassett, M. G. (eds.). A global standard for the Silurian System. National Museum of Wales, Geological Series 9, p. 73 - 90, Cardiff." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-2.7772 52.3592)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The most important incoming species above the GSSP is Saetograptus leintwardinensis leintwardinensis. Secondary Markers:  Dorning's (1981) acritarch Biozone boundary L2/L3 is positioned slightly below the Gorstian-Ludfordian boundary. The incoming species of the L3 biozone are: Cymbosphaeridium pilaris, Leoniella carminae, Multiplicisphaeridium paraquaferum, Veryhachium leintwardinensis, and Leiofusa estrecha.  At or near the base of the Ludfordian Stage the following fossils either disappear or become very rare:  Brachiopods: Kirkidium knightii, Strophonella euglypha;  Solitary corals: D. myops, P. globosa. GSSP is coincident with the base of the Leintwardine Formation near Ludlow, UK"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/gssps/ludfordian> ;
+    owl:versionInfo "1980" ;
+.
+
+gstime:BaseLudlowSP1980
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Ludlow Series - Gorstian Stage"@en ;
+    dcterms:source
+        "Dorning, K. J., 1981. Silurian acritarchs from the type Wenlock and Ludlow of Shropshire, England. Review of Palaeobotany and Palynology 34, p. 175 - 203." ,
+        "Holland, C. H., 1982. The state of Silurian Stratigraphy. Episodes 5/3, p. 21-23, 1982." ,
+        "Lawson, J. D. and White, D. E., 1989. The Ludlow Series in the Ludlow Area. In: Holland, C. H. and Bassett, M. G. (eds.). A global standard for the Silurian System. National Museum of Wales, Geological Series 9, p. 73 - 90, Cardiff." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-2.7772 52.3592)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  Graptolites:Saetograptus (Colonograptus) varians and ?Neodiversograptus nilssoni occur 0.03m and 0.23m, respectively, above the base of Gorstian stage boundary. Acritarchs: The junction between Dorning's (1981) acritarch zones W3 and L1 is at 0.6m above the base of Gorstian stage boundary.  GSSP is coincident with the base of the Lower Elton Formation, near Ludlow, UK"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/gorstian> ;
+    owl:versionInfo "1980" ;
+.
+
+gstime:BaseLutetianSP2011
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Lutetian"@en ;
+    dcterms:source "Molina, E., Alegret, L., Apellaniz, E., et al., 2011. The Global Stratotype Section and Point (GSSP) for the base of the Lutetian Stage at the Gorrondatxe section, Spain. Episodes, 34(2): 86-108, https://doi.org/10.18814/epiiugs/2011/v34i2/006." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(3.0143 43.9296)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  LO of calcareous nannofossil Blackites inflatus (CP12a/b boundary); middle of polarity Chron C21r.  GSSP is in dark marl at 167.85 m in Gorrondatxe sea-cliff section, Basque Country, Spain"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/gssps/lutetian> ;
+    owl:versionInfo "2011" ;
+.
+
+gstime:BaseMaastrichtianSP2001
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Maastrichtian"@en ;
+    dcterms:source "Odin, G. S., and Lamaurelle, M. A., 2001. The global Campanian-Maastrichtian stage boundary. Episodes 24/4, p. 229-238, https://doi.org/10.18814/epiiugs/2001/v24i4/002." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-1.1133 43.679)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The first appearance of Pachydiscus neubergicus is considered as the guide-event for the base of the Maastrichtian Stage. GSSP is at level 115.2 on platform IV of the geological site, Tercis les Bains, Landes, France"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/gssps/maastrichtian> ;
+    owl:versionInfo "2001" ;
+.
+
+gstime:BaseMeghalayanSP2018
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Meghalayan"@en ;
+    dcterms:source
+        "Walker, M., Head, M.J., Berkelhammer, M., Björck, S., Cheng, H., Cwynar, L., Fisher, D., Gkinis, V., Long, A., Lowe, j., Newnham, R., Rasmussen, S.O., Weiss, H., 2018. Formal ratification of the subdivision of the Holocene Series/ Epoch (Quaternary System/Period): two new Global Boundary Stratotype Sections and Points (GSSPs) and three new stages/ subseries. Episodes 41/4, 1-11, https://doi.org/10.18814/epiiugs/2018/018016 ." ,
+        "https://timescalefoundation.org/gssp/detail.php?periodid=183&top_parentid=2" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(91.715 25.2622)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Mawmluh Cave speleothem, Meghalaya, India. The Meghalayan GSSP is located in the northeastern Indian State of Meghalaya. The entrance of Mawmluh Cave is at the southern edge of the Meghalayan Plateau at a latitude of 25.262 N and a longitude of 91.715 W. The nearest town is Sohra (Cherrapunji).  The GSSP is defined in a speleothem (KM-A) with a modelled age of 4250yr bk2 (before AD2000), where the stable isotope profile shows a shift to heavier isotopic values, reflecting an abrupt reduction in precipitation due to weakening of the monsoon across the Indian sub-continent and southeast Asia."@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/meghalayan> ;
+    owl:versionInfo "2018-06-14" ;
+.
+
+gstime:BaseMesozoicSP2001
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Mesozoic - Triassic - Induan"@en ;
+    dcterms:source "Yin, H., Zhang, K., Tong, J., Yang, Z.i, and Wu, S., 2001. The Global Stratotype Section and Point (GSSP) of the Permian - Triassic Boundary. Episodes 24/2, p. 102 - 114, https://doi.org/10.18814/epiiugs/2001/v24i2/004." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(119.7058 31.0798)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: First occurrence of the conodont species Hindeodus parvus in the evolutionary lineage Hindeodus latidentatus - Hindeodus parvus - Isarcicella isarcica at the base of Bed 27c in the Meishan Section.  GSSP is at base of Bed 27c in the Meishan D Section, Meishan, Zhejiang Province, China"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/gssps/induan> ;
+    owl:versionInfo "2001" ;
+.
+
+gstime:BaseMessinianSP2000
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Messinian"@en ;
+    dcterms:source
+        "F.J. Hilgen, S. Iaccarino, W. Krijgsman, G. Villa, C.G. Langereis, and W.J. Zachariasse, 2000, The Global Boundary Stratotype Section and Point (GSSP) of the Messinian Stage (uppermost Miocene): Episodes 23/3, p. 172-178, https://doi.org/10.18814/epiiugs/2000/v23i3/004" ,
+        "Hilgen, F. J., Bissoli, L., Iaccarino, S., Krijgsman, W., Negri, A., and Villa, G., 2000. Integrated stratigraphy and astrochronology of the Messinian GSSP at Oued Akrech (Atlantic Morocco). Earth Planet. Sci. Lett., 182, 237-251." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-6.8125 33.936)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The basic sedimentary cycles are precession-controlled but precession/obliquity interference patterns are present as well. The characteristic cycle pattern allows the section to be astronomically tuned by matching the color cycles to correlative patterns in the astronomical target curve (Hilgen et al., 2000a; 65° N lat. summer insolation), thereby providing highly accurate ages for the Tortonian/Messinian boundary. Secondary Markers:  The turnover of dominantly dextrally coiled assemblages of Globorotalia menardii by dominantly sinistrally coiled assemblages of the Globorotalia miotumida group can be used to recognize the Tortonian/Messinian boundary in the Mediterranean and adjacent North Atlantic;  The first occurrence of Amaurolithus primus and Amaurolithus delicatus predate the boundary, while the first occurrence of Amaurolithus amplificus s.s. postdates the boundary. The first common occurrence of Reticulofenestra rotaria also predates the boundary;   The recorded two normal polarity intervals and intervening reversed interval correspond - from bottom to top - to C3Br.1n, C3Br.1r and C3Bn.The base of the reddish layer and, thus, the Messinian GSSP has been assigned an astronomical age of 7.251Ma, later revised to 7.246. GSSP is located near Oued Akrech, Morocco"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/messinian> ;
+    owl:versionInfo "2000" ;
+.
+
+gstime:BaseMiddleDevonianSP1985
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Middle Devonian - Eifelian"@en ;
+    dcterms:source "Ziegler, W. and Klapper, G., 1985. Stages of the Devonian System. Episodes 8/2, p. 104 - 109, https://doi.org/10.18814/epiiugs/1985/v8i2/006." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(6.4716 50.1496)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The base of the Eifelian Stage coincides with the first occurrence of the conodont Polygnathus costatus partitus. Conodont Icriodus corniger retrodepressus enters low in the partitus Zone. This conodont is easily recognizable and permits correlations with sequences in the Ardennes, Spain, and England.  GSSP is located 21.25m above the base of the exposed section, base of sample station WP30, Wetteldorf, Eifel Hills, Germany"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/eifelian> ;
+    owl:versionInfo "1985" ;
+.
+
+gstime:BaseMiddleJurassicSP2000
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Middle Jurassic - Aalenian"@en ;
+    dcterms:source "Cresta, S., Goy, A., Ureta, S., Arias, C., Barrón, E., Bernard, J., Canales, M. L., Garcí­a-Joral, F., Garcí­a-Romero, E., Gialanella, P. R., Gomes, J. J., González, J. A., Herrero, C., Marínez, G., Osete, M. L., Perilli, N., and Villalaí­n, J. J., 2001. The Global Boundary Stratotype Section and Point (GSSP) of the Toarcian - Aalenian Boundary (Lower - Middle Jurassic). Episodes 24/3, p.166 - 175, https://doi.org/10.18814/epiiugs/2001/v24i3/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-1.8333 41.1708)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The boundary coincides with the first occurrence of the ammonite assemblage characterized by Leioceras opalinum and Leioceras lineatum.  Secondary Markers: Nannofossil Hexalithus magharensis appears first in Bed FZ 107.  GSSP is located at base of Bed FZ 107, Fuentelsaz, Spain"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/aalenian> ;
+    owl:versionInfo "2000" ;
+.
+
+gstime:BaseMiddleMississippianSP2008
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Middle Mississippian - Visean"@en ;
+    dcterms:source "Devuyst, F.-X., Hance, L., Hou, H.F., Wu, X.H., Tian, S.G., Coen, M., Sevastopulo, G. 2003. A proposed Global Stratotype Section and Point for the base of the Viséan Stage (Carboniferous): the Pengchong section, Guangxi, South China. Episodes, 26(2): 105-115, https://doi.org/10.18814/epiiugs/2003/v26i2/004." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(109.45 24.4333)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: Benthic Foraminifer FAD Eoparastaffella simplex.  GSSP  is located at base of bed 83 in the Pengchong Section, Pengchong, south China"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/visean> ;
+    owl:versionInfo "2008" ;
+.
+
+gstime:BaseMiddleOrdovicianSP2007
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Middle Ordovician - Dapingian"@en ;
+    dcterms:source
+        "Wang, X., Stouge, S., Erdtmann, B-D., Chen, X., Li, Z., Wang, C., Zeng, Q., Zhou, Z., and Chen, H., 2005. A proposed GSSP for the base of the Middle Ordovician Series: the Huanghuachang section, Yichang, China. Episodes 28/2, p. 105 - 117, https://doi.org/10.18814/epiiugs/2005/v28i2/004." ,
+        "Xiaofeng W., Stouge, S., Xiaohong, C., Zhihong, L., Chuanshang, W., Finney, S.C., Qingluan, Z., Zhiqiang, Z., Huiming, C., and Erdtmann, B-D., 2009. The Global Stratotype Section and Point for the base of the Middle Ordovician Series and the Third Stage (Dapingian). Episodes 32/2, p. 96-113, https://doi.org/10.18814/epiiugs/2009/v32i2/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(110.374 30.86)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The GSSP coincides with the first appearance datum of Baltoniodus triangularis. It is further associated with the FAD of Periodon sp. A and followed closely by the FAD of Microzarkina flabellum.   Secondary Markers:  The base of the Belonechitina cf. henryi chitinozoan biozone is very close to the base of the Baltoniodus triangularis.  GSSP is located 10.57 m above base of the Dawan Formation, Huanghuachang Section, NE of Yichang city, Hubei Province, S. China"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/dapingian> ;
+    owl:versionInfo "2007" ;
+.
+
+gstime:BaseNeogeneSP1996
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Neogene - Aquitanian"@en ;
+    dcterms:source "Steiniger, F. F., Aubry, M. P., Berggren, W. A., Biolzi, M., Borsetti, A. M., Cartlidge, J. E., Cati, F., Corfield, R., Gelati, R., Iaccarino, S., Napoleone, C., Ottner, F., Roegl, F., Roetzel, R., Spezzaferri, S., Tateo, F., Villa, G., and Zevenboom, D., 1997. The Global Stratotype Section and Point (GSSP) for the Base of the Neogene. Episodes 20/1, p. 23 - 28, https://doi.org/10.18814/epiiugs/1997/v20i1/005." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(8.8364 44.658)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  An excellent lithological marker for the GSSP is provided by a distinct boundary between lithologic Unit A (the more massive part of the section) and the overlying lithologic Unit B-1 (the more stratified part of the section). At the 50m mark from the top there is a horizon with yellowish nodules. The GSSP is exactly 15m above this lithologic boundary. A layer with yellowish nodules lies in lithologic Subunit B2, exactly one meter below meter 35.  Correlation Events:  Magnetic -- base of Chron C6Cn.2n; planktonic foraminifer FAD of Paragloborotalia kugleri; calcareous nannofossil near LAD Reticulofenestra bisecta (base Zone NN1); Oxygen isotopic event MI-1.   GSSP is located at Lemme Carrioso Section, Allessandria Province, Italy"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/aquitanian> ;
+    owl:versionInfo "1996" ;
+.
+
+gstime:BaseNorthgrippianSP2020
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Northgrippian"@en ;
+    dcterms:source "Walker, M., Head, M.J., Berkelhammer, M., Björck, S., Cheng, H., Cwynar, L., Fisher, D., Gkinis, V., Long, A., Lowe, j., Newnham, R., Rasmussen, S.O., Weiss, H., 2018. Formal ratification of the subdivision of the Holocene Series/ Epoch (Quaternary System/Period): two new Global Boundary Stratotype Sections and Points (GSSPs) and three new stages/ subseries. Episodes 41/4, 1-11m https://doi.org/10.18814/epiiugs/2018/018016 ." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT (-42.3200 75.1000)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "GSSP defined in the NGRIP1 ice-core record at a depth of 1228.67 m at a horizon which shows a clear signal of climatic cooling following a period of generally rising temperatures during the Early Holocene. It corresponds to an age of 8236 years b2k (before AD2000). A global auxiliary stratotype (latitude of 13 degree 13 minute S, longitude of 44 degree 03 minute W) is placed at 293 - 287 mm level of Speleothem PAD07 (Stalagmite), Gruta do Padre Cave, Brazil at a marked shift of δ18O levels to lighter isotopic values."@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/northgrippian> ;
+    owl:versionInfo "2018-06-14" ;
+.
+
+gstime:BaseOligoceneSP1992
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Oligocene - Rupelian"@en ;
+    dcterms:source "Primoli Silva, I. and Jenkins, D. G., 1993. Decision on the Eocene-Oligocene boundary stratotype. Episodes 16/3, p.379 - 382, https://doi.org/10.18814/epiiugs/1993/v16i3/002 ." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(13.6011 43.5328)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The planktonic foraminifera Hantkenina and Cribrohantkenina, Eocene genera of the Hantkeninidae, become extinct at the GSSP.   Secondary Markers:  The GSSP is within calcareous nannofossil zones NP21 and CP16a. GSSP is located at Massignano, near Ancona, Italy"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/rupelian> ;
+    owl:versionInfo "1992" ;
+.
+
+gstime:BaseOrdovicianSP2000
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Ordovician - Lower Ordovician - Tremadocian"@en ;
+    dcterms:source "Cooper, R. A., Nowlan, G. S., and Williams, S. H., 2001. Global Stratotype Section and Point for base of the Ordovician System. Episodes 24/1, p. 19-28, https://doi.org/10.18814/epiiugs/2001/v24i1/005." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-57.9653 49.6829)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  First appearance of conodont species Iapetognathus fluctivagus within Bed 23.  Secondary Markers:  Planktonic graptolites appear 4.8m above the boundary in the Green Point Section. The earliest planktonic graptolite species, Staurograptus dichotomus and Rhabdinopora praeparabola, are both present in the Green Point Section.  Carbon isotopes:  The boundary level coincides closely with the peak of a positive cycle in  delta 13C, representing the highest value reached in the boundary interval.  GSSP is located at the 101.8m level, within Bed 23, in the measured section, Green Point Section, western Newfoundland {@en} " ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/tremadocian> ;
+    owl:versionInfo "2000" ;
+.
+
+gstime:BasePennsylvanianSP1996
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Pennsylvanian - Bashkirian"@en ;
+    dcterms:source "Lane, H. R., Brenckle, P. L., Baesemann, J. F., and Richards, B., 1999. The IUGS boundary in the middle of the Carboniferous: Arrow Canyon, Nevada, USA. Episodes 22/4, p. 272-283, https://doi.org/10.18814/epiiugs/1999/v22i4/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-114.7778 36.7333)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The Bashkirian GSSP coincides with the evolutionary first appearance of the conodont Declinognathodus noduliferus s.l.  Secondary Markers:  The Rhipidomella nevadensis brachiopod zone is latest Mississippian in age and extends to the GSSP boundary where it is overlain by the Rugoclostus zone of early Pennsylvanian age.  GSSP is located 82.9m above the top of the Battleship Formation in the lower Bird Spring Formation, Arrow Canyon, Nevada"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/bashkirian> ;
+    owl:versionInfo "1996" ;
+.
+
+gstime:BasePermianSP1996
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Permian - Asselian"@en ;
+    dcterms:source "Davydov, V. I., Glenister, B. F., Spinosa, C., Ritter, S. M., Chemykh, V. V., Wardlaw, B. R., and Snyder, W. S., 1998. Proposal of Aidaralash as Global Stratotype Section and Point (GSSP) for base of the Permian System. Episodes 21/1, p. 11 - 18, https://doi.org/10.18814/epiiugs/1998/v21i1/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(57.8914 50.2458)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  First occurrence of 'isolated-nodular' morphotype of the Streptognathodus 'wabaunsensis' conodont chronocline, 27m above the base of Bed 19.  Secondary Markers:  Termination of Prouddenites-Uddenites ammonoid lineage at the top of Bed 19.  Introduction of Svetlanoceras primore and Prostacheoceras principalein Bed 20. Base of the Fusulinoids Sphaeroschwagerina vulgaris-S. fusiformis Zone coincides with the contact of Beds 19.5 and 19.6.  Ultradaixina disappears and Schellwienia becomes scarce at the contact of Beds 19.5 and 19.6. Species of Sphaeroschwagerina first appear at this level.  GSSP is located 27m above the base of Bed 19, Aidaralash Creek, Kazakhstan"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/asselian> ;
+    owl:versionInfo "1996" ;
+.
+
+gstime:BasePhanerozoicSP1992
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Phanerozoic - Cambrian - Fortunian"@en ;
+    dcterms:source "Brasier, M., Cowie,J., and Taylor, M., 1994. Decision on the Precambrian-Cambrian boundary stratotype. Episodes 17/1&2, p. 95-100, https://timescalefoundation.org/references/Fortunian0.pdf." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-55.831 47.0762)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  First occurrence of the trace fossil Trichophycus pedum.  Secondary Markers:  Trace fossils:  Member 1 of the Chapel Island Formation includes uppermost Precambrian sediments. It yields the trace fossils Harlaniella podolica and Palaeopascichnus delicatus. These trace fossils range into Member 2, where they are last seen 0.2m below the GSSP.  GSSP is located 2.4m above the base of Member 2 in the Chapel Island Formation, Fortune Head, SE Newfoundland, Canada"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/GSSP/Fortunian.pdf> ;
+    owl:versionInfo "1992" ;
+.
+
+gstime:BasePiacenzianSP1997
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Piacenzian"@en ;
+    dcterms:source "Castradori, D., Rio, D., Hilgen, F. J., and Lourens, L. J., 1998. The Global Standard Stratotype-section and Point (GSSP) of the Piacenzian Stage (Middle Pliocene).. Episodes 21/2, p. 88-93, https://doi.org/10.18814/epiiugs/1998/v21i2/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT (13.4933 37.2889)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The base of the Piacenzian Stage is defined as the base of the beige marl bed of the small-scale carbonate cycle 77. It corresponds to precessional excursion 347 as numbered from the present, with an astrochronological age estimate of 3.600Ma.  Paleomagnetics:  The section spans the interval from the upper part of the Gilbert Chron (C2Ar) through the entire Gauss Chron and to the lowermost part of the Matuyama Chron. The Gilbert-Gauss magnetic reversal is recorded immediately above the GSSP within the same precessional cycle, having an astrochronological age of 3.596Ma.    Secondary Markers:  In the Mediterranean the base of the Piacenzian can be recognized by the first influx of foraminifera Globorotalia crassaformis (3.60 Ma) and by the temporary disappearance of Globorotalia puncticulata (3.57 Ma). In low and mid-latitude areas outside of the Mediterranean the last occurrence of Globorotalia margeritae (3.58 Ma) and Pulleniatina primalis (3.65) are close to the boundary.  The GSSP is located at Punta Piccola, Sicily, Italy"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/piacenzian> ;
+    owl:versionInfo "1997" ;
+.
+
+gstime:BasePliensbachianSP1997
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Pliensbachian"@en ;
+    dcterms:source "Meister, C., Aberhan, M., Blau, J., Dommergues, J.-L., Feist-Burkhardt, S., Hailwood, E. A., Hart, M., Hesselbo, S. P., Hounslow, M. W., Hylton, M., Morton, N., Page, K., and Price, G. D.,2006. The Global Boundary Stratotype Section and Point (GSSP) for the base of the Pliensbachian Stage (Lower Jurassic), Wine Haven, Yorkshire, UK. Episodes 29/2, p. 93-106, https://doi.org/10.18814/epiiugs/2006/v29i2/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-0.4975 54.4069)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The GSSP is marked by the ammonite association of Bifericeras donovani and Apoderoceras sp.. This association also includes Gleviceras juv. aff. iridescens.   Secondary Markers:  Analysis of belemnites yields a calcite 87Sr/86Sr ratio for the boundary level of 0.707425.  Magnetostratigraphy:  The Upper Sinemurian to lowermost Pliensbachian at Wine Haven section has predominantly normal polarity, but two discrete reversed polarity magnetozones are present. One spans much of the aplanatum zone of the latest Sinemurian and terminates < 0.5m below the boundary. The second reversed interval extends from the latest oxynotum subzone probably through the lower part of the raricostatum subzone.  The GSSP is located at the base of Bed 73b, Wine Haven, Robin Hoods Bay, Yorkshire Coast, England"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/pliensbachian> ;
+    owl:versionInfo "1997" ;
+.
+
+gstime:BasePlioceneSP2000
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Pliocene - Zanclean"@en ;
+    dcterms:source
+        "Lourens, L., Hilgen, F., Shackleton, N.J., Laskar, J., and Wilson, D., 2004, The Neogene Period,   in Gradstein et al., The Geologic Time Scale 2004, Cambridge University Press, p416." ,
+        "Van Couvering, J. A., Castradori, D., Cita, M. B., Hilgen, F. J., and Rio, D., 2000. The base of the Zanclean Stage and of the Pliocene Series. Episodes 23/3, p. 179 - 187, https://doi.org/10.18814/epiiugs/2000/v23i3/005." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT (13.2806 37.3917)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "The original proposal for base of Zanclean/Pliocene (Cita,1975) was base of Trubi formation at Capo Rossello, Sicily; Hilgen and Langereis (1988) proposed using the correlative level in the Eraclea Minoa Section, Agrigento Province, Sicily because of the excellent magnetostratigraphic record there.  This section is part of the Rossello Composite Section, the global reference section for Early and Middle Pliocene astronomical polarity time scale. The GSSP is placed at the base of small-scale carbonatie cycle 1, which overlies brownish sandy Arenazzolo and massive gypsum of latest Messinian age. The level corresponds to insolation cycle 510. The base of magnetic polarity Chron C3n.en is a good approximation for this stratigraphic point.  The GSSP is located at Eraclea Minoa, Sicily, Italy"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/zanclean> ;
+    owl:versionInfo "2000" ;
+.
+
+gstime:BasePragianSP1989
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Pragian"@en ;
+    dcterms:source "Chlupac, I. and Oliver, W. A. 1989. Decision on the Lochkovian - Pragian Boundary Stratotype (Lower Devonian). Episodes, 12/2, p. 109-113, https://doi.org/10.18814/epiiugs/1989/v12i2/014." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(14.3726 50.0147)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment """Primary Markers:  First occurrence of conodont Eognathodus sulcatus sulcatus at the base of bed 12.  Secondary Markers:\r\r\r
+The boundary is above the Tentaculites Paranowakia intermedia Zone. The base of the subsequent Zone with Nowakia sororcula (possibly = Nowakia kabylica) lies just below the boundary, while the lowest occurrence of typical specimens of the worldwide Pragian index Nowakia acuaria s.s. is above the boundary.  The boundary falls just below the lowest occurrence of the Pragian index Chitinozoan Angochitina comosa, close to the first occurrence of Gotlandochitina philippoti, and close to the last occurrence of Eisenackia bohemica.  The GSSP is located at the base of Bed 12 in Velká Chuchle Quarry, Velka Chuchle, Prague, Czech Republic"""@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/pragian> ;
+    owl:versionInfo "1989" ;
+.
+
+gstime:BasePridoliSP1984
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Pridoli"@en ;
+    dcterms:source
+        "Holland, C. H., 1985. Series and Stages of the Silurian System. Episodes 8/2, p. 101-103." ,
+        "Kríz, J., 1989. The Přídolí Series in the Prague Basin (Barrandium area, Bohemia). In: Holland, C. H. and Bassett, M. G. (eds.). A global standard for the Silurian System. National Museum of Wales, Geological Series 9, p. 90 - 100, Cardiff." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(14.3249 50.0277)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  First occurrence of the graptolite species Monograptus parultimus within Bed 96.    Secondary Markers:  The last occurrence of conodont Ozarkodina crispa is just below the Ludlow-Přídolí Boundary.  The first occurrence of Chitinozoan Urnochitina gr. urna is just above the Ludlow-Přídolí­ boundary in Bed 97 of the Požáry Section.  The GSSP is located at Požáry Section, Reporyje, Prague, Czech Republic"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/pridoli> ;
+    owl:versionInfo "1984" ;
+.
+
+gstime:BaseSakmarianSP2020
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Sakmarian"@en ;
+    dcterms:source
+        "Valery V. Chernykh, Boris I. Chuvashov, Shu-Zhong Shen, Charles M. Henderson, Dong-Xun Yuan, and Michael H. Stephen, 2020, The Global Stratotype Section and Point (GSSP) for the base-Sakmarian Stage (Cisuralian, Lower Permian): Episodes, v.43, no.4, https://doi.org/10.18814/epiiugs/2020/020059" ,
+        "https://timescalefoundation.org/gssp/detail.php?periodid=89&top_parentid=77" ;
+    rdfs:comment "The base of the Sakmarian Stage is defined in Bed 26/3 at 55.4m above the base of the Usolka Section, southern Urals, Russia. It coincides with the first occurrence of conodont Mesogondolella monstra. This is different guide marker from 2004 proposal."@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/sakmarian> ;
+    owl:versionInfo "2018" ;
+.
+
+gstime:BaseSantonianSP2013
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Santonian"@en ;
+    dcterms:source "Lamolda, M. A., Paul, C. R. C., Peryt, D., Pons, J. M., 2014. The Global Boundary Stratotype and Section Point (GSSP) for the base of the Santonian Stage, “Cantera de Margas”, Olazagutia, northern Spain. Episodes 37/1, p. 2 - 13, https://doi.org/10.18814/epiiugs/2014/v37i1/001." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(2.1968 42.866)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  First occurrence of the inoceramid bivalve Platyceramus undulatoplicatus.   Secondary Markers:  First occurrence of the planktonic foraminifer Sigalia carpatica, which is 7 m below the primary marker.  GSSP is located at 94.4 m in the Cantera de Margas quarry section, Olazagutia, Navarra, Spain"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/santonian> ;
+    owl:versionInfo "2013" ;
+.
+
+gstime:BaseSelandianSP2008
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Selandian"@en ;
+    dcterms:source "Schmitz, B., Pujalte, V., Molina, E., Monechi, S., Orue-Etxebarria, X., Speijer, R.P., Alegret, L., Apellaniz, E., Arenillas, I., Aubry, M-P., Baceta, J.I., Berggren, W.A., Bernaola, G., Caballero, F., Clemmensen, A., Dinarès-Turell, J., Dupuis, C., Heilmann-Clausen, C., Hilario Orús, A., Knox, R., Martín-Rubio, M., Ortiz, S., Payros, A., Petrizzo M.R., von Salis, K., Sprong, J., Steurbaut, E., & Thomsen, E., 2011. The Global Stratotype Sections and Points for the bases of the Selandian (Middle Paleocene) and Thanetian (Upper Paleocene) stages at Zumaia Spain. Episodes 34/4, p. 220-243, https://doi.org/10.18814/epiiugs/2011/v34i4/002." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-2.2594 43.3)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The base of the Selandian corresponds to the second radiation of the calcareous nannofossil group, the fasciculiths. Species, such as Fasciculithus ulii, F. billii, F. janii, F. involutus, F. pileatus and F. tympaniformis have their FAD in the interval from a few centimeters below to 1.1 meter above the GSSP. The marker species for the base of nannofossil Zone NP5 (Fasciculithus tympaniformis) occurs 1.1m above the GSSP.  Secondary Markers:   The GSSP occurs 30 precession cycles (630kyr) above the top of magnetochron C27n.  GSSP is located at the base of the red marls of Itzurun Formation, Zumaia section, northern Spain"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/selandian> ;
+    owl:versionInfo "2008" ;
+.
+
+gstime:BaseSerravallianSP2007
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Serravallian"@en ;
+    dcterms:source "Hilgen, F. J., Abels, H. A., Iaccarino, S., Krijgsman, W., Raffi, I., Sprovieri, R., Turco, E., Zachariasse, W. J., 2009. The Global Stratotype Section and Point (GSSP) of the Serravallian Stage (Middle Miocene). Episodes, 32/3, 152 - 166, https://doi.org/10.18814/epiiugs/2009/v32i3/002." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(14.3361 35.9139)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  Oxygen Isotopes--The GSSP coincides with the end of the major Mi-3b global cooling step in the oxygen isotopes and reflects a major increase in Antarctic ice volume.  Secondary Markers:  The GSSP is 0.5m below the acme end of Foraminifera Globigerina cf. quinqueloba;  The GSSP slightly predates the L(C)O of the calcareous nannofossil Sphenolithus heteromorphus, dated astronomically at 13.654 Ma, and falls within the younger part of Chron C5ACn. The GSSP postdates the FCO of Helicosphaera walbersdorfensis;  The formation boundary between the Globigerina Limestone and the Blue Clay and therefore the Serravallian GSSP falls within Chron C5ACn.  GSSP is located at Ras il Pellegrin section, Fomm Ir- Rih Bay, west coast of Malta"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/serravallian> ;
+    owl:versionInfo "2007" ;
+.
+
+gstime:BaseSilurianSP1984
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Silurian - Llandovery - Rhuddanian"@en ;
+    dcterms:source "Holland, C. H., 1985. Series and Stages of the Silurian System. Episodes 8/2, p. 101-103,https://doi.org/10.18814/epiiugs/1985/v8i2/005." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-3.27 55.44)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  Incoming of graptolites Akidograptus ascensus and Parakidograptus praematurus at 1.6m above the base of the Birkhill Shale Formation.   GSSP is located 1.6m above the base of the Birkhill Shale Formation, within Bed 96, Dobs Linn, Scotland"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/rhuddanian> ;
+    owl:versionInfo "1984" ;
+.
+
+gstime:BaseSinemurianSP2000
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Sinemurian"@en ;
+    dcterms:source "Bloos, G. and Page, K. N., 2002. The Global Stratotype Section and Point for base of the Sinemurian Stage (Lower Jurassic). Episodes, 25/1, 22-28, https://doi.org/10.18814/epiiugs/2002/v25i1/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-3.2364 51.1909)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The boundary level corresponds with the striking change in the ammonite fauna from the genus Schlotheimia (mainly Schlotheimia pseudomoreana) in the latest Hettangian to the genera Vermiceras and Metophioceras in the earliest Sinemurian. The GSSP coincides with the first appearance of the genera Vermiceras quantoxense, Vermiceras palmeri and Metophioceras sp. indet. 1.  Secondary Markers: Foraminifera: Lingulina tenera plex. substriata is characteristic of the latest Hettangian and the consistent appearance of Planularia inaequistriata and the Frondicularia terquemi plexus group is characteristic of the basal Sinemurian.  GSSP is located 0.90 m above the base of Bed 145, East Quantoxhead, SW England"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/sinemurian> ;
+    owl:versionInfo "2000" ;
+.
+
+gstime:BaseTelychianSP1984
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Telychian"@en ;
+    dcterms:source
+        "Cocks, L. R. M., 1989. The Llandovery Series in the Llandovery Area. In: Holland, C. H. and Bassett, M. G. (eds.). A global standard for the Silurian System. National Museum of Wales, Geological Series 9, p. 36 - 50, Cardiff." ,
+        "Holland, C. H., 1985. Series and Stages of the Silurian System. Episodes 8/2, p. 101-103." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-3.79 51.97)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The base of the Telychian Stage is defined at a point just above the highest record of the brachiopod Eocoelia intermedia and below the earliest record of the succeeding species Eocoelia curtisi.  Secondary Markers:  The boundary horizon corresponds with the base of the Biozone 4 acritarch fauna of Hill (1974). It is characterized by the incoming of Deunffia monospinosa, Domasia bispinosa and Pterospermella cf. foveolata.  GSSP is located within the Wormwood Formation, Cefn-cerig Road Section, Wales, UK"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/GSSP/Rhu-Tely&Pridoli.pdf> ;
+    owl:versionInfo "1984" ;
+.
+
+gstime:BaseThanetianSP2008
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Thanetian"@en ;
+    dcterms:source "Schmitz, B., Pujalte, V., Molina, E., Monechi, S., Orue-Etxebarria, X., Speijer, R.P., Alegret, L., Apellaniz, E., Arenillas, I., Aubry, M-P., Baceta, J.I., Berggren, W.A., Bernaola, G., Caballero, F., Clemmensen, A., Dinarès-Turell, J., Dupuis, C., Heilmann-Clausen, C., Hilario Orús, A., Knox, R., Martín-Rubio, M., Ortiz, S., Payros, A., Petrizzo M.R., von Salis, K., Sprong, J., Steurbaut, E., & Thomsen, E., 2011. The Global Stratotype Sections and Points for the bases of the Selandian (Middle Paleocene) and Thanetian (Upper Paleocene) stages at Zumaia Spain. Episodes 34/4, p. 220-243, https://doi.org/10.18814/epiiugs/2011/v34i4/002." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-2.2594 43.3)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The Thanetian GSSP corresponds to the base of magnetochron C26n.  GSSP is located 30.5m above the base of Itzurun Formation, Zumaia section, northern Spain"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/thanetian> ;
+    owl:versionInfo "2008" ;
+.
+
+gstime:BaseToarcianSP2014
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Toarcian"@en ;
+    dcterms:source "Rocha, R. B. et al., 2016, Toarcian Stage of Lower Jurassic defined by the Global Boundary Stratotype Section and Point (GSSP) at the Peniche section (Portugal). Episodes 39, 460–481, https://doi.org/10.18814/epiiugs/2016/v39i3/99741." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-9.3853 39.3708)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The GSSP is marked by the FO of the ammonite D. (E.) simplex co-occurring with D. (E.) pseudocommune and D. (E.) polymorphum.  Secondary Markers:  Ammonite association of D. (Eodactylites) ssp. and other species e.g. Protogrammoceras (Paltarpites) cf. paltum, Lioceratoides aff. balinense and Tiltoniceras aff. capillatum is particularly significant for the boundary definition. A succession of calcareous nannofossil first occurrences includes the FOs of L. velatus, B. intermedium (uppermost Pliensbachian), D. ignotus and C. superbus (lower Toarcian). A prominent (~2‰) negative excursion of delta 13C measured on bulk rock, belemnites and brachiopod calcite is also recorded just above the boundary level.  Strontium Isotopes:  Analysis of belemnites yields a calcite 87Sr/86Sr ratio for the boundary level of 0.70706.     GSSP is located at the base of bed 15e (Couches de passage), uppermost Lemede Formation, Peniche (Portugal)"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/toarcian> ;
+    owl:versionInfo "2014" ;
+.
+
+gstime:BaseTortonianSP2003
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Tortonian"@en ;
+    dcterms:source "Hilgen, F. J., Abdul Aziz, H., Bice, D., Iaccarino, S., Krijgsman, W., Kuiper, K., Montanari, A., Raffi, I., Turco, E., Zachariasse, W. J., 2005. The Global Boundary Stratotype Section and Point (GSSP) of the Tortonian Stage (Upper Miocene) at Monte dei Corvi. Episodes, 28/1, p. 6 - 17, https://doi.org/10.18814/epiiugs/2005/v28i1/001." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(13.5694 43.5867)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The Monte dei Corvi Beach section is composed of a cyclic alternation of marls, marly limestones and organic-rich beds (Montanari et al., 1997). The basic small-scale cycle is a couplet (between 0.3 and 1.0 m thick) which consists of an indurated whitish marly limestone and a softer grey to greenish-grey marl. Brownish to blackish colored organic-rich beds termed sapropels are frequently but not always intercalated in the limestones.  Larger-scale cycles can be distinguished in addition and comprise both small-scale and large-scale sapropel clusters. Small-scale clusters contain 2 to 4 sapropels (and 5-6 basic cycles); large-scale clusters contain several small-scale clusters (and up to 20 basic cycles). Finally a cycle of intermediate-scale is recognized by repetitive sapropel patterns in every other basic cycle. Previous studies of marine sections of Late Miocene to Pleistocene age in the Mediterranean (Hilgen, 1991; Hilgen et al., 1995; Lourens et al., 1996) showed that similar sapropel patterns reflect the astronomical cycles of precession (basic cycle), obliquity (intermediate cycle) and eccentricity (larger-scale cycles). Using the same phase relations as established for the younger sapropels, the sedimentary cycles in the Monte dei Corvi Beach section were tuned to the precession and insolation time series of the La93 solution (Laskar, 1990; Laskar et al., 1993). This tuning provides astronomical ages for all the sedimentary cycles, calcareous plankton bioevents, magnetic reversals and ash beds recorded in the section. It shows that the entire beach section ranges from 13.4 to 8.5 Ma and that the Tortonian GSSP has an astronomical age of 11.608 Ma (Hilgen et al., 2003).  GSSP is located at Monte dei Corvi Beach, near Ancona, Italy"@en ;
+    rdfs:seeAlso <hhttps://stratigraphy.org/gssps/tortonian> ;
+    owl:versionInfo "2003" ;
+.
+
+gstime:BaseTuronianSP2003
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Turonian"@en ;
+    dcterms:source "Kennedy, W. J., Walaszcyk, I., and Cobban, W. A., 2005. The Global Boundary Stratotype Section and Point for the base of the Turonian Stage of the Cretaceous: Pueblo, Colorado, U.S.A. Episodes 28/2, p. 93 - 104, https://doi.org/10.18814/epiiugs/2005/v28i2/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-104.7275 38.282)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The GSSP coincides with the first appearance of the ammonite Watinoceras devonense.   Secondary Markers: Foraminifera Helvetoglobotruncana helvetica appears for the first time in Bed 89; Nannoplankton The last occurrence of Microstaurus chiastius is between Beds 85 and 88;  Bivalves  The first occurrence of Mytiloides hattini is in the topmost part of Bed 84. The first occurrence of Mytiloides puebloensis coincides with the GSSP in Bed 86; Stable Isotopes: The delta 13Corg (PDB) curve shows that the base of Bed 86 falls immediately below the third positive peak in the curve.  GSSP is located base of Bed 86 of the Bridge Creek Limestone Member, Pueblo, Colorado, USA"@en ;
+    rdfs:seeAlso <hhttps://stratigraphy.org/gssps/turonian> ;
+    owl:versionInfo "2003" ;
+.
+
+gstime:BaseUpperCretaceousSP2002
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Upper Cretaceous - Cenomanian"@en ;
+    dcterms:source "Kennedy, W. J., Gale, A. S., Lees, J. A., and Caron, M., 2004. The Global Boundary Stratotype Section and Point (GSSP) for the base of the Cenomanian Stage, Mont Risou, Hautes-Alpes, France. Episodes 27/1, p. 21-32, https://doi.org/10.18814/epiiugs/2004/v27i1/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(5.5119 44.392)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The base of the Cenomanian corresponds to the first occurrence of the planktonic foraminifer Rotalipora globotruncanoides.  Four foraminfer species, Rotalipora appenninica, Rotalipora gandolfii (FO at -40m), Rotalipora globotruncanoides (FO at -36m), and Rotalipora tehamensis (FO at -48m) coexist from level -36m to -19m and form a subzonal association that is a useful indicator for the base of the Ceonmanian.    Secondary Markers:  The major faunal change in the ammonite fauna occurs between -30 and -32m, with the disappearance of typical Albian taxa at -32m (Lechites gaudini, Stoliczkaia clavigera) and the appearance of typical Cenomanian taxa at -30m (Neostlingoceras oberlini, Mantelliceras mantelli, etc.);  First occurrence of Nannofossil Calculites anfractus at -40m;  Stable Isotopes:  The GSSP preserves an excellent delta 13C and delta 18O record that provides an auxiliary marker.  GSSP is located 36 meters below the top of the Marnes Bleues Formation on the south side of Mount Risou, Hautes Alpes, France"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/cenomanian> ;
+    owl:versionInfo "2002" ;
+.
+
+gstime:BaseUpperDevonianSP1986
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Upper Devonian - Frasnian"@en ;
+    dcterms:source "Klapper, G., Feist, R., and House, M. R., 1987. Decision on the Boundary Stratotype for the Middle/Upper Devonian Series Boundary. Episodes 10/2, p. 97-101, https://doi.org/10.18814/epiiugs/1987/v10i2/004" ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(3.0868 43.5032)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The GSSP coincides with the first occurrence of the conodont species Ancyrodella rotundiloba.  Secondary Markers:  The goniatites Probeloceras and Petteroceras feisti first appear low in the Lower asymmetricus Zone.  GSSP is located at base of Bed 42’ at Col du Puech de la Suque section E, Montage Noire, France"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/frasnian> ;
+    owl:versionInfo "1986" ;
+.
+
+gstime:BaseUpperOrdovicianSP2002
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Upper Ordovician - Sandbian"@en ;
+    dcterms:source "Bergstrom, S. M., Finney, S. C., Chen Xu, Passon, C., Wang Zhi-hao, and Grahn, Y., 2000. A proposed global boundary stratotype for the base of the Upper Series of the Ordovician System: The Fagelsang section, Scania, southern Sweden. Episodes 23/2, p. 102 - 109, https://doi.org/10.18814/epiiugs/2000/v23i2/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(13.3255 55.7137)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The first appearance of graptolite Nemagraptus gracilis is 1.4m below a phosphorite marker bed.  GSSP is located 1.4m below a phosphorite marker bed in the E14b outcrop, Sularp Brook, Fagelsang, Sweden {@en} " ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/sandbian> ;
+    owl:versionInfo "2002" ;
+.
+
+gstime:BaseUpperTriassicSP2008
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Upper Triassic - Carnian"@en ;
+    dcterms:source "Mietto, P., Manfrin, S., Preto, N., et al., 2012. The Global Boundary Stratotype Section and Point (GSSP) of the Carnian Stage (Late Triassic) at Prati Di Stuores/Stuores Wiesen Section (Southern Alps, NE Italy). Episodes, 35(3): 414-430, https://doi.org/10.18814/epiiugs/2012/v35i3/003." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(11.9303 46.5269)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  FAD of the ammonoids Daxatina canadensis (Whiteaves).  Secondary Markers: FAD of the conodont Paragondolella polygnathiformis (Budurov and Stefanov), appearing 70 cm above the first occurrence of Daxatina canadensis and at the base of a long normal-polarity magnetic zone (S2n) in close proximity to the boundary.  GSSP is located at  base of marly limestone bed SW4, 45m from base of San Cassiano Formation, Prati di Stuores, Dolomites, Italy"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/carnian> ;
+    owl:versionInfo "2008" ;
+.
+
+gstime:BaseWenlockSP1980
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Wenlock Series - Sheinwoodian"@en ;
+    dcterms:source
+        "Bassett, M. G., 1989. The Wenlock Series in the Wenlock Area. In: Holland, C. H. and Bassett, M. G. (eds.). A global standard for the Silurian System. National Museum of Wales, Geological Series 9, p. 51-73, Cardiff." ,
+        "Holland, C. H., 1982. The state of Silurian Stratigraphy. Episodes 5/3, p. 21-23, 1982." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-2.6389 52.5811)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers:  The base of the Sheinwoodian Stage lies close to the base of the Cyrtograptus centrifugus Graptolite Biozone. Secondary Markers:  Basal beds of the Buildwas Formation contain diverse conodonts of the Pterospathodus amorphognathoides interval.  GSSP is located at base of the Buildwas Formation, Hughley Brook, UK"@en ;
+    rdfs:seeAlso <http://www.stratigraphy.org/GSSP/Sheinwoodian-Ludfordian.pdf> ;
+    owl:versionInfo "1980" ;
+.
+
+gstime:BaseWordianSP2001
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "GSSP Base of Wordian"@en ;
+    dcterms:source "Wu, Qiong, Jahandar Ramezani, Hua Zhang, Dong-xun Yuan, Douglas H. Erwin, Charles M. Henderson, Lance L. Lambert, Yi-chun Zhang, and Shu-zhong Shen, 2020, High-Precision U-Pb Zircon Age Constraints on the Guadalupian in West Texas, USA. Palaeogeography, Palaeoclimatology, Palaeoecology 548. DOI: 10.1016/j.palaeo.2020.109668." ;
+    geo:hasGeometry [
+            a geo:Geometry ;
+            geo:asWKT "POINT(-104.8328 31.8658)"^^geo:wktLiteral
+        ] ;
+    rdfs:comment "Primary Markers: The GSSP is at the first occurrence of the conodont Jinogondolella aserrata.  GSSP is located 7.6m above the base of the Getaway Ledge outcrop Section of the Getaway Limestone Member of the Cherry Canyon Formation, Guadalupe Pass, Texas, U.S.A"@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/wordian> ;
+    owl:versionInfo "2001" ;
+.
+
+gstime:BaseWuliuanSP2020
+    a
+        geo:Feature ,
+        gscn:GSSP ;
+    rdfs:label "Stratotype Point Base of Cambrian Stage 5"@en ;
+    dcterms:source "Episodes 42/2, p.165-184, 2019. https://doi.org/10.18814/epiiugs/2019/019013" ;
+    rdfs:comment "GSSP defined at the base of a silty mudstone layer (within bed 9) 52.8m above the base of the Kaili Formation in the Wuliu-Zengjiayan section in Jianhe County, eastern Guizhou Province, China. This level coincides with the first appearance of the cosmopolitan oryctocephalid trilobite Oryctocephalus indicus. Secondary indicators near the GSSP include the ROECE negative delta 13C excursion, the simultaneous appearance of acanthomorphic acritarchs, and a transgressive phase of a major eustatic event. The Wuliu-Zengjiayan section is situated along a hill ridge which is about 0.5km northeast of Balang Village, Jianhe County, GuizhouProvince, China at a latitude of 26.74738333 N and a longitude of 108.4138333 E. The GSSP is located inside the Jianhe Natural Reserve of Paleontological Fossils and the Miaoling National Geopark."@en ;
+    rdfs:seeAlso <https://stratigraphy.org/gssps/wuliuan> ;
+    owl:versionInfo "2019" ;
+.

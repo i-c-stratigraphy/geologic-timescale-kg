@@ -1,0 +1,65 @@
+# baseURI: https://data.surroundaustralia.com/def/spatial
+# prefix: spatial
+
+@prefix : <https://data.surroundaustralia.com/def/spatial/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.surroundaustralia.com/def/spatial>
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  rdfs:label "SURROUND's Spatial Ontology" ;
+  rdfs:comment "This small ontology extends GeoSPARQL and other spatial ontologies for SURROUND's purposes." ;
+.
+
+:memberOf
+	a owl:ObjectProperty ;
+	rdfs:isDefinedBy <https://data.surroundaustralia.com/def/spatial> ;		
+	rdfs:comment """The inverse of rdfs:member, for spatial objects"""@en ;
+	rdfs:label "memberOf"@en ;
+  owl:inverseOf rdfs:member ;
+.
+<https://data.surroundaustralia.com/def/spatial/SpatialEntity>
+  a owl:Class ;
+  rdfs:label "Spatial Entity" ;
+  rdfs:comment "A top-level spatial class to group all spatial things" ;
+  rdfs:subClassOf owl:Thing ;
+.
+geo:Feature
+  a owl:Class ;
+  rdfs:label "Feature" ;
+  rdfs:subClassOf geo:SpatialObject ;
+.
+geo:FeatureCollection
+  a owl:Class ;
+  rdfs:label "Feature Collection" ;
+  rdfs:subClassOf geo:SpatialObjectCollection ;
+.
+geo:Geometry
+  a owl:Class ;
+  rdfs:label "Geometry" ;
+  rdfs:subClassOf geo:SpatialObject ;
+.
+geo:GeometryCollection
+  a owl:Class ;
+  rdfs:label "Geometry Collection" ;
+  rdfs:subClassOf geo:SpatialObjectCollection ;
+.
+geo:SpatialObject
+  a owl:Class ;
+  rdfs:label "Spatial Object" ;
+  rdfs:subClassOf <https://data.surroundaustralia.com/def/spatial/SpatialEntity> ;
+.
+geo:SpatialObjectCollection
+  a owl:Class ;
+  rdfs:label "Spatial Object Collection" ;
+  rdfs:subClassOf <https://data.surroundaustralia.com/def/spatial/SpatialEntity> ;
+.
+dcat:Dataset
+  a owl:Class ;
+  rdfs:label "Dataset" ;
+  rdfs:subClassOf <https://data.surroundaustralia.com/def/spatial/SpatialEntity> ;
+.

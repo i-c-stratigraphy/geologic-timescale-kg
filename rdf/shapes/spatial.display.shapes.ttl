@@ -1,0 +1,180 @@
+# baseURI: https://data.surroundaustralia.com/def/spatial.display.shapes
+# imports: http://datashapes.org/dash
+
+@prefix : <https://data.surroundaustralia.com/def/spatial.display.shapes/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.surroundaustralia.com/def/spatial.display.shapes>
+  a owl:Ontology ;
+  rdfs:comment "These Shapes support the display of spatial objects in SOP" ;
+  rdfs:label "Spatial Display Shapes" ;
+  owl:imports <http://datashapes.org/dash> ;
+.
+:create-geometry-classing
+  a sh:NodeShape ;
+  rdfs:comment "Creates geo:Geometry for objects of geo:hasGeometry, geo:hasCentroid & geo:hasBoundingBox" ;
+  rdfs:label "Creates geo:Geometry classes" ;
+  sh:rule [
+      a sh:TripleRule ;
+      sh:object geo:Geometry ;
+      sh:predicate rdf:type ;
+      sh:subject sh:this ;
+    ] ;
+  sh:targetObjectsOf geo:hasBoundingBox ;
+  sh:targetObjectsOf geo:hasCentroid ;
+  sh:targetObjectsOf geo:hasGeometry ;
+.
+:create-memberOf
+  a sh:NodeShape ;
+  rdfs:comment "Creates spatial:memberOf from rdfs:member for things in Spatial Object, Feature & Geometry Collections" ;
+  rdfs:label "Creates spatial:memberOf" ;
+  sh:rule [
+      a sh:TripleRule ;
+      sh:condition [
+          a sh:NodeShape ;
+          sh:property [
+              a sh:PropertyShape ;
+              sh:path rdfs:member ;
+              sh:maxCount 0 ;
+            ] ;
+        ] ;
+      sh:object sh:this ;
+      sh:predicate :memberOf ;
+      sh:subject [
+          sh:path rdfs:member ;
+        ] ;
+    ] ;
+  sh:targetClass geo:FeatureCollection ;
+  sh:targetClass geo:GeometryCollection ;
+  sh:targetClass geo:SpatialObjectCollection ;
+  sh:targetClass dcat:Dataset ;
+.
+:feature
+  a sh:NodeShape ;
+  rdfs:label "Feature Shape" ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path dcterms:identifier ;
+      sh:name "feature identifier" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:hasGeometry ;
+      dash:viewer dash:DetailsViewer ;
+      sh:class geo:Geometry ;
+      sh:name "has geometry" ;
+      sh:nodeKind sh:BlankNodeOrIRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:sfContains ;
+      sh:class geo:Feature ;
+      sh:name "contains" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:sfOverlaps ;
+      sh:class geo:Feature ;
+      sh:name "overlaps" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:sfWithin ;
+      sh:class geo:Feature ;
+      sh:name "within" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass geo:Feature ;
+.
+:geometry-shape
+  a sh:NodeShape ;
+  rdfs:label "Geometry Shape" ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:asDGGS ;
+      sh:name "as DGGS" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:asGeoJSON ;
+      sh:name "as GeoJSON" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:asWKT ;
+      sh:name "as WKT" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:targetClass geo:Geometry ;
+.
+:member
+  a sh:NodeShape ;
+  rdfs:label "member Shape" ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:member ;
+      sh:name "has member" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass geo:FeatureCollection ;
+  sh:targetClass geo:GeometryCollection ;
+  sh:targetClass geo:SpatialObjectCollection ;
+.
+:memberOf
+  a sh:NodeShape ;
+  rdfs:label "member of Shape" ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path :memberOf ;
+      sh:name "is member of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass geo:Feature ;
+  sh:targetClass geo:FeatureCollection ;
+  sh:targetClass geo:Geometry ;
+  sh:targetClass geo:GeometryCollection ;
+  sh:targetClass geo:SpatialObject ;
+  sh:targetClass geo:SpatialObjectCollection ;
+.
+:spatialObject
+  a sh:NodeShape ;
+  rdfs:label "Spatial Object Shape" ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:hasMetricArea ;
+      sh:name "has metric area" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:hasMetricLength ;
+      sh:name "has metric length" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:hasMetricPerimeterLength ;
+      sh:name "has metric perimeter length" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path geo:hasMetricVolume ;
+      sh:name "has metric volume" ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:targetClass geo:SpatialObject ;
+.

@@ -1,11 +1,18 @@
 # baseURI: http://w3id.org/geotime/manifest
+# imports: https://data.surroundaustralia.com/def/standards-baseline
 
+@prefix : <http://w3id.org/geotime/manifest/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix graphql: <http://datashapes.org/graphql#> .
 @prefix manifest: <http://w3id.org/geotime/manifest/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix swa: <http://topbraid.org/swa#> .
+@prefix sop: <http://surroundaustralia.com/ns/platform/> .
 @prefix sopbl: <https://data.surroundaustralia.com/def/standards-baseline#> .
+@prefix swa: <http://topbraid.org/swa#> .
 @prefix teamwork: <http://topbraid.org/teamwork#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -19,31 +26,7 @@
   rdfs:label "Geologic Timescale Knowledge Graph"@en ;
   owl:imports <https://data.surroundaustralia.com/def/standards-baseline> ;
 .
-
-manifest:kg 
-    a sopbl:ManagedGraph ;
-    rdfs:label "Geologic Timescale Knowledge Graph Combined Data"@en ;
-    dcterms:provenance "This datagraph is purely a combination of the individual Timescale datagraphs within this KG."@en ;
-    teamwork:rootClass owl:Thing ;
-    rdfs:comment "This datagraph is purely a combination of the individual Timescale datagraphs within this KG."@en ;
-    sopbl:localCopyPath "datagraphs/kg.ttl" ;
-    sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-    # sopbl:include "" ; -- nothing yet included
-    sopbl:proxy "http://w3id.org/geotime"^^xsd:anyURI ;
-.
-
-manifest:timescales-meta
-    a sopbl:ManagedGraph ;
-    rdfs:label "Timescales Metadata Datagraph"@en ;
-    dcterms:provenance "This datagraph is purpose built for the Geologic Timescale Knowledge Graph"@en ;
-    teamwork:rootClass owl:Thing ;
-    rdfs:comment "This datagraph contains metadata about all the Timescale dataset within the Geologic Timescale Knowledge Graph."@en ;
-    sopbl:localCopyPath "datagraphs/timescales-meta.ttl" ;
-    sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
-    sopbl:proxy "http://w3id.org/geotime/timescales-meta"^^xsd:anyURI ;
-.
-
-:dcterms
+manifest:dcterms
   a sopbl:ManagedGraph ;
   dcterms:provenance "Part of the well-known Dublin Core Metadata Initiative, presented here as an OWL ontology"@en ;
   dcterms:source "https://www.dublincore.org/specifications/dublin-core/dcmi-terms/"^^xsd:anyURI ;
@@ -53,4 +36,45 @@ manifest:timescales-meta
   sopbl:include "https://data.surroundaustralia.com/platform/shapes/ontprez"^^xsd:anyURI ;
   sopbl:localCopyPath "ontologies/dcterms.ttl" ;
   sopbl:proxy "http://purl.org/dc/terms"^^xsd:anyURI ;
+.
+manifest:gssps
+  a sopbl:ManagedGraph ;
+  graphql:publicClass geo:Feature ;
+  graphql:publicClass geo:FeatureCollection ;
+  graphql:publicClass geo:Geometry ;
+  graphql:publicClass dcat:Dataset ;
+  swa:defaultNamespace "https://stratigraphy.org/data/gssps/" ;
+  teamwork:rootClass owl:Thing ;
+  rdfs:label "GSSPs" ;
+  owl:imports sop:shapes ;
+  owl:imports <http://topbraid.org/tbgeo> ;
+  sopbl:assetname "gssps" ;
+  sopbl:calculated_tag <urn:x-evn-master:gssps> ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+  sopbl:entailWith <https://data.surroundaustralia.com/platform/shapes/graphqlconfig> ;
+  sopbl:include "https://data.surroundaustralia.com/def/ogcldapi.shapes"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/def/spatial"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/def/spatial.display.shapes"^^xsd:anyURI ;
+  sopbl:include "https://data.surroundaustralia.com/platform/shapes/ontprez"^^xsd:anyURI ;
+  sopbl:proxy "https://stratigraphy.org/data/gssps"^^xsd:anyURI ;
+.
+manifest:kg
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "This datagraph is purely a combination of the individual Timescale datagraphs within this KG."@en ;
+  teamwork:rootClass owl:Thing ;
+  rdfs:comment "This datagraph is purely a combination of the individual Timescale datagraphs within this KG."@en ;
+  rdfs:label "Geologic Timescale Knowledge Graph Combined Data"@en ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+  sopbl:localCopyPath "datagraphs/kg.ttl" ;
+  sopbl:proxy "http://w3id.org/geotime"^^xsd:anyURI ;
+.
+manifest:timescales-meta
+  a sopbl:ManagedGraph ;
+  dcterms:provenance "This datagraph is purpose built for the Geologic Timescale Knowledge Graph"@en ;
+  teamwork:rootClass owl:Thing ;
+  rdfs:comment "This datagraph contains metadata about all the Timescale dataset within the Geologic Timescale Knowledge Graph."@en ;
+  rdfs:label "Timescales Metadata Datagraph"@en ;
+  sopbl:edgType <http://teamwork.topbraidlive.org/datagraph/datagraphprojects#ProjectType> ;
+  sopbl:localCopyPath "datagraphs/timescales-meta.ttl" ;
+  sopbl:proxy "http://w3id.org/geotime/timescales-meta"^^xsd:anyURI ;
 .

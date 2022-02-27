@@ -1,0 +1,11 @@
+PREFIX gscn: <https://w3id.org/gso/geologiccontact/>
+
+
+SELECT ?gssp # (COUNT(?gssp) AS ?c)
+WHERE {
+	?gssp a gscn:GSSP .
+
+	FILTER NOT EXISTS {
+		?gssp geo:hasGeometry ?g
+	}
+}
