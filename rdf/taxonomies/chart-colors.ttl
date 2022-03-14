@@ -1,22 +1,28 @@
-@prefix : <http://resource.geosciml.org/classifier/ics/chart-colors/> .
-@prefix cs: <http://resource.geosciml.org/classifier/ics/chart-colors> .
+# baseURI: http://resource.geosciml.org/classifier/ics/chart-colours/
+
+@prefix : <http://resource.geosciml.org/classifier/ics/chart-colours/> .
+@prefix cs: <http://resource.geosciml.org/classifier/ics/chart-colours> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix isc: <http://resource.geosciml.org/classifier/ics/ischart/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cs: a skos:ConceptScheme ;
-    dcterms:created "2021-09-30"^^xsd:date ;
-    dcterms:creator <https://linked.data.gov.au/org/ics> ;
-    dcterms:description """A vocabulary of chronostratigraphic Eonothems, Erathems, Systems, Subsytems, Series, Subseries, Stages and their occifial ICS chart colors.
+<http://resource.geosciml.org/classifier/ics/chart-colours>
+  a skos:ConceptScheme ;
+  dcterms:created "2021-09-30"^^xsd:date ;
+  dcterms:creator <https://linked.data.gov.au/org/ics> ;
+  skos:definition """A vocabulary of chronostratigraphic Eonothems, Erathems, Systems, Subsytems, Series, Subseries, Stages and their occifial ICS chart colours.
     
- The Concepts in this vocabulary are derived from the ICS chronostratigraphic chart but give color notations (CMYK, RGB etc.) for each."""@en ;
-    dcterms:modified "2021-09-30"^^xsd:date ;
-    dcterms:provenance """CGMW/CCGM 2008, 2013:  The conversion from the reference CMYK values to the RGB codes utilizes Adobe® Illustrator® CS3’s color function of “Emulate Adobe® Illustrator® 6.0” (menu Edit / Color Settings / Settings).
+ The Concepts in this vocabulary are derived from the ICS chronostratigraphic chart but give colour notations (CMYK, RGB etc.) for each."""@en ;
+  dcterms:identifier "chart-colours" ;
+  dcterms:modified "2022-03-13"^^xsd:date ;
+  dcterms:provenance """CGMW/CCGM 2008, 2013:  The conversion from the reference CMYK values to the RGB codes utilizes Adobe® Illustrator® CS3’s colour function of “Emulate Adobe® Illustrator® 6.0” (menu Edit / colour Settings / Settings).
 
- Color composition by J.M. Pellé (BRGM, France) 2008 - Technical review by C. Vinnemann (BGR, Germany) 
+ colour composition by J.M. Pellé (BRGM, France) 2008 - Technical review by C. Vinnemann (BGR, Germany) 
  Quaternary colour schemes ammended Head et al. (SQS, incollab. with CCGM), 2020 .
 
  Import into this master workbook: K.M. Cohen (ICS graphic officer), 2021based on 2013 PDF source materials by CGMW and the Head et al. 2020 Episodes table amendment.
@@ -24,1170 +30,2304 @@ cs: a skos:ConceptScheme ;
  Includes 17 june - 29 July 2021 communication on Pennsylvanian subsystem CMYK colour (and an RGB conversion).
 
  Non-semantic version online at https://stratigraphy.org/chart."""@en ;
-    dcterms:title "International Chronostratigraphic Chart Colors"@en ;
-    owl:versionIRI isc:0.1 ;
-    owl:versionInfo "This is an early draft vocabulary - alpha." .
-
-<https://linked.data.gov.au/org/ics> a sdo:Organization ;
-    sdo:name "International Commission on Stratigraphy" ;
-    sdo:url "https://stratigraphy.org"^^xsd:anyURI .
+  skos:prefLabel "International Chronostratigraphic Chart Colours"@en ;
+  owl:versionIRI <http://resource.geosciml.org/classifier/ics/ischart/0.1> ;
+  owl:versionInfo "This is an early draft vocabulary - alpha." ;
+  skos:hasTopConcept isc:Aalenian ;
+  skos:hasTopConcept isc:Aeronian ;
+  skos:hasTopConcept isc:Albian ;
+  skos:hasTopConcept isc:Anisian ;
+  skos:hasTopConcept isc:Aptian ;
+  skos:hasTopConcept isc:Aquitanian ;
+  skos:hasTopConcept isc:Archean ;
+  skos:hasTopConcept isc:Artinskian ;
+  skos:hasTopConcept isc:Asselian ;
+  skos:hasTopConcept isc:Bajocian ;
+  skos:hasTopConcept isc:Barremian ;
+  skos:hasTopConcept isc:Bartonian ;
+  skos:hasTopConcept isc:Bashkirian ;
+  skos:hasTopConcept isc:Bathonian ;
+  skos:hasTopConcept isc:Berriasian ;
+  skos:hasTopConcept isc:Burdigalian ;
+  skos:hasTopConcept isc:Calabrian ;
+  skos:hasTopConcept isc:Callovian ;
+  skos:hasTopConcept isc:Calymmian ;
+  skos:hasTopConcept isc:Cambrian ;
+  skos:hasTopConcept isc:CambrianSeries2 ;
+  skos:hasTopConcept isc:CambrianStage10 ;
+  skos:hasTopConcept isc:CambrianStage2 ;
+  skos:hasTopConcept isc:CambrianStage3 ;
+  skos:hasTopConcept isc:CambrianStage4 ;
+  skos:hasTopConcept isc:Campanian ;
+  skos:hasTopConcept isc:Capitanian ;
+  skos:hasTopConcept isc:Carboniferous ;
+  skos:hasTopConcept isc:Carnian ;
+  skos:hasTopConcept isc:Cenomanian ;
+  skos:hasTopConcept isc:Cenozoic ;
+  skos:hasTopConcept isc:Changhsingian ;
+  skos:hasTopConcept isc:Chattian ;
+  skos:hasTopConcept isc:Chibanian ;
+  skos:hasTopConcept isc:Cisuralian ;
+  skos:hasTopConcept isc:Coniacian ;
+  skos:hasTopConcept isc:Cretaceous ;
+  skos:hasTopConcept isc:Cryogenian ;
+  skos:hasTopConcept isc:Danian ;
+  skos:hasTopConcept isc:Dapingian ;
+  skos:hasTopConcept isc:Darriwilian ;
+  skos:hasTopConcept isc:Devonian ;
+  skos:hasTopConcept isc:Drumian ;
+  skos:hasTopConcept isc:Ectasian ;
+  skos:hasTopConcept isc:Ediacaran ;
+  skos:hasTopConcept isc:Eifelian ;
+  skos:hasTopConcept isc:Emsian ;
+  skos:hasTopConcept isc:Eoarchean ;
+  skos:hasTopConcept isc:EoarcheanSystem ;
+  skos:hasTopConcept isc:Eocene ;
+  skos:hasTopConcept isc:Famennian ;
+  skos:hasTopConcept isc:Floian ;
+  skos:hasTopConcept isc:Fortunian ;
+  skos:hasTopConcept isc:Frasnian ;
+  skos:hasTopConcept isc:Furongian ;
+  skos:hasTopConcept isc:Gelasian ;
+  skos:hasTopConcept isc:Givetian ;
+  skos:hasTopConcept isc:Gorstian ;
+  skos:hasTopConcept isc:Greenlandian ;
+  skos:hasTopConcept isc:Guadalupian ;
+  skos:hasTopConcept isc:Guzhangian ;
+  skos:hasTopConcept isc:Gzhelian ;
+  skos:hasTopConcept isc:Hadean ;
+  skos:hasTopConcept isc:Hauterivian ;
+  skos:hasTopConcept isc:Hettangian ;
+  skos:hasTopConcept isc:Hirnantian ;
+  skos:hasTopConcept isc:Holocene ;
+  skos:hasTopConcept isc:Homerian ;
+  skos:hasTopConcept isc:Induan ;
+  skos:hasTopConcept isc:Jiangshanian ;
+  skos:hasTopConcept isc:Jurassic ;
+  skos:hasTopConcept isc:Kasimovian ;
+  skos:hasTopConcept isc:Katian ;
+  skos:hasTopConcept isc:Kimmeridgian ;
+  skos:hasTopConcept isc:Kungurian ;
+  skos:hasTopConcept isc:Ladinian ;
+  skos:hasTopConcept isc:Langhian ;
+  skos:hasTopConcept isc:Llandovery ;
+  skos:hasTopConcept isc:Lochkovian ;
+  skos:hasTopConcept isc:Lopingian ;
+  skos:hasTopConcept isc:LowerCretaceous ;
+  skos:hasTopConcept isc:LowerDevonian ;
+  skos:hasTopConcept isc:LowerHolocene ;
+  skos:hasTopConcept isc:LowerJurassic ;
+  skos:hasTopConcept isc:LowerMississippian ;
+  skos:hasTopConcept isc:LowerOrdovician ;
+  skos:hasTopConcept isc:LowerPennsylvanian ;
+  skos:hasTopConcept isc:LowerPleistocene ;
+  skos:hasTopConcept isc:LowerTriassic ;
+  skos:hasTopConcept isc:Ludfordian ;
+  skos:hasTopConcept isc:Ludlow ;
+  skos:hasTopConcept isc:Lutetian ;
+  skos:hasTopConcept isc:Maastrichtian ;
+  skos:hasTopConcept isc:Meghalayan ;
+  skos:hasTopConcept isc:Mesoarchean ;
+  skos:hasTopConcept isc:MesoarcheanSystem ;
+  skos:hasTopConcept isc:Mesoproterozoic ;
+  skos:hasTopConcept isc:Mesozoic ;
+  skos:hasTopConcept isc:Messinian ;
+  skos:hasTopConcept isc:Miaolingian ;
+  skos:hasTopConcept isc:MiddleDevonian ;
+  skos:hasTopConcept isc:MiddleHolocene ;
+  skos:hasTopConcept isc:MiddleJurassic ;
+  skos:hasTopConcept isc:MiddleMississippian ;
+  skos:hasTopConcept isc:MiddleOrdovician ;
+  skos:hasTopConcept isc:MiddlePennsylvanian ;
+  skos:hasTopConcept isc:MiddlePleistocene ;
+  skos:hasTopConcept isc:MiddleTriassic ;
+  skos:hasTopConcept isc:Miocene ;
+  skos:hasTopConcept isc:Mississippian ;
+  skos:hasTopConcept isc:Moscovian ;
+  skos:hasTopConcept isc:Neoarchean ;
+  skos:hasTopConcept isc:NeoarcheanSystem ;
+  skos:hasTopConcept isc:Neogene ;
+  skos:hasTopConcept isc:Neoproterozoic ;
+  skos:hasTopConcept isc:Norian ;
+  skos:hasTopConcept isc:Northgrippian ;
+  skos:hasTopConcept isc:Olenekian ;
+  skos:hasTopConcept isc:Oligocene ;
+  skos:hasTopConcept isc:Ordovician ;
+  skos:hasTopConcept isc:Orosirian ;
+  skos:hasTopConcept isc:Oxfordian ;
+  skos:hasTopConcept isc:Paibian ;
+  skos:hasTopConcept isc:Paleoarchean ;
+  skos:hasTopConcept isc:PaleoarcheanSystem ;
+  skos:hasTopConcept isc:Paleocene ;
+  skos:hasTopConcept isc:Paleogene ;
+  skos:hasTopConcept isc:Paleoproterozoic ;
+  skos:hasTopConcept isc:Paleozoic ;
+  skos:hasTopConcept isc:Pennsylvanian ;
+  skos:hasTopConcept isc:Permian ;
+  skos:hasTopConcept isc:Phanerozoic ;
+  skos:hasTopConcept isc:Piacenzian ;
+  skos:hasTopConcept isc:Pleistocene ;
+  skos:hasTopConcept isc:Pliensbachian ;
+  skos:hasTopConcept isc:Pliocene ;
+  skos:hasTopConcept isc:Pragian ;
+  skos:hasTopConcept isc:Precambrian ;
+  skos:hasTopConcept isc:Priabonian ;
+  skos:hasTopConcept isc:Pridoli ;
+  skos:hasTopConcept isc:PridoliStage ;
+  skos:hasTopConcept isc:Proterozoic ;
+  skos:hasTopConcept isc:Quaternary ;
+  skos:hasTopConcept isc:Rhaetian ;
+  skos:hasTopConcept isc:Rhuddanian ;
+  skos:hasTopConcept isc:Rhyacian ;
+  skos:hasTopConcept isc:Roadian ;
+  skos:hasTopConcept isc:Rupelian ;
+  skos:hasTopConcept isc:Sakmarian ;
+  skos:hasTopConcept isc:Sandbian ;
+  skos:hasTopConcept isc:Santonian ;
+  skos:hasTopConcept isc:Selandian ;
+  skos:hasTopConcept isc:Serpukhovian ;
+  skos:hasTopConcept isc:Serravallian ;
+  skos:hasTopConcept isc:Sheinwoodian ;
+  skos:hasTopConcept isc:Siderian ;
+  skos:hasTopConcept isc:Silurian ;
+  skos:hasTopConcept isc:Sinemurian ;
+  skos:hasTopConcept isc:Statherian ;
+  skos:hasTopConcept isc:Stenian ;
+  skos:hasTopConcept isc:Telychian ;
+  skos:hasTopConcept isc:Terreneuvian ;
+  skos:hasTopConcept isc:Thanetian ;
+  skos:hasTopConcept isc:Tithonian ;
+  skos:hasTopConcept isc:Toarcian ;
+  skos:hasTopConcept isc:Tonian ;
+  skos:hasTopConcept isc:Tortonian ;
+  skos:hasTopConcept isc:Tournaisian ;
+  skos:hasTopConcept isc:Tremadocian ;
+  skos:hasTopConcept isc:Triassic ;
+  skos:hasTopConcept isc:Turonian ;
+  skos:hasTopConcept isc:UpperCretaceous ;
+  skos:hasTopConcept isc:UpperDevonian ;
+  skos:hasTopConcept isc:UpperHolocene ;
+  skos:hasTopConcept isc:UpperJurassic ;
+  skos:hasTopConcept isc:UpperMississippian ;
+  skos:hasTopConcept isc:UpperOrdovician ;
+  skos:hasTopConcept isc:UpperPennsylvanian ;
+  skos:hasTopConcept isc:UpperPleistocene ;
+  skos:hasTopConcept isc:UpperPleistoceneStage ;
+  skos:hasTopConcept isc:UpperTriassic ;
+  skos:hasTopConcept isc:Valanginian ;
+  skos:hasTopConcept isc:Visean ;
+  skos:hasTopConcept isc:Wenlock ;
+  skos:hasTopConcept isc:Wordian ;
+  skos:hasTopConcept isc:Wuchiapingian ;
+  skos:hasTopConcept isc:Wuliuan ;
+  skos:hasTopConcept isc:Ypresian ;
+  skos:hasTopConcept isc:Zanclean ;
+.
 
 :CMYK
-    a owl:Datatype ;
-    dcterms:title "CMYK color model" ;
-    dcterms:description """The CMYK color model (also known as process color, or four color) is a subtractive color model, based on the CMY color model, used in color printing, and is also used to describe the printing process itself. CMYK refers to the four ink plates used in some color printing: cyan, magenta, yellow, and key (black).
+  a owl:Datatype ;
+  dcterms:description """The CMYK colour model (also known as process colour, or four colour) is a subtractive colour model, based on the CMY colour model, used in colour printing, and is also used to describe the printing process itself. CMYK refers to the four ink plates used in some colour printing: cyan, magenta, yellow, and key (black).
 
-This datatype uses a microformat of "{C}/{M}/{Y}/{K}" with integer values for {C}, {M} {Y} & {K}."""@en ;
-    dcterms:source <https://en.wikipedia.org/wiki/CMYK_color_model> ;
-.    
-
+This datatype uses a microformat of \"{C}/{M}/{Y}/{K}\" with integer values for {C}, {M} {Y} & {K}."""@en ;
+  dcterms:source <https://en.wikipedia.org/wiki/CMYK_colour_model> ;
+  dcterms:title "CMYK colour model" ;
+.
 :RGB
-    a owl:Datatype ;
-    dcterms:title "CMYK color notation" ;
-    dcterms:description """The RGB color model is an additive color model in which the red, green, and blue primary colors of light are added together in various ways to reproduce a broad array of colors. The name of the model comes from the initials of the three additive primary colors, red, green, and blue. 
+  a owl:Datatype ;
+  dcterms:description """The RGB colour model is an additive colour model in which the red, green, and blue primary colours of light are added together in various ways to reproduce a broad array of colours. The name of the model comes from the initials of the three additive primary colours, red, green, and blue. 
 
-This datatype uses a microformat of "{R}/{G}/{B}" with integer values for {R}, {G} & {B} between 0 and 255."""@en ;
-    dcterms:source <https://en.wikipedia.org/wiki/RGB_color_model> ;
+This datatype uses a microformat of \"{R}/{G}/{B}\" with integer values for {R}, {G} & {B} between 0 and 255."""@en ;
+  dcterms:source <https://en.wikipedia.org/wiki/RGB_colour_model> ;
+  dcterms:title "CMYK colour notation" ;
 .
-
 :RGBHex
-    a owl:Datatype ;
-    dcterms:title "CMYK color notation" ;
-    dcterms:description """An 8-bit per channel, hexidecimal representation of RGB colors.
+  a owl:Datatype ;
+  dcterms:description """An 8-bit per channel, hexidecimal representation of RGB colours.
     
-This datatype uses a microformat of "#{R}{G}{B}" with hexidecimal value for {R}, {G} & {B} between 00 and FF."""@en ;
+This datatype uses a microformat of \"#{R}{G}{B}\" with hexidecimal value for {R}, {G} & {B} between 00 and FF."""@en ;
+  dcterms:title "CMYK colour notation" ;
 .
-
-isc:Aalenian a skos:Concept ;
-    skos:notation "40/0/5/0"^^:CMYK,
-        "154/217/221"^^:RGB,
-        "#9AD9DD"^^:RGBHex ;
-    skos:prefLabel "Aalenian"@en .
-
-isc:Aeronian a skos:Concept ;
-    skos:notation "30/0/20/0"^^:CMYK,
-        "179/225/194"^^:RGB,
-        "#B3E1C2"^^:RGBHex ;
-    skos:prefLabel "Aeronian"@en .
-
-isc:Albian a skos:Concept ;
-    skos:notation "20/0/40/0"^^:CMYK,
-        "204/234/151"^^:RGB,
-        "#CCEA97"^^:RGBHex ;
-    skos:prefLabel "Albian"@en .
-
-isc:Anisian a skos:Concept ;
-    skos:notation "25/50/0/0"^^:CMYK,
-        "188/117/183"^^:RGB,
-        "#BC75B7"^^:RGBHex ;
-    skos:prefLabel "Anisian"@en .
-
-isc:Aptian a skos:Concept ;
-    skos:notation "25/0/45/0"^^:CMYK,
-        "191/228/138"^^:RGB,
-        "#BFE48A"^^:RGBHex ;
-    skos:prefLabel "Aptian"@en .
-
-isc:Aquitanian a skos:Concept ;
-    skos:notation "0/0/80/0"^^:CMYK,
-        "255/255/51"^^:RGB,
-        "#FFFF33"^^:RGBHex ;
-    skos:prefLabel "Aquitanian"@en .
-
-isc:Archean a skos:Concept ;
-    skos:notation "0/100/0/0"^^:CMYK,
-        "240/4/127"^^:RGB,
-        "#F0047F"^^:RGBHex ;
-    skos:prefLabel "Archean"@en .
-
-isc:Artinskian a skos:Concept ;
-    skos:notation "10/50/45/0"^^:CMYK,
-        "227/123/104"^^:RGB,
-        "#E37B68"^^:RGBHex ;
-    skos:prefLabel "Artinskian"@en .
-
-isc:Asselian a skos:Concept ;
-    skos:notation "10/60/55/0"^^:CMYK,
-        "227/99/80"^^:RGB,
-        "#E36350"^^:RGBHex ;
-    skos:prefLabel "Asselian"@en .
-
-isc:Bajocian a skos:Concept ;
-    skos:notation "35/0/5/0"^^:CMYK,
-        "166/221/224"^^:RGB,
-        "#A6DDE0"^^:RGBHex ;
-    skos:prefLabel "Bajocian"@en .
-
-isc:Barremian a skos:Concept ;
-    skos:notation "30/0/50/0"^^:CMYK,
-        "179/223/127"^^:RGB,
-        "#B3DF7F"^^:RGBHex ;
-    skos:prefLabel "Barremian"@en .
-
-isc:Bartonian a skos:Concept ;
-    skos:notation "0/25/35/0"^^:CMYK,
-        "253/192/145"^^:RGB,
-        "#FDC091"^^:RGBHex ;
-    skos:prefLabel "Bartonian"@en .
-
-isc:Bashkirian a skos:Concept ;
-    skos:notation "40/10/20/0"^^:CMYK,
-        "153/194/181"^^:RGB,
-        "#99C2B5"^^:RGBHex ;
-    skos:prefLabel "Bashkirian"@en .
-
-isc:Bathonian a skos:Concept ;
-    skos:notation "30/0/5/0"^^:CMYK,
-        "179/226/227"^^:RGB,
-        "#B3E2E3"^^:RGBHex ;
-    skos:prefLabel "Bathonian"@en .
-
-isc:Berriasian a skos:Concept ;
-    skos:notation "45/0/65/0"^^:CMYK,
-        "140/205/96"^^:RGB,
-        "#8CCD60"^^:RGBHex ;
-    skos:prefLabel "Berriasian"@en .
-
-isc:Burdigalian a skos:Concept ;
-    skos:notation "0/0/75/0"^^:CMYK,
-        "255/255/65"^^:RGB,
-        "#FFFF41"^^:RGBHex ;
-    skos:prefLabel "Burdigalian"@en .
-
-isc:Calabrian a skos:Concept ;
-    skos:notation "0/5/25/0"^^:CMYK,
-        "255/242/186"^^:RGB,
-        "#FFF2BA"^^:RGBHex ;
-    skos:prefLabel "Calabrian"@en .
-
-isc:Callovian a skos:Concept ;
-    skos:notation "25/0/5/0"^^:CMYK,
-        "191/231/229"^^:RGB,
-        "#BFE7E5"^^:RGBHex ;
-    skos:prefLabel "Callovian"@en .
-
-isc:Calymmian a skos:Concept ;
-    skos:notation "0/24/45/0"^^:CMYK,
-        "253/192/122"^^:RGB,
-        "#FDC07A"^^:RGBHex ;
-    skos:prefLabel "Calymmian"@en .
-
-isc:Cambrian a skos:Concept ;
-    skos:notation "50/20/65/0"^^:CMYK,
-        "127/160/86"^^:RGB,
-        "#7FA056"^^:RGBHex ;
-    skos:prefLabel "Cambrian"@en .
-
-isc:CambrianSeries2 a skos:Concept ;
-    skos:notation "40/10/50/0"^^:CMYK,
-        "153/192/120"^^:RGB,
-        "#99C078"^^:RGBHex ;
-    skos:prefLabel "Series 2"@en .
-
-isc:CambrianStage10 a skos:Concept ;
-    skos:notation "10/0/20/0"^^:CMYK,
-        "230/245/201"^^:RGB,
-        "#E6F5C9"^^:RGBHex ;
-    skos:prefLabel "Stage 10"@en .
-
-isc:CambrianStage2 a skos:Concept ;
-    skos:notation "35/15/45/0"^^:CMYK,
-        "166/186/128"^^:RGB,
-        "#A6BA80"^^:RGBHex ;
-    skos:prefLabel "Stage 2"@en .
-
-isc:CambrianStage3 a skos:Concept ;
-    skos:notation "35/10/45/0"^^:CMYK,
-        "166/197/131"^^:RGB,
-        "#A6C583"^^:RGBHex ;
-    skos:prefLabel "Stage 3"@en .
-
-isc:CambrianStage4 a skos:Concept ;
-    skos:notation "30/10/40/0"^^:CMYK,
-        "179/202/142"^^:RGB,
-        "#B3CA8E"^^:RGBHex ;
-    skos:prefLabel "Stage 4"@en .
-
-isc:Campanian a skos:Concept ;
-    skos:notation "10/0/50/0"^^:CMYK,
-        "230/244/127"^^:RGB,
-        "#E6F47F"^^:RGBHex ;
-    skos:prefLabel "Campanian"@en .
-
-isc:Capitanian a skos:Concept ;
-    skos:notation "0/40/35/0"^^:CMYK,
-        "251/154/133"^^:RGB,
-        "#FB9A85"^^:RGBHex ;
-    skos:prefLabel "Capitanian"@en .
-
-isc:Carboniferous a skos:Concept ;
-    skos:notation "60/15/30/0"^^:CMYK,
-        "103/165/153"^^:RGB,
-        "#67A599"^^:RGBHex ;
-    skos:prefLabel "Carboniferous"@en .
-
-isc:Carnian a skos:Concept ;
-    skos:notation "20/35/0/0"^^:CMYK,
-        "201/155/203"^^:RGB,
-        "#C99BCB"^^:RGBHex ;
-    skos:prefLabel "Carnian"@en .
-
-isc:Cenomanian a skos:Concept ;
-    skos:notation "30/0/70/0"^^:CMYK,
-        "179/222/83"^^:RGB,
-        "#B3DE53"^^:RGBHex ;
-    skos:prefLabel "Cenomanian"@en .
-
-isc:Cenozoic a skos:Concept ;
-    skos:notation "40/0/5/0"^^:CMYK,
-        "242/249/29"^^:RGB,
-        "#F2F91D"^^:RGBHex ;
-    skos:prefLabel "Cenozoic"@en .
-
-isc:Changhsingian a skos:Concept ;
-    skos:notation "0/25/20/0"^^:CMYK,
-        "252/192/178"^^:RGB,
-        "#FCC0B2"^^:RGBHex ;
-    skos:prefLabel "Changhsingian"@en .
-
-isc:Chattian a skos:Concept ;
-    skos:notation "0/10/30/0"^^:CMYK,
-        "254/230/170"^^:RGB,
-        "#FEE6AA"^^:RGBHex ;
-    skos:prefLabel "Chattian"@en .
-
-isc:Chibanian a skos:Concept ;
-    skos:notation "0/5/20/0"^^:CMYK,
-        "255/242/199"^^:RGB,
-        "#FFF2C7"^^:RGBHex ;
-    skos:prefLabel "Chibanian"@en .
-
-isc:Cisuralian a skos:Concept ;
-    skos:notation "5/65/60/0"^^:CMYK,
-        "239/88/69"^^:RGB,
-        "#EF5845"^^:RGBHex ;
-    skos:prefLabel "Cisuralian"@en .
-
-isc:Coniacian a skos:Concept ;
-    skos:notation "20/0/60/0"^^:CMYK,
-        "204/233/104"^^:RGB,
-        "#CCE968"^^:RGBHex ;
-    skos:prefLabel "Coniacian"@en .
-
-isc:Cretaceous a skos:Concept ;
-    skos:notation "50/0/75/0"^^:CMYK,
-        "127/198/78"^^:RGB,
-        "#7FC64E"^^:RGBHex ;
-    skos:prefLabel "Cretaceous"@en .
-
-isc:Cryogenian a skos:Concept ;
-    skos:notation "0/20/60/0"^^:CMYK,
-        "254/204/92"^^:RGB,
-        "#FECC5C"^^:RGBHex ;
-    skos:prefLabel "Cryogenian"@en .
-
-isc:Danian a skos:Concept ;
-    skos:notation "0/30/55/0"^^:CMYK,
-        "253/180/98"^^:RGB,
-        "#FDB462"^^:RGBHex ;
-    skos:prefLabel "Danian"@en .
-
-isc:Dapingian a skos:Concept ;
-    skos:notation "60/0/40/0"^^:CMYK,
-        "102/192/146"^^:RGB,
-        "#66C092"^^:RGBHex ;
-    skos:prefLabel "Dapingian"@en .
-
-isc:Darriwilian a skos:Concept ;
-    skos:notation "55/0/35/0"^^:CMYK,
-        "116/198/156"^^:RGB,
-        "#74C69C"^^:RGBHex ;
-    skos:prefLabel "Darriwilian"@en .
-
-isc:Devonian a skos:Concept ;
-    skos:notation "20/40/75/0"^^:CMYK,
-        "203/140/55"^^:RGB,
-        "#CB8C37"^^:RGBHex ;
-    skos:prefLabel "Devonian"@en .
-
-isc:Drumian a skos:Concept ;
-    skos:notation "25/5/35/0"^^:CMYK,
-        "191/217/157"^^:RGB,
-        "#BFD99D"^^:RGBHex ;
-    skos:prefLabel "Drumian"@en .
-
-isc:Ectasian a skos:Concept ;
-    skos:notation "0/20/40/0"^^:CMYK,
-        "253/204/138"^^:RGB,
-        "#FDCC8A"^^:RGBHex ;
-    skos:prefLabel "Ectasian"@en .
-
-isc:Ediacaran a skos:Concept ;
-    skos:notation "0/15/55/0"^^:CMYK,
-        "254/217/106"^^:RGB,
-        "#FED96A"^^:RGBHex ;
-    skos:prefLabel "Ediacaran"@en .
-
-isc:Eifelian a skos:Concept ;
-    skos:notation "5/15/50/0"^^:CMYK,
-        "241/213/118"^^:RGB,
-        "#F1D576"^^:RGBHex ;
-    skos:prefLabel "Eifelian"@en .
-
-isc:Emsian a skos:Concept ;
-    skos:notation "10/15/50/0"^^:CMYK,
-        "229/208/117"^^:RGB,
-        "#E5D075"^^:RGBHex ;
-    skos:prefLabel "Emsian"@en .
-
-isc:Eoarchean a skos:Concept ;
-    skos:notation "10/100/0/0"^^:CMYK,
-        "218/3/127"^^:RGB,
-        "#DA037F"^^:RGBHex ;
-    skos:prefLabel "Eoarchean"@en .
-
-isc:EoarcheanSystem a skos:Concept ;
-    skos:notation "5/90/0/0"^^:CMYK,
-        "230/29/140"^^:RGB,
-        "#E61D8C"^^:RGBHex ;
-    skos:prefLabel "unnamed4"@en .
-
-isc:Eocene a skos:Concept ;
-    skos:notation "0/30/50/0"^^:CMYK,
-        "253/180/108"^^:RGB,
-        "#FDB46C"^^:RGBHex ;
-    skos:prefLabel "Eocene"@en .
-
-isc:Famennian a skos:Concept ;
-    skos:notation "5/5/20/0"^^:CMYK,
-        "242/237/179"^^:RGB,
-        "#F2EDB3"^^:RGBHex ;
-    skos:prefLabel "Famennian"@en .
-
-isc:Floian a skos:Concept ;
-    skos:notation "75/0/45/0"^^:CMYK,
-        "65/176/135"^^:RGB,
-        "#41B087"^^:RGBHex ;
-    skos:prefLabel "Floian"@en .
-
-isc:Fortunian a skos:Concept ;
-    skos:notation "40/15/50/0"^^:CMYK,
-        "153/181/117"^^:RGB,
-        "#99B575"^^:RGBHex ;
-    skos:prefLabel "Fortunian"@en .
-
-isc:Frasnian a skos:Concept ;
-    skos:notation "5/5/30/0"^^:CMYK,
-        "242/237/173"^^:RGB,
-        "#F2EDAD"^^:RGBHex ;
-    skos:prefLabel "Frasnian"@en .
-
-isc:Furongian a skos:Concept ;
-    skos:notation "30/0/40/0"^^:CMYK,
-        "179/224/149"^^:RGB,
-        "#B3E095"^^:RGBHex ;
-    skos:prefLabel "Furongian"@en .
-
-isc:Gelasian a skos:Concept ;
-    skos:notation "0/5/30/0"^^:CMYK,
-        "255/237/179"^^:RGB,
-        "#FFEDB3"^^:RGBHex ;
-    skos:prefLabel "Gelasian"@en .
-
-isc:Givetian a skos:Concept ;
-    skos:notation "5/10/45/0"^^:CMYK,
-        "241/225/133"^^:RGB,
-        "#F1E185"^^:RGBHex ;
-    skos:prefLabel "Givetian"@en .
-
-isc:Gorstian a skos:Concept ;
-    skos:notation "20/0/10/0"^^:CMYK,
-        "204/236/221"^^:RGB,
-        "#CCECDD"^^:RGBHex ;
-    skos:prefLabel "Gorstian"@en .
-
-isc:Greenlandian a skos:Concept ;
-    skos:notation "0/10/15/0"^^:CMYK,
-        "254/236/219"^^:RGB,
-        "#FEECDB"^^:RGBHex ;
-    skos:prefLabel "Greenlandian"@en .
-
-isc:Guadalupian a skos:Concept ;
-    skos:notation "0/55/50/0"^^:CMYK,
-        "251/116/92"^^:RGB,
-        "#FB745C"^^:RGBHex ;
-    skos:prefLabel "Guadalupian"@en .
-
-isc:Guzhangian a skos:Concept ;
-    skos:notation "20/5/30/0"^^:CMYK,
-        "204/223/170"^^:RGB,
-        "#CCDFAA"^^:RGBHex ;
-    skos:prefLabel "Guzhangian"@en .
-
-isc:Gzhelian a skos:Concept ;
-    skos:notation "20/10/15/0"^^:CMYK,
-        "204/212/199"^^:RGB,
-        "#CCD4C7"^^:RGBHex ;
-    skos:prefLabel "Gzhelian"@en .
-
-isc:Hadean a skos:Concept ;
-    skos:notation "30/100/0/0"^^:CMYK,
-        "174/2/126"^^:RGB,
-        "#AE027E"^^:RGBHex ;
-    skos:prefLabel "Hadean"@en .
-
-isc:Hauterivian a skos:Concept ;
-    skos:notation "35/0/55/0"^^:CMYK,
-        "166/217/117"^^:RGB,
-        "#A6D975"^^:RGBHex ;
-    skos:prefLabel "Hauterivian"@en .
-
-isc:Hettangian a skos:Concept ;
-    skos:notation "70/5/0/0"^^:CMYK,
-        "78/179/211"^^:RGB,
-        "#4EB3D3"^^:RGBHex ;
-    skos:prefLabel "Hettangian"@en .
-
-isc:Hirnantian a skos:Concept ;
-    skos:notation "35/0/30/0"^^:CMYK,
-        "166/219/171"^^:RGB,
-        "#A6DBAB"^^:RGBHex ;
-    skos:prefLabel "Hirnantian"@en .
-
-isc:Holocene a skos:Concept ;
-    skos:notation "0/10/20/0"^^:CMYK,
-        "254/235/210"^^:RGB,
-        "#FEEBD2"^^:RGBHex ;
-    skos:prefLabel "Holocene"@en .
-
-isc:Homerian a skos:Concept ;
-    skos:notation "20/0/15/0"^^:CMYK,
-        "204/235/209"^^:RGB,
-        "#CCEBD1"^^:RGBHex ;
-    skos:prefLabel "Homerian"@en .
-
-isc:Induan a skos:Concept ;
-    skos:notation "35/70/0/0"^^:CMYK,
-        "164/70/159"^^:RGB,
-        "#A4469F"^^:RGBHex ;
-    skos:prefLabel "Induan"@en .
-
-isc:Jiangshanian a skos:Concept ;
-    skos:notation "15/0/25/0"^^:CMYK,
-        "217/240/187"^^:RGB,
-        "#D9F0BB"^^:RGBHex ;
-    skos:prefLabel "Jiangshanian"@en .
-
-isc:Jurassic a skos:Concept ;
-    skos:notation "80/0/5/0"^^:CMYK,
-        "52/178/201"^^:RGB,
-        "#34B2C9"^^:RGBHex ;
-    skos:prefLabel "Jurassic"@en .
-
-isc:Kasimovian a skos:Concept ;
-    skos:notation "25/10/15/0"^^:CMYK,
-        "191/208/197"^^:RGB,
-        "#BFD0C5"^^:RGBHex ;
-    skos:prefLabel "Kasimovian"@en .
-
-isc:Katian a skos:Concept ;
-    skos:notation "40/0/35/0"^^:CMYK,
-        "153/214/159"^^:RGB,
-        "#99D69F"^^:RGBHex ;
-    skos:prefLabel "Katian"@en .
-
-isc:Kimmeridgian a skos:Concept ;
-    skos:notation "20/0/0/0"^^:CMYK,
-        "204/236/244"^^:RGB,
-        "#CCECF4"^^:RGBHex ;
-    skos:prefLabel "Kimmeridgian"@en .
-
-isc:Kungurian a skos:Concept ;
-    skos:notation "10/45/40/0"^^:CMYK,
-        "227/135/118"^^:RGB,
-        "#E38776"^^:RGBHex ;
-    skos:prefLabel "Kungurian"@en .
-
-isc:Ladinian a skos:Concept ;
-    skos:notation "20/45/0/0"^^:CMYK,
-        "201/131/191"^^:RGB,
-        "#C983BF"^^:RGBHex ;
-    skos:prefLabel "Ladinian"@en .
-
-isc:Langhian a skos:Concept ;
-    skos:notation "0/0/70/0"^^:CMYK,
-        "255/255/77"^^:RGB,
-        "#FFFF4D"^^:RGBHex ;
-    skos:prefLabel "Langhian"@en .
-
-isc:Llandovery a skos:Concept ;
-    skos:notation "40/0/25/0"^^:CMYK,
-        "153/215/179"^^:RGB,
-        "#99D7B3"^^:RGBHex ;
-    skos:prefLabel "Llandovery"@en .
-
-isc:Lochkovian a skos:Concept ;
-    skos:notation "10/25/60/0"^^:CMYK,
-        "229/183/90"^^:RGB,
-        "#E5B75A"^^:RGBHex ;
-    skos:prefLabel "Lochkovian"@en .
-
-isc:Lopingian a skos:Concept ;
-    skos:notation "0/35/30/0"^^:CMYK,
-        "251/167/148"^^:RGB,
-        "#FBA794"^^:RGBHex ;
-    skos:prefLabel "Lopingian"@en .
-
-isc:LowerCretaceous a skos:Concept ;
-    skos:notation "45/0/70/0"^^:CMYK,
-        "140/205/87"^^:RGB,
-        "#8CCD57"^^:RGBHex ;
-    skos:prefLabel "Lower Cretaceous"@en .
-
-isc:LowerDevonian a skos:Concept ;
-    skos:notation "10/30/65/0"^^:CMYK,
-        "229/172/77"^^:RGB,
-        "#E5AC4D"^^:RGBHex ;
-    skos:prefLabel "Lower Devonian"@en .
-
-isc:LowerHolocene a skos:Concept ;
-    skos:notation "0/10/15/0"^^:CMYK,
-        "254/236/219"^^:RGB,
-        "#FEECDB"^^:RGBHex ;
-    skos:prefLabel "Lower/Early Holocene"@en .
-
-isc:LowerJurassic a skos:Concept ;
-    skos:notation "75/5/0/0"^^:CMYK,
-        "66/174/208"^^:RGB,
-        "#42AED0"^^:RGBHex ;
-    skos:prefLabel "Lower Jurassic"@en .
-
-isc:LowerMississippian a skos:Concept ;
-    skos:notation "45/15/55/0"^^:CMYK,
-        "128/171/108"^^:RGB,
-        "#80AB6C"^^:RGBHex ;
-    skos:prefLabel "Lower Mississippian"@en .
-
-isc:LowerOrdovician a skos:Concept ;
-    skos:notation "90/0/60/0"^^:CMYK,
-        "26/157/111"^^:RGB,
-        "#1A9D6F"^^:RGBHex ;
-    skos:prefLabel "Lower Ordovician"@en .
-
-isc:LowerPennsylvanian a skos:Concept ;
-    skos:notation "45/10/20/0"^^:CMYK,
-        "140/190/180"^^:RGB,
-        "#8CBEB4"^^:RGBHex ;
-    skos:prefLabel "Lower Pennsylvanian"@en .
-
-isc:LowerPleistocene a skos:Concept ;
-    skos:notation "0/5/35/0"^^:CMYK,
-        "255/240/185"^^:RGB,
-        "#FFF0B9"^^:RGBHex ;
-    skos:prefLabel "Lower/Early Pleistocene"@en .
-
-isc:LowerTriassic a skos:Concept ;
-    skos:notation "40/75/0/0"^^:CMYK,
-        "152/57/153"^^:RGB,
-        "#983999"^^:RGBHex ;
-    skos:prefLabel "Lower Triassic"@en .
-
-isc:Ludfordian a skos:Concept ;
-    skos:notation "15/0/10/0"^^:CMYK,
-        "217/240/223"^^:RGB,
-        "#D9F0DF"^^:RGBHex ;
-    skos:prefLabel "Ludfordian"@en .
-
-isc:Ludlow a skos:Concept ;
-    skos:notation "25/0/15/0"^^:CMYK,
-        "191/230/207"^^:RGB,
-        "#BFE6CF"^^:RGBHex ;
-    skos:prefLabel "Ludlow"@en .
-
-isc:Lutetian a skos:Concept ;
-    skos:notation "0/30/40/0"^^:CMYK,
-        "253/180/130"^^:RGB,
-        "#FDB482"^^:RGBHex ;
-    skos:prefLabel "Lutetian"@en .
-
-isc:Maastrichtian a skos:Concept ;
-    skos:notation "5/0/45/0"^^:CMYK,
-        "242/250/140"^^:RGB,
-        "#F2FA8C"^^:RGBHex ;
-    skos:prefLabel "Maastrichtian"@en .
-
-isc:Meghalayan a skos:Concept ;
-    skos:notation "0/10/5/0"^^:CMYK,
-        "253/237/236"^^:RGB,
-        "#FDEDEC"^^:RGBHex ;
-    skos:prefLabel "Meghalayan"@en .
-
-isc:Mesoarchean a skos:Concept ;
-    skos:notation "0/60/5/0"^^:CMYK,
-        "247/104/169"^^:RGB,
-        "#F768A9"^^:RGBHex ;
-    skos:prefLabel "Mesoarchean"@en .
-
-isc:MesoarcheanSystem a skos:Concept ;
-    skos:notation "0/50/5/0"^^:CMYK,
-        "248/129/181"^^:RGB,
-        "#F881B5"^^:RGBHex ;
-    skos:prefLabel "unnamed2"@en .
-
-isc:Mesoproterozoic a skos:Concept ;
-    skos:notation "0/30/55/0"^^:CMYK,
-        "253/180/98"^^:RGB,
-        "#FDB462"^^:RGBHex ;
-    skos:prefLabel "Mesoproterozoic"@en .
-
-isc:Mesozoic a skos:Concept ;
-    skos:notation "60/0/10/0"^^:CMYK,
-        "103/197/202"^^:RGB,
-        "#67C5CA"^^:RGBHex ;
-    skos:prefLabel "Mesozoic"@en .
-
-isc:Messinian a skos:Concept ;
-    skos:notation "0/0/55/0"^^:CMYK,
-        "255/255/115"^^:RGB,
-        "#FFFF73"^^:RGBHex ;
-    skos:prefLabel "Messinian"@en .
-
-isc:Miaolingian a skos:Concept ;
-    skos:notation "35/5/45/0"^^:CMYK,
-        "166/207/134"^^:RGB,
-        "#A6CF86"^^:RGBHex ;
-    skos:prefLabel "Miaolingian"@en .
-
-isc:MiddleDevonian a skos:Concept ;
-    skos:notation "5/20/55/0"^^:CMYK,
-        "241/200/104"^^:RGB,
-        "#F1C868"^^:RGBHex ;
-    skos:prefLabel "Middle Devonian"@en .
-
-isc:MiddleHolocene a skos:Concept ;
-    skos:notation "0/10/10/0"^^:CMYK,
-        "253/236/228"^^:RGB,
-        "#FDECE4"^^:RGBHex ;
-    skos:prefLabel "Middle Holocene"@en .
-
-isc:MiddleJurassic a skos:Concept ;
-    skos:notation "50/0/5/0"^^:CMYK,
-        "128/207/216"^^:RGB,
-        "#80CFD8"^^:RGBHex ;
-    skos:prefLabel "Middle Jurassic"@en .
-
-isc:MiddleMississippian a skos:Concept ;
-    skos:notation "35/15/55/0"^^:CMYK,
-        "153/180/108"^^:RGB,
-        "#99B46C"^^:RGBHex ;
-    skos:prefLabel "Middle Mississippian"@en .
-
-isc:MiddleOrdovician a skos:Concept ;
-    skos:notation "70/0/50/0"^^:CMYK,
-        "77/180/126"^^:RGB,
-        "#4DB47E"^^:RGBHex ;
-    skos:prefLabel "Middle Ordovician"@en .
-
-isc:MiddlePennsylvanian a skos:Concept ;
-    skos:notation "30/10/20/0"^^:CMYK,
-        "166/199/183"^^:RGB,
-        "#A6C7B7"^^:RGBHex ;
-    skos:prefLabel "Middle Pennsylvanian"@en .
-
-isc:MiddlePleistocene a skos:Concept ;
-    skos:notation "0/5/20/0"^^:CMYK,
-        "255/242/199"^^:RGB,
-        "#FFF2C7"^^:RGBHex ;
-    skos:prefLabel "Middle Pleistocene"@en .
-
-isc:MiddleTriassic a skos:Concept ;
-    skos:notation "30/55/0/0"^^:CMYK,
-        "177/104/177"^^:RGB,
-        "#B168B1"^^:RGBHex ;
-    skos:prefLabel "Middle Triassic"@en .
-
-isc:Miocene a skos:Concept ;
-    skos:notation "0/0/100/0"^^:CMYK,
-        "255/255/0"^^:RGB,
-        "#FFFF00"^^:RGBHex ;
-    skos:prefLabel "Miocene"@en .
-
-isc:Mississippian a skos:Concept ;
-    skos:notation "60/25/55/0"^^:CMYK,
-        "103/143/102"^^:RGB,
-        "#678F66"^^:RGBHex ;
-    skos:prefLabel "Mississippian"@en .
-
-isc:Moscovian a skos:Concept ;
-    skos:notation "30/10/20/0"^^:CMYK,
-        "179/203/185"^^:RGB,
-        "#B3CBB9"^^:RGBHex ;
-    skos:prefLabel "Moscovian"@en .
-
-isc:Neoarchean a skos:Concept ;
-    skos:notation "0/40/5/0"^^:CMYK,
-        "249/155/193"^^:RGB,
-        "#F99BC1"^^:RGBHex ;
-    skos:prefLabel "Neoarchean"@en .
-
-isc:NeoarcheanSystem a skos:Concept ;
-    skos:notation "0/35/5/0"^^:CMYK,
-        "250/167/200"^^:RGB,
-        "#FAA7C8"^^:RGBHex ;
-    skos:prefLabel "unnamed1"@en .
-
-isc:Neogene a skos:Concept ;
-    skos:notation "0/10/90/0"^^:CMYK,
-        "255/230/25"^^:RGB,
-        "#FFE619"^^:RGBHex ;
-    skos:prefLabel "Neogene"@en .
-
-isc:Neoproterozoic a skos:Concept ;
-    skos:notation "0/30/70/0"^^:CMYK,
-        "254/179/66"^^:RGB,
-        "#FEB342"^^:RGBHex ;
-    skos:prefLabel "Neoproterozoic"@en .
-
-isc:Norian a skos:Concept ;
-    skos:notation "15/30/0/0"^^:CMYK,
-        "214/170/211"^^:RGB,
-        "#D6AAD3"^^:RGBHex ;
-    skos:prefLabel "Norian"@en .
-
-isc:Northgrippian a skos:Concept ;
-    skos:notation "0/10/10/0"^^:CMYK,
-        "253/236/228"^^:RGB,
-        "#FDECE4"^^:RGBHex ;
-    skos:prefLabel "Northgrippian"@en .
-
-isc:Olenekian a skos:Concept ;
-    skos:notation "30/65/0/0"^^:CMYK,
-        "176/81/165"^^:RGB,
-        "#B051A5"^^:RGBHex ;
-    skos:prefLabel "Olenekian"@en .
-
-isc:Oligocene a skos:Concept ;
-    skos:notation "0/25/45/0"^^:CMYK,
-        "254/192/122"^^:RGB,
-        "#FEC07A"^^:RGBHex ;
-    skos:prefLabel "Oligocene"@en .
-
-isc:Ordovician a skos:Concept ;
-    skos:notation "100/0/60/0"^^:CMYK,
-        "0/146/112"^^:RGB,
-        "#009270"^^:RGBHex ;
-    skos:prefLabel "Ordovician"@en .
-
-isc:Orosirian a skos:Concept ;
-    skos:notation "0/60/15/0"^^:CMYK,
-        "247/104/152"^^:RGB,
-        "#F76898"^^:RGBHex ;
-    skos:prefLabel "Orosirian"@en .
-
-isc:Oxfordian a skos:Concept ;
-    skos:notation "25/0/0/0"^^:CMYK,
-        "191/231/241"^^:RGB,
-        "#BFE7F1"^^:RGBHex ;
-    skos:prefLabel "Oxfordian"@en .
-
-isc:Paibian a skos:Concept ;
-    skos:notation "20/0/35/0"^^:CMYK,
-        "204/235/174"^^:RGB,
-        "#CCEBAE"^^:RGBHex ;
-    skos:prefLabel "Paibian"@en .
-
-isc:Paleoarchean a skos:Concept ;
-    skos:notation "0/75/0/0"^^:CMYK,
-        "244/68/159"^^:RGB,
-        "#F4449F"^^:RGBHex ;
-    skos:prefLabel "Paleoarchean"@en .
-
-isc:PaleoarcheanSystem a skos:Concept ;
-    skos:notation "0/60/0/0"^^:CMYK,
-        "246/104/178"^^:RGB,
-        "#F668B2"^^:RGBHex ;
-    skos:prefLabel "unnamed3"@en .
-
-isc:Paleocene a skos:Concept ;
-    skos:notation "0/40/60/0"^^:CMYK,
-        "253/167/95"^^:RGB,
-        "#FDA75F"^^:RGBHex ;
-    skos:prefLabel "Paleocene"@en .
-
-isc:Paleogene a skos:Concept ;
-    skos:notation "5/0/90/0"^^:CMYK,
-        "253/154/82"^^:RGB,
-        "#FD9A52"^^:RGBHex ;
-    skos:prefLabel "Paleogene"@en .
-
-isc:Paleoproterozoic a skos:Concept ;
-    skos:notation "0/75/30/0"^^:CMYK,
-        "247/67/112"^^:RGB,
-        "#F74370"^^:RGBHex ;
-    skos:prefLabel "Paleoproterozoic"@en .
-
-isc:Paleozoic a skos:Concept ;
-    skos:notation "40/10/40/0"^^:CMYK,
-        "153/192/141"^^:RGB,
-        "#99C08D"^^:RGBHex ;
-    skos:prefLabel "Paleozoic"@en .
-
-isc:Pennsylvanian a skos:Concept ;
-    skos:notation "50/10/20/0"^^:CMYK,
-        "126/188/198"^^:RGB,
-        "#7EBCC6"^^:RGBHex ;
-    skos:prefLabel "Pennsylvanian"@en .
-
-isc:Permian a skos:Concept ;
-    skos:notation "5/75/75/0"^^:CMYK,
-        "240/64/40"^^:RGB,
-        "#F04028"^^:RGBHex ;
-    skos:prefLabel "Permian"@en .
-
-isc:Phanerozoic a skos:Concept ;
-    skos:notation "40/0/5/0"^^:CMYK,
-        "154/217/221"^^:RGB,
-        "#9AD9DD"^^:RGBHex ;
-    skos:prefLabel "Phanerozoic"@en .
-
-isc:Piacenzian a skos:Concept ;
-    skos:notation "0/0/25/0"^^:CMYK,
-        "255/255/191"^^:RGB,
-        "#FFFFBF"^^:RGBHex ;
-    skos:prefLabel "Piacenzian"@en .
-
-isc:Pleistocene a skos:Concept ;
-    skos:notation "0/5/40/0"^^:CMYK,
-        "255/239/175"^^:RGB,
-        "#FFEFAF"^^:RGBHex ;
-    skos:prefLabel "Pleistocene"@en .
-
-isc:Pliensbachian a skos:Concept ;
-    skos:notation "50/5/0/0"^^:CMYK,
-        "128/197/221"^^:RGB,
-        "#80C5DD"^^:RGBHex ;
-    skos:prefLabel "Pliensbachian"@en .
-
-isc:Pliocene a skos:Concept ;
-    skos:notation "0/0/40/0"^^:CMYK,
-        "255/255/153"^^:RGB,
-        "#FFFF99"^^:RGBHex ;
-    skos:prefLabel "Pliocene"@en .
-
-isc:Pragian a skos:Concept ;
-    skos:notation "10/20/55/0"^^:CMYK,
-        "229/196/104"^^:RGB,
-        "#E5C468"^^:RGBHex ;
-    skos:prefLabel "Pragian"@en .
-
-isc:Precambrian a skos:Concept ;
-    skos:notation "0/75/30/0"^^:CMYK,
-        "247/67/112"^^:RGB,
-        "#F74370"^^:RGBHex ;
-    skos:prefLabel "Precambrian"@en .
-
-isc:Priabonian a skos:Concept ;
-    skos:notation "0/20/30/0"^^:CMYK,
-        "253/205/161"^^:RGB,
-        "#FDCDA1"^^:RGBHex ;
-    skos:prefLabel "Priabonian"@en .
-
-isc:Pridoli a skos:Concept ;
-    skos:notation "10/0/10/0"^^:CMYK,
-        "230/245/225"^^:RGB,
-        "#E6F5E1"^^:RGBHex ;
-    skos:prefLabel "Pridoli"@en .
-
-isc:PridoliStage a skos:Concept ;
-    skos:notation "10/0/10/0"^^:CMYK,
-        "230/245/225"^^:RGB,
-        "#E6F5E1"^^:RGBHex ;
-    skos:prefLabel "Pridoli"@en .
-
-isc:Proterozoic a skos:Concept ;
-    skos:notation "0/80/35/0"^^:CMYK,
-        "247/53/99"^^:RGB,
-        "#F73563"^^:RGBHex ;
-    skos:prefLabel "Proterozoic"@en .
-
-isc:Quaternary a skos:Concept ;
-    skos:notation "0/0/50/0"^^:CMYK,
-        "249/249/127"^^:RGB,
-        "#F9F97F"^^:RGBHex ;
-    skos:prefLabel "Quaternary"@en .
-
-isc:Rhaetian a skos:Concept ;
-    skos:notation "10/25/0/0"^^:CMYK,
-        "227/185/219"^^:RGB,
-        "#E3B9DB"^^:RGBHex ;
-    skos:prefLabel "Rhaetian"@en .
-
-isc:Rhuddanian a skos:Concept ;
-    skos:notation "35/0/25/0"^^:CMYK,
-        "166/220/181"^^:RGB,
-        "#A6DCB5"^^:RGBHex ;
-    skos:prefLabel "Rhuddanian"@en .
-
-isc:Rhyacian a skos:Concept ;
-    skos:notation "0/65/20/0"^^:CMYK,
-        "247/91/137"^^:RGB,
-        "#F75B89"^^:RGBHex ;
-    skos:prefLabel "Rhyacian"@en .
-
-isc:Roadian a skos:Concept ;
-    skos:notation "0/50/45/0"^^:CMYK,
-        "251/128/105"^^:RGB,
-        "#FB8069"^^:RGBHex ;
-    skos:prefLabel "Roadian"@en .
-
-isc:Rupelian a skos:Concept ;
-    skos:notation "0/15/35/0"^^:CMYK,
-        "254/217/154"^^:RGB,
-        "#FED99A"^^:RGBHex ;
-    skos:prefLabel "Rupelian"@en .
-
-isc:Sakmarian a skos:Concept ;
-    skos:notation "10/55/50/0"^^:CMYK,
-        "227/111/92"^^:RGB,
-        "#E36F5C"^^:RGBHex ;
-    skos:prefLabel "Sakmarian"@en .
-
-isc:Sandbian a skos:Concept ;
-    skos:notation "45/0/40/0"^^:CMYK,
-        "140/208/148"^^:RGB,
-        "#8CD094"^^:RGBHex ;
-    skos:prefLabel "Sandbian"@en .
-
-isc:Santonian a skos:Concept ;
-    skos:notation "15/0/55/0"^^:CMYK,
-        "217/239/116"^^:RGB,
-        "#D9EF74"^^:RGBHex ;
-    skos:prefLabel "Santonian"@en .
-
-isc:Selandian a skos:Concept ;
-    skos:notation "0/25/55/0"^^:CMYK,
-        "254/191/101"^^:RGB,
-        "#FEBF65"^^:RGBHex ;
-    skos:prefLabel "Selandian"@en .
-
-isc:Serpukhovian a skos:Concept ;
-    skos:notation "25/15/55/0"^^:CMYK,
-        "191/194/107"^^:RGB,
-        "#BFC26B"^^:RGBHex ;
-    skos:prefLabel "Serpukhovian"@en .
-
-isc:Serravallian a skos:Concept ;
-    skos:notation "0/0/65/0"^^:CMYK,
-        "255/255/89"^^:RGB,
-        "#FFFF59"^^:RGBHex ;
-    skos:prefLabel "Serravallian"@en .
-
-isc:Sheinwoodian a skos:Concept ;
-    skos:notation "25/0/20/0"^^:CMYK,
-        "191/230/195"^^:RGB,
-        "#BFE6C3"^^:RGBHex ;
-    skos:prefLabel "Sheinwoodian"@en .
-
-isc:Siderian a skos:Concept ;
-    skos:notation "0/70/25/0"^^:CMYK,
-        "247/79/124"^^:RGB,
-        "#F74F7C"^^:RGBHex ;
-    skos:prefLabel "Siderian"@en .
-
-isc:Silurian a skos:Concept ;
-    skos:notation "30/0/25/0"^^:CMYK,
-        "179/225/182"^^:RGB,
-        "#B3E1B6"^^:RGBHex ;
-    skos:prefLabel "Silurian"@en .
-
-isc:Sinemurian a skos:Concept ;
-    skos:notation "60/5/0/0"^^:CMYK,
-        "103/188/216"^^:RGB,
-        "#67BCD8"^^:RGBHex ;
-    skos:prefLabel "Sinemurian"@en .
-
-isc:Statherian a skos:Concept ;
-    skos:notation "0/55/10/0"^^:CMYK,
-        "248/117/167"^^:RGB,
-        "#F875A7"^^:RGBHex ;
-    skos:prefLabel "Statherian"@en .
-
-isc:Stenian a skos:Concept ;
-    skos:notation "0/15/35/0"^^:CMYK,
-        "254/217/154"^^:RGB,
-        "#FED99A"^^:RGBHex ;
-    skos:prefLabel "Stenian"@en .
-
-isc:Telychian a skos:Concept ;
-    skos:notation "25/0/15/0"^^:CMYK,
-        "191/230/207"^^:RGB,
-        "#BFE6CF"^^:RGBHex ;
-    skos:prefLabel "Telychian"@en .
-
-isc:Terreneuvian a skos:Concept ;
-    skos:notation "45/15/55/0"^^:CMYK,
-        "140/176/108"^^:RGB,
-        "#8CB06C"^^:RGBHex ;
-    skos:prefLabel "Terreneuvian"@en .
-
-isc:Thanetian a skos:Concept ;
-    skos:notation "0/25/50/0"^^:CMYK,
-        "253/191/111"^^:RGB,
-        "#FDBF6F"^^:RGBHex ;
-    skos:prefLabel "Thanetian"@en .
-
-isc:Tithonian a skos:Concept ;
-    skos:notation "15/0/0/0"^^:CMYK,
-        "217/241/247"^^:RGB,
-        "#D9F1F7"^^:RGBHex ;
-    skos:prefLabel "Tithonian"@en .
-
-isc:Toarcian a skos:Concept ;
-    skos:notation "40/5/0/0"^^:CMYK,
-        "153/206/227"^^:RGB,
-        "#99CEE3"^^:RGBHex ;
-    skos:prefLabel "Toarcian"@en .
-
-isc:Tonian a skos:Concept ;
-    skos:notation "0/25/65/0"^^:CMYK,
-        "254/191/78"^^:RGB,
-        "#FEBF4E"^^:RGBHex ;
-    skos:prefLabel "Tonian"@en .
-
-isc:Tortonian a skos:Concept ;
-    skos:notation "0/0/60/0"^^:CMYK,
-        "255/255/102"^^:RGB,
-        "#FFFF66"^^:RGBHex ;
-    skos:prefLabel "Tortonian"@en .
-
-isc:Tournaisian a skos:Concept ;
-    skos:notation "45/15/55/0"^^:CMYK,
-        "140/176/108"^^:RGB,
-        "#8CB06C"^^:RGBHex ;
-    skos:prefLabel "Tournaisian"@en .
-
-isc:Tremadocian a skos:Concept ;
-    skos:notation "80/0/50/0"^^:CMYK,
-        "51/169/126"^^:RGB,
-        "#33A97E"^^:RGBHex ;
-    skos:prefLabel "Tremadocian"@en .
-
-isc:Triassic a skos:Concept ;
-    skos:notation "50/80/0/0"^^:CMYK,
-        "129/43/146"^^:RGB,
-        "#812B92"^^:RGBHex ;
-    skos:prefLabel "Triassic"@en .
-
-isc:Turonian a skos:Concept ;
-    skos:notation "25/0/65/0"^^:CMYK,
-        "191/227/93"^^:RGB,
-        "#BFE35D"^^:RGBHex ;
-    skos:prefLabel "Turonian"@en .
-
-isc:UpperCretaceous a skos:Concept ;
-    skos:notation "35/0/75/0"^^:CMYK,
-        "166/216/74"^^:RGB,
-        "#A6D84A"^^:RGBHex ;
-    skos:prefLabel "Upper Cretaceous"@en .
-
-isc:UpperDevonian a skos:Concept ;
-    skos:notation "5/10/35/0"^^:CMYK,
-        "241/225/157"^^:RGB,
-        "#F1E19D"^^:RGBHex ;
-    skos:prefLabel "Upper Devonian"@en .
-
-isc:UpperHolocene a skos:Concept ;
-    skos:notation "0/10/5/0"^^:CMYK,
-        "253/237/236"^^:RGB,
-        "#FDEDEC"^^:RGBHex ;
-    skos:prefLabel "Upper/Late Holocene"@en .
-
-isc:UpperJurassic a skos:Concept ;
-    skos:notation "30/0/0/0"^^:CMYK,
-        "179/227/238"^^:RGB,
-        "#B3E3EE"^^:RGBHex ;
-    skos:prefLabel "Upper Jurassic"@en .
-
-isc:UpperMississippian a skos:Concept ;
-    skos:notation "25/15/55/0"^^:CMYK,
-        "179/190/108"^^:RGB,
-        "#B3BE6C"^^:RGBHex ;
-    skos:prefLabel "Upper Mississippian"@en .
-
-isc:UpperOrdovician a skos:Concept ;
-    skos:notation "50/0/40/0"^^:CMYK,
-        "127/202/147"^^:RGB,
-        "#7FCA93"^^:RGBHex ;
-    skos:prefLabel "Upper Ordovician"@en .
-
-isc:UpperPennsylvanian a skos:Concept ;
-    skos:notation "25/10/20/0"^^:CMYK,
-        "191/208/186"^^:RGB,
-        "#BFD0BA"^^:RGBHex ;
-    skos:prefLabel "Upper Pennsylvanian"@en .
-
-isc:UpperPleistocene a skos:Concept ;
-    skos:notation "0/5/15/0"^^:CMYK,
-        "255/242/211"^^:RGB,
-        "#FFF2D3"^^:RGBHex ;
-    skos:prefLabel "Upper/Middle Pleistocene"@en .
-
-isc:UpperPleistoceneStage a skos:Concept ;
-    skos:notation "0/5/15/0"^^:CMYK,
-        "255/242/211"^^:RGB,
-        "#FFF2D3"^^:RGBHex ;
-    skos:prefLabel "Upper Pleistocene"@en .
-
-isc:UpperTriassic a skos:Concept ;
-    skos:notation "25/40/0/0"^^:CMYK,
-        "189/140/195"^^:RGB,
-        "#BD8CC3"^^:RGBHex ;
-    skos:prefLabel "Upper Triassic"@en .
-
-isc:Valanginian a skos:Concept ;
-    skos:notation "40/0/60/0"^^:CMYK,
-        "153/211/106"^^:RGB,
-        "#99D36A"^^:RGBHex ;
-    skos:prefLabel "Valanginian"@en .
-
-isc:Visean a skos:Concept ;
-    skos:notation "35/15/55/0"^^:CMYK,
-        "166/185/108"^^:RGB,
-        "#A6B96C"^^:RGBHex ;
-    skos:prefLabel "Visean"@en .
-
-isc:Wenlock a skos:Concept ;
-    skos:notation "30/0/20/0"^^:CMYK,
-        "179/225/194"^^:RGB,
-        "#B3E1C2"^^:RGBHex ;
-    skos:prefLabel "Wenlock"@en .
-
-isc:Wordian a skos:Concept ;
-    skos:notation "0/45/40/0"^^:CMYK,
-        "251/141/118"^^:RGB,
-        "#FB8D76"^^:RGBHex ;
-    skos:prefLabel "Wordian"@en .
-
-isc:Wuchiapingian a skos:Concept ;
-    skos:notation "0/30/25/0"^^:CMYK,
-        "252/180/162"^^:RGB,
-        "#FCB4A2"^^:RGBHex ;
-    skos:prefLabel "Wuchiapingian"@en .
-
-isc:Wuliuan a skos:Concept ;
-    skos:notation "30/5/40/0"^^:CMYK,
-        "179/212/146"^^:RGB,
-        "#B3D492"^^:RGBHex ;
-    skos:prefLabel "Wuliuan"@en .
-
-isc:Ypresian a skos:Concept ;
-    skos:notation "0/35/45/0"^^:CMYK,
-        "252/167/115"^^:RGB,
-        "#FCA773"^^:RGBHex ;
-    skos:prefLabel "Ypresian"@en .
-
-isc:Zanclean a skos:Concept ;
-    skos:notation "0/0/30/0"^^:CMYK,
-        "255/255/179"^^:RGB,
-        "#FFFFB3"^^:RGBHex ;
-    skos:prefLabel "Zanclean"@en .
+isc:Aalenian
+  a skos:Concept ;
+  dcterms:identifier "Aalenian" ;
+  skos:definition "Colour for Aalenian" ;
+  skos:notation "#9AD9DD"^^:RGBHex ;
+  skos:notation "154/217/221"^^:RGB ;
+  skos:notation "40/0/5/0"^^:CMYK ;
+  skos:prefLabel "Aalenian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Aeronian
+  a skos:Concept ;
+  dcterms:identifier "Aeronian" ;
+  skos:definition "Colour for Aeronian" ;
+  skos:notation "#B3E1C2"^^:RGBHex ;
+  skos:notation "179/225/194"^^:RGB ;
+  skos:notation "30/0/20/0"^^:CMYK ;
+  skos:prefLabel "Aeronian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Albian
+  a skos:Concept ;
+  dcterms:identifier "Albian" ;
+  skos:definition "Colour for Albian" ;
+  skos:notation "#CCEA97"^^:RGBHex ;
+  skos:notation "20/0/40/0"^^:CMYK ;
+  skos:notation "204/234/151"^^:RGB ;
+  skos:prefLabel "Albian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Anisian
+  a skos:Concept ;
+  dcterms:identifier "Anisian" ;
+  skos:definition "Colour for Anisian" ;
+  skos:notation "#BC75B7"^^:RGBHex ;
+  skos:notation "188/117/183"^^:RGB ;
+  skos:notation "25/50/0/0"^^:CMYK ;
+  skos:prefLabel "Anisian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Aptian
+  a skos:Concept ;
+  dcterms:identifier "Aptian" ;
+  skos:definition "Colour for Aptian" ;
+  skos:notation "#BFE48A"^^:RGBHex ;
+  skos:notation "191/228/138"^^:RGB ;
+  skos:notation "25/0/45/0"^^:CMYK ;
+  skos:prefLabel "Aptian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Aquitanian
+  a skos:Concept ;
+  dcterms:identifier "Aquitanian" ;
+  skos:definition "Colour for Aquitanian" ;
+  skos:notation "#FFFF33"^^:RGBHex ;
+  skos:notation "0/0/80/0"^^:CMYK ;
+  skos:notation "255/255/51"^^:RGB ;
+  skos:prefLabel "Aquitanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Archean
+  a skos:Concept ;
+  dcterms:identifier "Archean" ;
+  skos:definition "Colour for Archean" ;
+  skos:notation "#F0047F"^^:RGBHex ;
+  skos:notation "0/100/0/0"^^:CMYK ;
+  skos:notation "240/4/127"^^:RGB ;
+  skos:prefLabel "Archean"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Artinskian
+  a skos:Concept ;
+  dcterms:identifier "Artinskian" ;
+  skos:definition "Colour for Artinskian" ;
+  skos:notation "#E37B68"^^:RGBHex ;
+  skos:notation "10/50/45/0"^^:CMYK ;
+  skos:notation "227/123/104"^^:RGB ;
+  skos:prefLabel "Artinskian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Asselian
+  a skos:Concept ;
+  dcterms:identifier "Asselian" ;
+  skos:definition "Colour for Asselian" ;
+  skos:notation "#E36350"^^:RGBHex ;
+  skos:notation "10/60/55/0"^^:CMYK ;
+  skos:notation "227/99/80"^^:RGB ;
+  skos:prefLabel "Asselian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Bajocian
+  a skos:Concept ;
+  dcterms:identifier "Bajocian" ;
+  skos:definition "Colour for Bajocian" ;
+  skos:notation "#A6DDE0"^^:RGBHex ;
+  skos:notation "166/221/224"^^:RGB ;
+  skos:notation "35/0/5/0"^^:CMYK ;
+  skos:prefLabel "Bajocian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Barremian
+  a skos:Concept ;
+  dcterms:identifier "Barremian" ;
+  skos:definition "Colour for Barremian" ;
+  skos:notation "#B3DF7F"^^:RGBHex ;
+  skos:notation "179/223/127"^^:RGB ;
+  skos:notation "30/0/50/0"^^:CMYK ;
+  skos:prefLabel "Barremian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Bartonian
+  a skos:Concept ;
+  dcterms:identifier "Bartonian" ;
+  skos:definition "Colour for Bartonian" ;
+  skos:notation "#FDC091"^^:RGBHex ;
+  skos:notation "0/25/35/0"^^:CMYK ;
+  skos:notation "253/192/145"^^:RGB ;
+  skos:prefLabel "Bartonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Bashkirian
+  a skos:Concept ;
+  dcterms:identifier "Bashkirian" ;
+  skos:definition "Colour for Bashkirian" ;
+  skos:notation "#99C2B5"^^:RGBHex ;
+  skos:notation "153/194/181"^^:RGB ;
+  skos:notation "40/10/20/0"^^:CMYK ;
+  skos:prefLabel "Bashkirian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Bathonian
+  a skos:Concept ;
+  dcterms:identifier "Bathonian" ;
+  skos:definition "Colour for Bathonian" ;
+  skos:notation "#B3E2E3"^^:RGBHex ;
+  skos:notation "179/226/227"^^:RGB ;
+  skos:notation "30/0/5/0"^^:CMYK ;
+  skos:prefLabel "Bathonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Berriasian
+  a skos:Concept ;
+  dcterms:identifier "Berriasian" ;
+  skos:definition "Colour for Berriasian" ;
+  skos:notation "#8CCD60"^^:RGBHex ;
+  skos:notation "140/205/96"^^:RGB ;
+  skos:notation "45/0/65/0"^^:CMYK ;
+  skos:prefLabel "Berriasian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Burdigalian
+  a skos:Concept ;
+  dcterms:identifier "Burdigalian" ;
+  skos:definition "Colour for Burdigalian" ;
+  skos:notation "#FFFF41"^^:RGBHex ;
+  skos:notation "0/0/75/0"^^:CMYK ;
+  skos:notation "255/255/65"^^:RGB ;
+  skos:prefLabel "Burdigalian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Calabrian
+  a skos:Concept ;
+  dcterms:identifier "Calabrian" ;
+  skos:definition "Colour for Calabrian" ;
+  skos:notation "#FFF2BA"^^:RGBHex ;
+  skos:notation "0/5/25/0"^^:CMYK ;
+  skos:notation "255/242/186"^^:RGB ;
+  skos:prefLabel "Calabrian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Callovian
+  a skos:Concept ;
+  dcterms:identifier "Callovian" ;
+  skos:definition "Colour for Callovian" ;
+  skos:notation "#BFE7E5"^^:RGBHex ;
+  skos:notation "191/231/229"^^:RGB ;
+  skos:notation "25/0/5/0"^^:CMYK ;
+  skos:prefLabel "Callovian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Calymmian
+  a skos:Concept ;
+  dcterms:identifier "Calymmian" ;
+  skos:definition "Colour for Calymmian" ;
+  skos:notation "#FDC07A"^^:RGBHex ;
+  skos:notation "0/24/45/0"^^:CMYK ;
+  skos:notation "253/192/122"^^:RGB ;
+  skos:prefLabel "Calymmian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Cambrian
+  a skos:Concept ;
+  dcterms:identifier "Cambrian" ;
+  skos:definition "Colour for Cambrian" ;
+  skos:notation "#7FA056"^^:RGBHex ;
+  skos:notation "127/160/86"^^:RGB ;
+  skos:notation "50/20/65/0"^^:CMYK ;
+  skos:prefLabel "Cambrian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:CambrianSeries2
+  a skos:Concept ;
+  dcterms:identifier "CambrianSeries2" ;
+  skos:definition "Colour for Series 2" ;
+  skos:notation "#99C078"^^:RGBHex ;
+  skos:notation "153/192/120"^^:RGB ;
+  skos:notation "40/10/50/0"^^:CMYK ;
+  skos:prefLabel "Series 2"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:CambrianStage10
+  a skos:Concept ;
+  dcterms:identifier "CambrianStage10" ;
+  skos:definition "Colour for Stage 10" ;
+  skos:notation "#E6F5C9"^^:RGBHex ;
+  skos:notation "10/0/20/0"^^:CMYK ;
+  skos:notation "230/245/201"^^:RGB ;
+  skos:prefLabel "Stage 10"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:CambrianStage2
+  a skos:Concept ;
+  dcterms:identifier "CambrianStage2" ;
+  skos:definition "Colour for Stage 2" ;
+  skos:notation "#A6BA80"^^:RGBHex ;
+  skos:notation "166/186/128"^^:RGB ;
+  skos:notation "35/15/45/0"^^:CMYK ;
+  skos:prefLabel "Stage 2"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:CambrianStage3
+  a skos:Concept ;
+  dcterms:identifier "CambrianStage3" ;
+  skos:definition "Colour for Stage 3" ;
+  skos:notation "#A6C583"^^:RGBHex ;
+  skos:notation "166/197/131"^^:RGB ;
+  skos:notation "35/10/45/0"^^:CMYK ;
+  skos:prefLabel "Stage 3"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:CambrianStage4
+  a skos:Concept ;
+  dcterms:identifier "CambrianStage4" ;
+  skos:definition "Colour for Stage 4" ;
+  skos:notation "#B3CA8E"^^:RGBHex ;
+  skos:notation "179/202/142"^^:RGB ;
+  skos:notation "30/10/40/0"^^:CMYK ;
+  skos:prefLabel "Stage 4"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Campanian
+  a skos:Concept ;
+  dcterms:identifier "Campanian" ;
+  skos:definition "Colour for Campanian" ;
+  skos:notation "#E6F47F"^^:RGBHex ;
+  skos:notation "10/0/50/0"^^:CMYK ;
+  skos:notation "230/244/127"^^:RGB ;
+  skos:prefLabel "Campanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Capitanian
+  a skos:Concept ;
+  dcterms:identifier "Capitanian" ;
+  skos:definition "Colour for Capitanian" ;
+  skos:notation "#FB9A85"^^:RGBHex ;
+  skos:notation "0/40/35/0"^^:CMYK ;
+  skos:notation "251/154/133"^^:RGB ;
+  skos:prefLabel "Capitanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Carboniferous
+  a skos:Concept ;
+  dcterms:identifier "Carboniferous" ;
+  skos:definition "Colour for Carboniferous" ;
+  skos:notation "#67A599"^^:RGBHex ;
+  skos:notation "103/165/153"^^:RGB ;
+  skos:notation "60/15/30/0"^^:CMYK ;
+  skos:prefLabel "Carboniferous"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Carnian
+  a skos:Concept ;
+  dcterms:identifier "Carnian" ;
+  skos:definition "Colour for Carnian" ;
+  skos:notation "#C99BCB"^^:RGBHex ;
+  skos:notation "20/35/0/0"^^:CMYK ;
+  skos:notation "201/155/203"^^:RGB ;
+  skos:prefLabel "Carnian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Cenomanian
+  a skos:Concept ;
+  dcterms:identifier "Cenomanian" ;
+  skos:definition "Colour for Cenomanian" ;
+  skos:notation "#B3DE53"^^:RGBHex ;
+  skos:notation "179/222/83"^^:RGB ;
+  skos:notation "30/0/70/0"^^:CMYK ;
+  skos:prefLabel "Cenomanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Cenozoic
+  a skos:Concept ;
+  dcterms:identifier "Cenozoic" ;
+  skos:definition "Colour for Cenozoic" ;
+  skos:notation "#F2F91D"^^:RGBHex ;
+  skos:notation "242/249/29"^^:RGB ;
+  skos:notation "40/0/5/0"^^:CMYK ;
+  skos:prefLabel "Cenozoic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Changhsingian
+  a skos:Concept ;
+  dcterms:identifier "Changhsingian" ;
+  skos:definition "Colour for Changhsingian" ;
+  skos:notation "#FCC0B2"^^:RGBHex ;
+  skos:notation "0/25/20/0"^^:CMYK ;
+  skos:notation "252/192/178"^^:RGB ;
+  skos:prefLabel "Changhsingian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Chattian
+  a skos:Concept ;
+  dcterms:identifier "Chattian" ;
+  skos:definition "Colour for Chattian" ;
+  skos:notation "#FEE6AA"^^:RGBHex ;
+  skos:notation "0/10/30/0"^^:CMYK ;
+  skos:notation "254/230/170"^^:RGB ;
+  skos:prefLabel "Chattian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Chibanian
+  a skos:Concept ;
+  dcterms:identifier "Chibanian" ;
+  skos:definition "Colour for Chibanian" ;
+  skos:notation "#FFF2C7"^^:RGBHex ;
+  skos:notation "0/5/20/0"^^:CMYK ;
+  skos:notation "255/242/199"^^:RGB ;
+  skos:prefLabel "Chibanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Cisuralian
+  a skos:Concept ;
+  dcterms:identifier "Cisuralian" ;
+  skos:definition "Colour for Cisuralian" ;
+  skos:notation "#EF5845"^^:RGBHex ;
+  skos:notation "239/88/69"^^:RGB ;
+  skos:notation "5/65/60/0"^^:CMYK ;
+  skos:prefLabel "Cisuralian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Coniacian
+  a skos:Concept ;
+  dcterms:identifier "Coniacian" ;
+  skos:definition "Colour for Coniacian" ;
+  skos:notation "#CCE968"^^:RGBHex ;
+  skos:notation "20/0/60/0"^^:CMYK ;
+  skos:notation "204/233/104"^^:RGB ;
+  skos:prefLabel "Coniacian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Cretaceous
+  a skos:Concept ;
+  dcterms:identifier "Cretaceous" ;
+  skos:definition "Colour for Cretaceous" ;
+  skos:notation "#7FC64E"^^:RGBHex ;
+  skos:notation "127/198/78"^^:RGB ;
+  skos:notation "50/0/75/0"^^:CMYK ;
+  skos:prefLabel "Cretaceous"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Cryogenian
+  a skos:Concept ;
+  dcterms:identifier "Cryogenian" ;
+  skos:definition "Colour for Cryogenian" ;
+  skos:notation "#FECC5C"^^:RGBHex ;
+  skos:notation "0/20/60/0"^^:CMYK ;
+  skos:notation "254/204/92"^^:RGB ;
+  skos:prefLabel "Cryogenian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Danian
+  a skos:Concept ;
+  dcterms:identifier "Danian" ;
+  skos:definition "Colour for Danian" ;
+  skos:notation "#FDB462"^^:RGBHex ;
+  skos:notation "0/30/55/0"^^:CMYK ;
+  skos:notation "253/180/98"^^:RGB ;
+  skos:prefLabel "Danian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Dapingian
+  a skos:Concept ;
+  dcterms:identifier "Dapingian" ;
+  skos:definition "Colour for Dapingian" ;
+  skos:notation "#66C092"^^:RGBHex ;
+  skos:notation "102/192/146"^^:RGB ;
+  skos:notation "60/0/40/0"^^:CMYK ;
+  skos:prefLabel "Dapingian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Darriwilian
+  a skos:Concept ;
+  dcterms:identifier "Darriwilian" ;
+  skos:definition "Colour for Darriwilian" ;
+  skos:notation "#74C69C"^^:RGBHex ;
+  skos:notation "116/198/156"^^:RGB ;
+  skos:notation "55/0/35/0"^^:CMYK ;
+  skos:prefLabel "Darriwilian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Devonian
+  a skos:Concept ;
+  dcterms:identifier "Devonian" ;
+  skos:definition "Colour for Devonian" ;
+  skos:notation "#CB8C37"^^:RGBHex ;
+  skos:notation "20/40/75/0"^^:CMYK ;
+  skos:notation "203/140/55"^^:RGB ;
+  skos:prefLabel "Devonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Drumian
+  a skos:Concept ;
+  dcterms:identifier "Drumian" ;
+  skos:definition "Colour for Drumian" ;
+  skos:notation "#BFD99D"^^:RGBHex ;
+  skos:notation "191/217/157"^^:RGB ;
+  skos:notation "25/5/35/0"^^:CMYK ;
+  skos:prefLabel "Drumian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Ectasian
+  a skos:Concept ;
+  dcterms:identifier "Ectasian" ;
+  skos:definition "Colour for Ectasian" ;
+  skos:notation "#FDCC8A"^^:RGBHex ;
+  skos:notation "0/20/40/0"^^:CMYK ;
+  skos:notation "253/204/138"^^:RGB ;
+  skos:prefLabel "Ectasian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Ediacaran
+  a skos:Concept ;
+  dcterms:identifier "Ediacaran" ;
+  skos:definition "Colour for Ediacaran" ;
+  skos:notation "#FED96A"^^:RGBHex ;
+  skos:notation "0/15/55/0"^^:CMYK ;
+  skos:notation "254/217/106"^^:RGB ;
+  skos:prefLabel "Ediacaran"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Eifelian
+  a skos:Concept ;
+  dcterms:identifier "Eifelian" ;
+  skos:definition "Colour for Eifelian" ;
+  skos:notation "#F1D576"^^:RGBHex ;
+  skos:notation "241/213/118"^^:RGB ;
+  skos:notation "5/15/50/0"^^:CMYK ;
+  skos:prefLabel "Eifelian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Emsian
+  a skos:Concept ;
+  dcterms:identifier "Emsian" ;
+  skos:definition "Colour for Emsian" ;
+  skos:notation "#E5D075"^^:RGBHex ;
+  skos:notation "10/15/50/0"^^:CMYK ;
+  skos:notation "229/208/117"^^:RGB ;
+  skos:prefLabel "Emsian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Eoarchean
+  a skos:Concept ;
+  dcterms:identifier "Eoarchean" ;
+  skos:definition "Colour for Eoarchean" ;
+  skos:notation "#DA037F"^^:RGBHex ;
+  skos:notation "10/100/0/0"^^:CMYK ;
+  skos:notation "218/3/127"^^:RGB ;
+  skos:prefLabel "Eoarchean"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:EoarcheanSystem
+  a skos:Concept ;
+  dcterms:identifier "EoarcheanSystem" ;
+  skos:definition "Colour for unnamed4" ;
+  skos:notation "#E61D8C"^^:RGBHex ;
+  skos:notation "230/29/140"^^:RGB ;
+  skos:notation "5/90/0/0"^^:CMYK ;
+  skos:prefLabel "unnamed4"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Eocene
+  a skos:Concept ;
+  dcterms:identifier "Eocene" ;
+  skos:definition "Colour for Eocene" ;
+  skos:notation "#FDB46C"^^:RGBHex ;
+  skos:notation "0/30/50/0"^^:CMYK ;
+  skos:notation "253/180/108"^^:RGB ;
+  skos:prefLabel "Eocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Famennian
+  a skos:Concept ;
+  dcterms:identifier "Famennian" ;
+  skos:definition "Colour for Famennian" ;
+  skos:notation "#F2EDB3"^^:RGBHex ;
+  skos:notation "242/237/179"^^:RGB ;
+  skos:notation "5/5/20/0"^^:CMYK ;
+  skos:prefLabel "Famennian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Floian
+  a skos:Concept ;
+  dcterms:identifier "Floian" ;
+  skos:definition "Colour for Floian" ;
+  skos:notation "#41B087"^^:RGBHex ;
+  skos:notation "65/176/135"^^:RGB ;
+  skos:notation "75/0/45/0"^^:CMYK ;
+  skos:prefLabel "Floian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Fortunian
+  a skos:Concept ;
+  dcterms:identifier "Fortunian" ;
+  skos:definition "Colour for Fortunian" ;
+  skos:notation "#99B575"^^:RGBHex ;
+  skos:notation "153/181/117"^^:RGB ;
+  skos:notation "40/15/50/0"^^:CMYK ;
+  skos:prefLabel "Fortunian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Frasnian
+  a skos:Concept ;
+  dcterms:identifier "Frasnian" ;
+  skos:definition "Colour for Frasnian" ;
+  skos:notation "#F2EDAD"^^:RGBHex ;
+  skos:notation "242/237/173"^^:RGB ;
+  skos:notation "5/5/30/0"^^:CMYK ;
+  skos:prefLabel "Frasnian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Furongian
+  a skos:Concept ;
+  dcterms:identifier "Furongian" ;
+  skos:definition "Colour for Furongian" ;
+  skos:notation "#B3E095"^^:RGBHex ;
+  skos:notation "179/224/149"^^:RGB ;
+  skos:notation "30/0/40/0"^^:CMYK ;
+  skos:prefLabel "Furongian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Gelasian
+  a skos:Concept ;
+  dcterms:identifier "Gelasian" ;
+  skos:definition "Colour for Gelasian" ;
+  skos:notation "#FFEDB3"^^:RGBHex ;
+  skos:notation "0/5/30/0"^^:CMYK ;
+  skos:notation "255/237/179"^^:RGB ;
+  skos:prefLabel "Gelasian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Givetian
+  a skos:Concept ;
+  dcterms:identifier "Givetian" ;
+  skos:definition "Colour for Givetian" ;
+  skos:notation "#F1E185"^^:RGBHex ;
+  skos:notation "241/225/133"^^:RGB ;
+  skos:notation "5/10/45/0"^^:CMYK ;
+  skos:prefLabel "Givetian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Gorstian
+  a skos:Concept ;
+  dcterms:identifier "Gorstian" ;
+  skos:definition "Colour for Gorstian" ;
+  skos:notation "#CCECDD"^^:RGBHex ;
+  skos:notation "20/0/10/0"^^:CMYK ;
+  skos:notation "204/236/221"^^:RGB ;
+  skos:prefLabel "Gorstian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Greenlandian
+  a skos:Concept ;
+  dcterms:identifier "Greenlandian" ;
+  skos:definition "Colour for Greenlandian" ;
+  skos:notation "#FEECDB"^^:RGBHex ;
+  skos:notation "0/10/15/0"^^:CMYK ;
+  skos:notation "254/236/219"^^:RGB ;
+  skos:prefLabel "Greenlandian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Guadalupian
+  a skos:Concept ;
+  dcterms:identifier "Guadalupian" ;
+  skos:definition "Colour for Guadalupian" ;
+  skos:notation "#FB745C"^^:RGBHex ;
+  skos:notation "0/55/50/0"^^:CMYK ;
+  skos:notation "251/116/92"^^:RGB ;
+  skos:prefLabel "Guadalupian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Guzhangian
+  a skos:Concept ;
+  dcterms:identifier "Guzhangian" ;
+  skos:definition "Colour for Guzhangian" ;
+  skos:notation "#CCDFAA"^^:RGBHex ;
+  skos:notation "20/5/30/0"^^:CMYK ;
+  skos:notation "204/223/170"^^:RGB ;
+  skos:prefLabel "Guzhangian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Gzhelian
+  a skos:Concept ;
+  dcterms:identifier "Gzhelian" ;
+  skos:definition "Colour for Gzhelian" ;
+  skos:notation "#CCD4C7"^^:RGBHex ;
+  skos:notation "20/10/15/0"^^:CMYK ;
+  skos:notation "204/212/199"^^:RGB ;
+  skos:prefLabel "Gzhelian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Hadean
+  a skos:Concept ;
+  dcterms:identifier "Hadean" ;
+  skos:definition "Colour for Hadean" ;
+  skos:notation "#AE027E"^^:RGBHex ;
+  skos:notation "174/2/126"^^:RGB ;
+  skos:notation "30/100/0/0"^^:CMYK ;
+  skos:prefLabel "Hadean"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Hauterivian
+  a skos:Concept ;
+  dcterms:identifier "Hauterivian" ;
+  skos:definition "Colour for Hauterivian" ;
+  skos:notation "#A6D975"^^:RGBHex ;
+  skos:notation "166/217/117"^^:RGB ;
+  skos:notation "35/0/55/0"^^:CMYK ;
+  skos:prefLabel "Hauterivian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Hettangian
+  a skos:Concept ;
+  dcterms:identifier "Hettangian" ;
+  skos:definition "Colour for Hettangian" ;
+  skos:notation "#4EB3D3"^^:RGBHex ;
+  skos:notation "70/5/0/0"^^:CMYK ;
+  skos:notation "78/179/211"^^:RGB ;
+  skos:prefLabel "Hettangian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Hirnantian
+  a skos:Concept ;
+  dcterms:identifier "Hirnantian" ;
+  skos:definition "Colour for Hirnantian" ;
+  skos:notation "#A6DBAB"^^:RGBHex ;
+  skos:notation "166/219/171"^^:RGB ;
+  skos:notation "35/0/30/0"^^:CMYK ;
+  skos:prefLabel "Hirnantian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Holocene
+  a skos:Concept ;
+  dcterms:identifier "Holocene" ;
+  skos:definition "Colour for Holocene" ;
+  skos:notation "#FEEBD2"^^:RGBHex ;
+  skos:notation "0/10/20/0"^^:CMYK ;
+  skos:notation "254/235/210"^^:RGB ;
+  skos:prefLabel "Holocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Homerian
+  a skos:Concept ;
+  dcterms:identifier "Homerian" ;
+  skos:definition "Colour for Homerian" ;
+  skos:notation "#CCEBD1"^^:RGBHex ;
+  skos:notation "20/0/15/0"^^:CMYK ;
+  skos:notation "204/235/209"^^:RGB ;
+  skos:prefLabel "Homerian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Induan
+  a skos:Concept ;
+  dcterms:identifier "Induan" ;
+  skos:definition "Colour for Induan" ;
+  skos:notation "#A4469F"^^:RGBHex ;
+  skos:notation "164/70/159"^^:RGB ;
+  skos:notation "35/70/0/0"^^:CMYK ;
+  skos:prefLabel "Induan"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Jiangshanian
+  a skos:Concept ;
+  dcterms:identifier "Jiangshanian" ;
+  skos:definition "Colour for Jiangshanian" ;
+  skos:notation "#D9F0BB"^^:RGBHex ;
+  skos:notation "15/0/25/0"^^:CMYK ;
+  skos:notation "217/240/187"^^:RGB ;
+  skos:prefLabel "Jiangshanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Jurassic
+  a skos:Concept ;
+  dcterms:identifier "Jurassic" ;
+  skos:definition "Colour for Jurassic" ;
+  skos:notation "#34B2C9"^^:RGBHex ;
+  skos:notation "52/178/201"^^:RGB ;
+  skos:notation "80/0/5/0"^^:CMYK ;
+  skos:prefLabel "Jurassic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Kasimovian
+  a skos:Concept ;
+  dcterms:identifier "Kasimovian" ;
+  skos:definition "Colour for Kasimovian" ;
+  skos:notation "#BFD0C5"^^:RGBHex ;
+  skos:notation "191/208/197"^^:RGB ;
+  skos:notation "25/10/15/0"^^:CMYK ;
+  skos:prefLabel "Kasimovian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Katian
+  a skos:Concept ;
+  dcterms:identifier "Katian" ;
+  skos:definition "Colour for Katian" ;
+  skos:notation "#99D69F"^^:RGBHex ;
+  skos:notation "153/214/159"^^:RGB ;
+  skos:notation "40/0/35/0"^^:CMYK ;
+  skos:prefLabel "Katian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Kimmeridgian
+  a skos:Concept ;
+  dcterms:identifier "Kimmeridgian" ;
+  skos:definition "Colour for Kimmeridgian" ;
+  skos:notation "#CCECF4"^^:RGBHex ;
+  skos:notation "20/0/0/0"^^:CMYK ;
+  skos:notation "204/236/244"^^:RGB ;
+  skos:prefLabel "Kimmeridgian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Kungurian
+  a skos:Concept ;
+  dcterms:identifier "Kungurian" ;
+  skos:definition "Colour for Kungurian" ;
+  skos:notation "#E38776"^^:RGBHex ;
+  skos:notation "10/45/40/0"^^:CMYK ;
+  skos:notation "227/135/118"^^:RGB ;
+  skos:prefLabel "Kungurian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Ladinian
+  a skos:Concept ;
+  dcterms:identifier "Ladinian" ;
+  skos:definition "Colour for Ladinian" ;
+  skos:notation "#C983BF"^^:RGBHex ;
+  skos:notation "20/45/0/0"^^:CMYK ;
+  skos:notation "201/131/191"^^:RGB ;
+  skos:prefLabel "Ladinian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Langhian
+  a skos:Concept ;
+  dcterms:identifier "Langhian" ;
+  skos:definition "Colour for Langhian" ;
+  skos:notation "#FFFF4D"^^:RGBHex ;
+  skos:notation "0/0/70/0"^^:CMYK ;
+  skos:notation "255/255/77"^^:RGB ;
+  skos:prefLabel "Langhian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Llandovery
+  a skos:Concept ;
+  dcterms:identifier "Llandovery" ;
+  skos:definition "Colour for Llandovery" ;
+  skos:notation "#99D7B3"^^:RGBHex ;
+  skos:notation "153/215/179"^^:RGB ;
+  skos:notation "40/0/25/0"^^:CMYK ;
+  skos:prefLabel "Llandovery"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Lochkovian
+  a skos:Concept ;
+  dcterms:identifier "Lochkovian" ;
+  skos:definition "Colour for Lochkovian" ;
+  skos:notation "#E5B75A"^^:RGBHex ;
+  skos:notation "10/25/60/0"^^:CMYK ;
+  skos:notation "229/183/90"^^:RGB ;
+  skos:prefLabel "Lochkovian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Lopingian
+  a skos:Concept ;
+  dcterms:identifier "Lopingian" ;
+  skos:definition "Colour for Lopingian" ;
+  skos:notation "#FBA794"^^:RGBHex ;
+  skos:notation "0/35/30/0"^^:CMYK ;
+  skos:notation "251/167/148"^^:RGB ;
+  skos:prefLabel "Lopingian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerCretaceous
+  a skos:Concept ;
+  dcterms:identifier "LowerCretaceous" ;
+  skos:definition "Colour for Lower Cretaceous" ;
+  skos:notation "#8CCD57"^^:RGBHex ;
+  skos:notation "140/205/87"^^:RGB ;
+  skos:notation "45/0/70/0"^^:CMYK ;
+  skos:prefLabel "Lower Cretaceous"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerDevonian
+  a skos:Concept ;
+  dcterms:identifier "LowerDevonian" ;
+  skos:definition "Colour for Lower Devonian" ;
+  skos:notation "#E5AC4D"^^:RGBHex ;
+  skos:notation "10/30/65/0"^^:CMYK ;
+  skos:notation "229/172/77"^^:RGB ;
+  skos:prefLabel "Lower Devonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerHolocene
+  a skos:Concept ;
+  dcterms:identifier "LowerHolocene" ;
+  skos:definition "Colour for Lower/Early Holocene" ;
+  skos:notation "#FEECDB"^^:RGBHex ;
+  skos:notation "0/10/15/0"^^:CMYK ;
+  skos:notation "254/236/219"^^:RGB ;
+  skos:prefLabel "Lower/Early Holocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerJurassic
+  a skos:Concept ;
+  dcterms:identifier "LowerJurassic" ;
+  skos:definition "Colour for Lower Jurassic" ;
+  skos:notation "#42AED0"^^:RGBHex ;
+  skos:notation "66/174/208"^^:RGB ;
+  skos:notation "75/5/0/0"^^:CMYK ;
+  skos:prefLabel "Lower Jurassic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerMississippian
+  a skos:Concept ;
+  dcterms:identifier "LowerMississippian" ;
+  skos:definition "Colour for Lower Mississippian" ;
+  skos:notation "#80AB6C"^^:RGBHex ;
+  skos:notation "128/171/108"^^:RGB ;
+  skos:notation "45/15/55/0"^^:CMYK ;
+  skos:prefLabel "Lower Mississippian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerOrdovician
+  a skos:Concept ;
+  dcterms:identifier "LowerOrdovician" ;
+  skos:definition "Colour for Lower Ordovician" ;
+  skos:notation "#1A9D6F"^^:RGBHex ;
+  skos:notation "26/157/111"^^:RGB ;
+  skos:notation "90/0/60/0"^^:CMYK ;
+  skos:prefLabel "Lower Ordovician"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerPennsylvanian
+  a skos:Concept ;
+  dcterms:identifier "LowerPennsylvanian" ;
+  skos:definition "Colour for Lower Pennsylvanian" ;
+  skos:notation "#8CBEB4"^^:RGBHex ;
+  skos:notation "140/190/180"^^:RGB ;
+  skos:notation "45/10/20/0"^^:CMYK ;
+  skos:prefLabel "Lower Pennsylvanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerPleistocene
+  a skos:Concept ;
+  dcterms:identifier "LowerPleistocene" ;
+  skos:definition "Colour for Lower/Early Pleistocene" ;
+  skos:notation "#FFF0B9"^^:RGBHex ;
+  skos:notation "0/5/35/0"^^:CMYK ;
+  skos:notation "255/240/185"^^:RGB ;
+  skos:prefLabel "Lower/Early Pleistocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:LowerTriassic
+  a skos:Concept ;
+  dcterms:identifier "LowerTriassic" ;
+  skos:definition "Colour for Lower Triassic" ;
+  skos:notation "#983999"^^:RGBHex ;
+  skos:notation "152/57/153"^^:RGB ;
+  skos:notation "40/75/0/0"^^:CMYK ;
+  skos:prefLabel "Lower Triassic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Ludfordian
+  a skos:Concept ;
+  dcterms:identifier "Ludfordian" ;
+  skos:definition "Colour for Ludfordian" ;
+  skos:notation "#D9F0DF"^^:RGBHex ;
+  skos:notation "15/0/10/0"^^:CMYK ;
+  skos:notation "217/240/223"^^:RGB ;
+  skos:prefLabel "Ludfordian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Ludlow
+  a skos:Concept ;
+  dcterms:identifier "Ludlow" ;
+  skos:definition "Colour for Ludlow" ;
+  skos:notation "#BFE6CF"^^:RGBHex ;
+  skos:notation "191/230/207"^^:RGB ;
+  skos:notation "25/0/15/0"^^:CMYK ;
+  skos:prefLabel "Ludlow"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Lutetian
+  a skos:Concept ;
+  dcterms:identifier "Lutetian" ;
+  skos:definition "Colour for Lutetian" ;
+  skos:notation "#FDB482"^^:RGBHex ;
+  skos:notation "0/30/40/0"^^:CMYK ;
+  skos:notation "253/180/130"^^:RGB ;
+  skos:prefLabel "Lutetian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Maastrichtian
+  a skos:Concept ;
+  dcterms:identifier "Maastrichtian" ;
+  skos:definition "Colour for Maastrichtian" ;
+  skos:notation "#F2FA8C"^^:RGBHex ;
+  skos:notation "242/250/140"^^:RGB ;
+  skos:notation "5/0/45/0"^^:CMYK ;
+  skos:prefLabel "Maastrichtian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Meghalayan
+  a skos:Concept ;
+  dcterms:identifier "Meghalayan" ;
+  skos:definition "Colour for Meghalayan" ;
+  skos:notation "#FDEDEC"^^:RGBHex ;
+  skos:notation "0/10/5/0"^^:CMYK ;
+  skos:notation "253/237/236"^^:RGB ;
+  skos:prefLabel "Meghalayan"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Mesoarchean
+  a skos:Concept ;
+  dcterms:identifier "Mesoarchean" ;
+  skos:definition "Colour for Mesoarchean" ;
+  skos:notation "#F768A9"^^:RGBHex ;
+  skos:notation "0/60/5/0"^^:CMYK ;
+  skos:notation "247/104/169"^^:RGB ;
+  skos:prefLabel "Mesoarchean"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MesoarcheanSystem
+  a skos:Concept ;
+  dcterms:identifier "MesoarcheanSystem" ;
+  skos:definition "Colour for unnamed2" ;
+  skos:notation "#F881B5"^^:RGBHex ;
+  skos:notation "0/50/5/0"^^:CMYK ;
+  skos:notation "248/129/181"^^:RGB ;
+  skos:prefLabel "unnamed2"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Mesoproterozoic
+  a skos:Concept ;
+  dcterms:identifier "Mesoproterozoic" ;
+  skos:definition "Colour for Mesoproterozoic" ;
+  skos:notation "#FDB462"^^:RGBHex ;
+  skos:notation "0/30/55/0"^^:CMYK ;
+  skos:notation "253/180/98"^^:RGB ;
+  skos:prefLabel "Mesoproterozoic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Mesozoic
+  a skos:Concept ;
+  dcterms:identifier "Mesozoic" ;
+  skos:definition "Colour for Mesozoic" ;
+  skos:notation "#67C5CA"^^:RGBHex ;
+  skos:notation "103/197/202"^^:RGB ;
+  skos:notation "60/0/10/0"^^:CMYK ;
+  skos:prefLabel "Mesozoic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Messinian
+  a skos:Concept ;
+  dcterms:identifier "Messinian" ;
+  skos:definition "Colour for Messinian" ;
+  skos:notation "#FFFF73"^^:RGBHex ;
+  skos:notation "0/0/55/0"^^:CMYK ;
+  skos:notation "255/255/115"^^:RGB ;
+  skos:prefLabel "Messinian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Miaolingian
+  a skos:Concept ;
+  dcterms:identifier "Miaolingian" ;
+  skos:definition "Colour for Miaolingian" ;
+  skos:notation "#A6CF86"^^:RGBHex ;
+  skos:notation "166/207/134"^^:RGB ;
+  skos:notation "35/5/45/0"^^:CMYK ;
+  skos:prefLabel "Miaolingian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MiddleDevonian
+  a skos:Concept ;
+  dcterms:identifier "MiddleDevonian" ;
+  skos:definition "Colour for Middle Devonian" ;
+  skos:notation "#F1C868"^^:RGBHex ;
+  skos:notation "241/200/104"^^:RGB ;
+  skos:notation "5/20/55/0"^^:CMYK ;
+  skos:prefLabel "Middle Devonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MiddleHolocene
+  a skos:Concept ;
+  dcterms:identifier "MiddleHolocene" ;
+  skos:definition "Colour for Middle Holocene" ;
+  skos:notation "#FDECE4"^^:RGBHex ;
+  skos:notation "0/10/10/0"^^:CMYK ;
+  skos:notation "253/236/228"^^:RGB ;
+  skos:prefLabel "Middle Holocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MiddleJurassic
+  a skos:Concept ;
+  dcterms:identifier "MiddleJurassic" ;
+  skos:definition "Colour for Middle Jurassic" ;
+  skos:notation "#80CFD8"^^:RGBHex ;
+  skos:notation "128/207/216"^^:RGB ;
+  skos:notation "50/0/5/0"^^:CMYK ;
+  skos:prefLabel "Middle Jurassic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MiddleMississippian
+  a skos:Concept ;
+  dcterms:identifier "MiddleMississippian" ;
+  skos:definition "Colour for Middle Mississippian" ;
+  skos:notation "#99B46C"^^:RGBHex ;
+  skos:notation "153/180/108"^^:RGB ;
+  skos:notation "35/15/55/0"^^:CMYK ;
+  skos:prefLabel "Middle Mississippian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MiddleOrdovician
+  a skos:Concept ;
+  dcterms:identifier "MiddleOrdovician" ;
+  skos:definition "Colour for Middle Ordovician" ;
+  skos:notation "#4DB47E"^^:RGBHex ;
+  skos:notation "70/0/50/0"^^:CMYK ;
+  skos:notation "77/180/126"^^:RGB ;
+  skos:prefLabel "Middle Ordovician"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MiddlePennsylvanian
+  a skos:Concept ;
+  dcterms:identifier "MiddlePennsylvanian" ;
+  skos:definition "Colour for Middle Pennsylvanian" ;
+  skos:notation "#A6C7B7"^^:RGBHex ;
+  skos:notation "166/199/183"^^:RGB ;
+  skos:notation "30/10/20/0"^^:CMYK ;
+  skos:prefLabel "Middle Pennsylvanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MiddlePleistocene
+  a skos:Concept ;
+  dcterms:identifier "MiddlePleistocene" ;
+  skos:definition "Colour for Middle Pleistocene" ;
+  skos:notation "#FFF2C7"^^:RGBHex ;
+  skos:notation "0/5/20/0"^^:CMYK ;
+  skos:notation "255/242/199"^^:RGB ;
+  skos:prefLabel "Middle Pleistocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:MiddleTriassic
+  a skos:Concept ;
+  dcterms:identifier "MiddleTriassic" ;
+  skos:definition "Colour for Middle Triassic" ;
+  skos:notation "#B168B1"^^:RGBHex ;
+  skos:notation "177/104/177"^^:RGB ;
+  skos:notation "30/55/0/0"^^:CMYK ;
+  skos:prefLabel "Middle Triassic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Miocene
+  a skos:Concept ;
+  dcterms:identifier "Miocene" ;
+  skos:definition "Colour for Miocene" ;
+  skos:notation "#FFFF00"^^:RGBHex ;
+  skos:notation "0/0/100/0"^^:CMYK ;
+  skos:notation "255/255/0"^^:RGB ;
+  skos:prefLabel "Miocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Mississippian
+  a skos:Concept ;
+  dcterms:identifier "Mississippian" ;
+  skos:definition "Colour for Mississippian" ;
+  skos:notation "#678F66"^^:RGBHex ;
+  skos:notation "103/143/102"^^:RGB ;
+  skos:notation "60/25/55/0"^^:CMYK ;
+  skos:prefLabel "Mississippian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Moscovian
+  a skos:Concept ;
+  dcterms:identifier "Moscovian" ;
+  skos:definition "Colour for Moscovian" ;
+  skos:notation "#B3CBB9"^^:RGBHex ;
+  skos:notation "179/203/185"^^:RGB ;
+  skos:notation "30/10/20/0"^^:CMYK ;
+  skos:prefLabel "Moscovian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Neoarchean
+  a skos:Concept ;
+  dcterms:identifier "Neoarchean" ;
+  skos:definition "Colour for Neoarchean" ;
+  skos:notation "#F99BC1"^^:RGBHex ;
+  skos:notation "0/40/5/0"^^:CMYK ;
+  skos:notation "249/155/193"^^:RGB ;
+  skos:prefLabel "Neoarchean"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:NeoarcheanSystem
+  a skos:Concept ;
+  dcterms:identifier "NeoarcheanSystem" ;
+  skos:definition "Colour for unnamed1" ;
+  skos:notation "#FAA7C8"^^:RGBHex ;
+  skos:notation "0/35/5/0"^^:CMYK ;
+  skos:notation "250/167/200"^^:RGB ;
+  skos:prefLabel "unnamed1"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Neogene
+  a skos:Concept ;
+  dcterms:identifier "Neogene" ;
+  skos:definition "Colour for Neogene" ;
+  skos:notation "#FFE619"^^:RGBHex ;
+  skos:notation "0/10/90/0"^^:CMYK ;
+  skos:notation "255/230/25"^^:RGB ;
+  skos:prefLabel "Neogene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Neoproterozoic
+  a skos:Concept ;
+  dcterms:identifier "Neoproterozoic" ;
+  skos:definition "Colour for Neoproterozoic" ;
+  skos:notation "#FEB342"^^:RGBHex ;
+  skos:notation "0/30/70/0"^^:CMYK ;
+  skos:notation "254/179/66"^^:RGB ;
+  skos:prefLabel "Neoproterozoic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Norian
+  a skos:Concept ;
+  dcterms:identifier "Norian" ;
+  skos:definition "Colour for Norian" ;
+  skos:notation "#D6AAD3"^^:RGBHex ;
+  skos:notation "15/30/0/0"^^:CMYK ;
+  skos:notation "214/170/211"^^:RGB ;
+  skos:prefLabel "Norian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Northgrippian
+  a skos:Concept ;
+  dcterms:identifier "Northgrippian" ;
+  skos:definition "Colour for Northgrippian" ;
+  skos:notation "#FDECE4"^^:RGBHex ;
+  skos:notation "0/10/10/0"^^:CMYK ;
+  skos:notation "253/236/228"^^:RGB ;
+  skos:prefLabel "Northgrippian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Olenekian
+  a skos:Concept ;
+  dcterms:identifier "Olenekian" ;
+  skos:definition "Colour for Olenekian" ;
+  skos:notation "#B051A5"^^:RGBHex ;
+  skos:notation "176/81/165"^^:RGB ;
+  skos:notation "30/65/0/0"^^:CMYK ;
+  skos:prefLabel "Olenekian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Oligocene
+  a skos:Concept ;
+  dcterms:identifier "Oligocene" ;
+  skos:definition "Colour for Oligocene" ;
+  skos:notation "#FEC07A"^^:RGBHex ;
+  skos:notation "0/25/45/0"^^:CMYK ;
+  skos:notation "254/192/122"^^:RGB ;
+  skos:prefLabel "Oligocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Ordovician
+  a skos:Concept ;
+  dcterms:identifier "Ordovician" ;
+  skos:definition "Colour for Ordovician" ;
+  skos:notation "#009270"^^:RGBHex ;
+  skos:notation "0/146/112"^^:RGB ;
+  skos:notation "100/0/60/0"^^:CMYK ;
+  skos:prefLabel "Ordovician"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Orosirian
+  a skos:Concept ;
+  dcterms:identifier "Orosirian" ;
+  skos:definition "Colour for Orosirian" ;
+  skos:notation "#F76898"^^:RGBHex ;
+  skos:notation "0/60/15/0"^^:CMYK ;
+  skos:notation "247/104/152"^^:RGB ;
+  skos:prefLabel "Orosirian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Oxfordian
+  a skos:Concept ;
+  dcterms:identifier "Oxfordian" ;
+  skos:definition "Colour for Oxfordian" ;
+  skos:notation "#BFE7F1"^^:RGBHex ;
+  skos:notation "191/231/241"^^:RGB ;
+  skos:notation "25/0/0/0"^^:CMYK ;
+  skos:prefLabel "Oxfordian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Paibian
+  a skos:Concept ;
+  dcterms:identifier "Paibian" ;
+  skos:definition "Colour for Paibian" ;
+  skos:notation "#CCEBAE"^^:RGBHex ;
+  skos:notation "20/0/35/0"^^:CMYK ;
+  skos:notation "204/235/174"^^:RGB ;
+  skos:prefLabel "Paibian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Paleoarchean
+  a skos:Concept ;
+  dcterms:identifier "Paleoarchean" ;
+  skos:definition "Colour for Paleoarchean" ;
+  skos:notation "#F4449F"^^:RGBHex ;
+  skos:notation "0/75/0/0"^^:CMYK ;
+  skos:notation "244/68/159"^^:RGB ;
+  skos:prefLabel "Paleoarchean"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:PaleoarcheanSystem
+  a skos:Concept ;
+  dcterms:identifier "PaleoarcheanSystem" ;
+  skos:definition "Colour for unnamed3" ;
+  skos:notation "#F668B2"^^:RGBHex ;
+  skos:notation "0/60/0/0"^^:CMYK ;
+  skos:notation "246/104/178"^^:RGB ;
+  skos:prefLabel "unnamed3"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Paleocene
+  a skos:Concept ;
+  dcterms:identifier "Paleocene" ;
+  skos:definition "Colour for Paleocene" ;
+  skos:notation "#FDA75F"^^:RGBHex ;
+  skos:notation "0/40/60/0"^^:CMYK ;
+  skos:notation "253/167/95"^^:RGB ;
+  skos:prefLabel "Paleocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Paleogene
+  a skos:Concept ;
+  dcterms:identifier "Paleogene" ;
+  skos:definition "Colour for Paleogene" ;
+  skos:notation "#FD9A52"^^:RGBHex ;
+  skos:notation "253/154/82"^^:RGB ;
+  skos:notation "5/0/90/0"^^:CMYK ;
+  skos:prefLabel "Paleogene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Paleoproterozoic
+  a skos:Concept ;
+  dcterms:identifier "Paleoproterozoic" ;
+  skos:definition "Colour for Paleoproterozoic" ;
+  skos:notation "#F74370"^^:RGBHex ;
+  skos:notation "0/75/30/0"^^:CMYK ;
+  skos:notation "247/67/112"^^:RGB ;
+  skos:prefLabel "Paleoproterozoic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Paleozoic
+  a skos:Concept ;
+  dcterms:identifier "Paleozoic" ;
+  skos:definition "Colour for Paleozoic" ;
+  skos:notation "#99C08D"^^:RGBHex ;
+  skos:notation "153/192/141"^^:RGB ;
+  skos:notation "40/10/40/0"^^:CMYK ;
+  skos:prefLabel "Paleozoic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Pennsylvanian
+  a skos:Concept ;
+  dcterms:identifier "Pennsylvanian" ;
+  skos:definition "Colour for Pennsylvanian" ;
+  skos:notation "#7EBCC6"^^:RGBHex ;
+  skos:notation "126/188/198"^^:RGB ;
+  skos:notation "50/10/20/0"^^:CMYK ;
+  skos:prefLabel "Pennsylvanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Permian
+  a skos:Concept ;
+  dcterms:identifier "Permian" ;
+  skos:definition "Colour for Permian" ;
+  skos:notation "#F04028"^^:RGBHex ;
+  skos:notation "240/64/40"^^:RGB ;
+  skos:notation "5/75/75/0"^^:CMYK ;
+  skos:prefLabel "Permian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Phanerozoic
+  a skos:Concept ;
+  dcterms:identifier "Phanerozoic" ;
+  skos:definition "Colour for Phanerozoic" ;
+  skos:notation "#9AD9DD"^^:RGBHex ;
+  skos:notation "154/217/221"^^:RGB ;
+  skos:notation "40/0/5/0"^^:CMYK ;
+  skos:prefLabel "Phanerozoic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Piacenzian
+  a skos:Concept ;
+  dcterms:identifier "Piacenzian" ;
+  skos:definition "Colour for Piacenzian" ;
+  skos:notation "#FFFFBF"^^:RGBHex ;
+  skos:notation "0/0/25/0"^^:CMYK ;
+  skos:notation "255/255/191"^^:RGB ;
+  skos:prefLabel "Piacenzian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Pleistocene
+  a skos:Concept ;
+  dcterms:identifier "Pleistocene" ;
+  skos:definition "Colour for Pleistocene" ;
+  skos:notation "#FFEFAF"^^:RGBHex ;
+  skos:notation "0/5/40/0"^^:CMYK ;
+  skos:notation "255/239/175"^^:RGB ;
+  skos:prefLabel "Pleistocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Pliensbachian
+  a skos:Concept ;
+  dcterms:identifier "Pliensbachian" ;
+  skos:definition "Colour for Pliensbachian" ;
+  skos:notation "#80C5DD"^^:RGBHex ;
+  skos:notation "128/197/221"^^:RGB ;
+  skos:notation "50/5/0/0"^^:CMYK ;
+  skos:prefLabel "Pliensbachian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Pliocene
+  a skos:Concept ;
+  dcterms:identifier "Pliocene" ;
+  skos:definition "Colour for Pliocene" ;
+  skos:notation "#FFFF99"^^:RGBHex ;
+  skos:notation "0/0/40/0"^^:CMYK ;
+  skos:notation "255/255/153"^^:RGB ;
+  skos:prefLabel "Pliocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Pragian
+  a skos:Concept ;
+  dcterms:identifier "Pragian" ;
+  skos:definition "Colour for Pragian" ;
+  skos:notation "#E5C468"^^:RGBHex ;
+  skos:notation "10/20/55/0"^^:CMYK ;
+  skos:notation "229/196/104"^^:RGB ;
+  skos:prefLabel "Pragian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Precambrian
+  a skos:Concept ;
+  dcterms:identifier "Precambrian" ;
+  skos:definition "Colour for Precambrian" ;
+  skos:notation "#F74370"^^:RGBHex ;
+  skos:notation "0/75/30/0"^^:CMYK ;
+  skos:notation "247/67/112"^^:RGB ;
+  skos:prefLabel "Precambrian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Priabonian
+  a skos:Concept ;
+  dcterms:identifier "Priabonian" ;
+  skos:definition "Colour for Priabonian" ;
+  skos:notation "#FDCDA1"^^:RGBHex ;
+  skos:notation "0/20/30/0"^^:CMYK ;
+  skos:notation "253/205/161"^^:RGB ;
+  skos:prefLabel "Priabonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Pridoli
+  a skos:Concept ;
+  dcterms:identifier "Pridoli" ;
+  skos:definition "Colour for Pridoli" ;
+  skos:notation "#E6F5E1"^^:RGBHex ;
+  skos:notation "10/0/10/0"^^:CMYK ;
+  skos:notation "230/245/225"^^:RGB ;
+  skos:prefLabel "Pridoli"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:PridoliStage
+  a skos:Concept ;
+  dcterms:identifier "PridoliStage" ;
+  skos:definition "Colour for Pridoli" ;
+  skos:notation "#E6F5E1"^^:RGBHex ;
+  skos:notation "10/0/10/0"^^:CMYK ;
+  skos:notation "230/245/225"^^:RGB ;
+  skos:prefLabel "Pridoli"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Proterozoic
+  a skos:Concept ;
+  dcterms:identifier "Proterozoic" ;
+  skos:definition "Colour for Proterozoic" ;
+  skos:notation "#F73563"^^:RGBHex ;
+  skos:notation "0/80/35/0"^^:CMYK ;
+  skos:notation "247/53/99"^^:RGB ;
+  skos:prefLabel "Proterozoic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Quaternary
+  a skos:Concept ;
+  dcterms:identifier "Quaternary" ;
+  skos:definition "Colour for Quaternary" ;
+  skos:notation "#F9F97F"^^:RGBHex ;
+  skos:notation "0/0/50/0"^^:CMYK ;
+  skos:notation "249/249/127"^^:RGB ;
+  skos:prefLabel "Quaternary"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Rhaetian
+  a skos:Concept ;
+  dcterms:identifier "Rhaetian" ;
+  skos:definition "Colour for Rhaetian" ;
+  skos:notation "#E3B9DB"^^:RGBHex ;
+  skos:notation "10/25/0/0"^^:CMYK ;
+  skos:notation "227/185/219"^^:RGB ;
+  skos:prefLabel "Rhaetian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Rhuddanian
+  a skos:Concept ;
+  dcterms:identifier "Rhuddanian" ;
+  skos:definition "Colour for Rhuddanian" ;
+  skos:notation "#A6DCB5"^^:RGBHex ;
+  skos:notation "166/220/181"^^:RGB ;
+  skos:notation "35/0/25/0"^^:CMYK ;
+  skos:prefLabel "Rhuddanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Rhyacian
+  a skos:Concept ;
+  dcterms:identifier "Rhyacian" ;
+  skos:definition "Colour for Rhyacian" ;
+  skos:notation "#F75B89"^^:RGBHex ;
+  skos:notation "0/65/20/0"^^:CMYK ;
+  skos:notation "247/91/137"^^:RGB ;
+  skos:prefLabel "Rhyacian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Roadian
+  a skos:Concept ;
+  dcterms:identifier "Roadian" ;
+  skos:definition "Colour for Roadian" ;
+  skos:notation "#FB8069"^^:RGBHex ;
+  skos:notation "0/50/45/0"^^:CMYK ;
+  skos:notation "251/128/105"^^:RGB ;
+  skos:prefLabel "Roadian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Rupelian
+  a skos:Concept ;
+  dcterms:identifier "Rupelian" ;
+  skos:definition "Colour for Rupelian" ;
+  skos:notation "#FED99A"^^:RGBHex ;
+  skos:notation "0/15/35/0"^^:CMYK ;
+  skos:notation "254/217/154"^^:RGB ;
+  skos:prefLabel "Rupelian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Sakmarian
+  a skos:Concept ;
+  dcterms:identifier "Sakmarian" ;
+  skos:definition "Colour for Sakmarian" ;
+  skos:notation "#E36F5C"^^:RGBHex ;
+  skos:notation "10/55/50/0"^^:CMYK ;
+  skos:notation "227/111/92"^^:RGB ;
+  skos:prefLabel "Sakmarian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Sandbian
+  a skos:Concept ;
+  dcterms:identifier "Sandbian" ;
+  skos:definition "Colour for Sandbian" ;
+  skos:notation "#8CD094"^^:RGBHex ;
+  skos:notation "140/208/148"^^:RGB ;
+  skos:notation "45/0/40/0"^^:CMYK ;
+  skos:prefLabel "Sandbian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Santonian
+  a skos:Concept ;
+  dcterms:identifier "Santonian" ;
+  skos:definition "Colour for Santonian" ;
+  skos:notation "#D9EF74"^^:RGBHex ;
+  skos:notation "15/0/55/0"^^:CMYK ;
+  skos:notation "217/239/116"^^:RGB ;
+  skos:prefLabel "Santonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Selandian
+  a skos:Concept ;
+  dcterms:identifier "Selandian" ;
+  skos:definition "Colour for Selandian" ;
+  skos:notation "#FEBF65"^^:RGBHex ;
+  skos:notation "0/25/55/0"^^:CMYK ;
+  skos:notation "254/191/101"^^:RGB ;
+  skos:prefLabel "Selandian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Serpukhovian
+  a skos:Concept ;
+  dcterms:identifier "Serpukhovian" ;
+  skos:definition "Colour for Serpukhovian" ;
+  skos:notation "#BFC26B"^^:RGBHex ;
+  skos:notation "191/194/107"^^:RGB ;
+  skos:notation "25/15/55/0"^^:CMYK ;
+  skos:prefLabel "Serpukhovian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Serravallian
+  a skos:Concept ;
+  dcterms:identifier "Serravallian" ;
+  skos:definition "Colour for Serravallian" ;
+  skos:notation "#FFFF59"^^:RGBHex ;
+  skos:notation "0/0/65/0"^^:CMYK ;
+  skos:notation "255/255/89"^^:RGB ;
+  skos:prefLabel "Serravallian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Sheinwoodian
+  a skos:Concept ;
+  dcterms:identifier "Sheinwoodian" ;
+  skos:definition "Colour for Sheinwoodian" ;
+  skos:notation "#BFE6C3"^^:RGBHex ;
+  skos:notation "191/230/195"^^:RGB ;
+  skos:notation "25/0/20/0"^^:CMYK ;
+  skos:prefLabel "Sheinwoodian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Siderian
+  a skos:Concept ;
+  dcterms:identifier "Siderian" ;
+  skos:definition "Colour for Siderian" ;
+  skos:notation "#F74F7C"^^:RGBHex ;
+  skos:notation "0/70/25/0"^^:CMYK ;
+  skos:notation "247/79/124"^^:RGB ;
+  skos:prefLabel "Siderian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Silurian
+  a skos:Concept ;
+  dcterms:identifier "Silurian" ;
+  skos:definition "Colour for Silurian" ;
+  skos:notation "#B3E1B6"^^:RGBHex ;
+  skos:notation "179/225/182"^^:RGB ;
+  skos:notation "30/0/25/0"^^:CMYK ;
+  skos:prefLabel "Silurian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Sinemurian
+  a skos:Concept ;
+  dcterms:identifier "Sinemurian" ;
+  skos:definition "Colour for Sinemurian" ;
+  skos:notation "#67BCD8"^^:RGBHex ;
+  skos:notation "103/188/216"^^:RGB ;
+  skos:notation "60/5/0/0"^^:CMYK ;
+  skos:prefLabel "Sinemurian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Statherian
+  a skos:Concept ;
+  dcterms:identifier "Statherian" ;
+  skos:definition "Colour for Statherian" ;
+  skos:notation "#F875A7"^^:RGBHex ;
+  skos:notation "0/55/10/0"^^:CMYK ;
+  skos:notation "248/117/167"^^:RGB ;
+  skos:prefLabel "Statherian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Stenian
+  a skos:Concept ;
+  dcterms:identifier "Stenian" ;
+  skos:definition "Colour for Stenian" ;
+  skos:notation "#FED99A"^^:RGBHex ;
+  skos:notation "0/15/35/0"^^:CMYK ;
+  skos:notation "254/217/154"^^:RGB ;
+  skos:prefLabel "Stenian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Telychian
+  a skos:Concept ;
+  dcterms:identifier "Telychian" ;
+  skos:definition "Colour for Telychian" ;
+  skos:notation "#BFE6CF"^^:RGBHex ;
+  skos:notation "191/230/207"^^:RGB ;
+  skos:notation "25/0/15/0"^^:CMYK ;
+  skos:prefLabel "Telychian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Terreneuvian
+  a skos:Concept ;
+  dcterms:identifier "Terreneuvian" ;
+  skos:definition "Colour for Terreneuvian" ;
+  skos:notation "#8CB06C"^^:RGBHex ;
+  skos:notation "140/176/108"^^:RGB ;
+  skos:notation "45/15/55/0"^^:CMYK ;
+  skos:prefLabel "Terreneuvian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Thanetian
+  a skos:Concept ;
+  dcterms:identifier "Thanetian" ;
+  skos:definition "Colour for Thanetian" ;
+  skos:notation "#FDBF6F"^^:RGBHex ;
+  skos:notation "0/25/50/0"^^:CMYK ;
+  skos:notation "253/191/111"^^:RGB ;
+  skos:prefLabel "Thanetian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Tithonian
+  a skos:Concept ;
+  dcterms:identifier "Tithonian" ;
+  skos:definition "Colour for Tithonian" ;
+  skos:notation "#D9F1F7"^^:RGBHex ;
+  skos:notation "15/0/0/0"^^:CMYK ;
+  skos:notation "217/241/247"^^:RGB ;
+  skos:prefLabel "Tithonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Toarcian
+  a skos:Concept ;
+  dcterms:identifier "Toarcian" ;
+  skos:definition "Colour for Toarcian" ;
+  skos:notation "#99CEE3"^^:RGBHex ;
+  skos:notation "153/206/227"^^:RGB ;
+  skos:notation "40/5/0/0"^^:CMYK ;
+  skos:prefLabel "Toarcian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Tonian
+  a skos:Concept ;
+  dcterms:identifier "Tonian" ;
+  skos:definition "Colour for Tonian" ;
+  skos:notation "#FEBF4E"^^:RGBHex ;
+  skos:notation "0/25/65/0"^^:CMYK ;
+  skos:notation "254/191/78"^^:RGB ;
+  skos:prefLabel "Tonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Tortonian
+  a skos:Concept ;
+  dcterms:identifier "Tortonian" ;
+  skos:definition "Colour for Tortonian" ;
+  skos:notation "#FFFF66"^^:RGBHex ;
+  skos:notation "0/0/60/0"^^:CMYK ;
+  skos:notation "255/255/102"^^:RGB ;
+  skos:prefLabel "Tortonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Tournaisian
+  a skos:Concept ;
+  dcterms:identifier "Tournaisian" ;
+  skos:definition "Colour for Tournaisian" ;
+  skos:notation "#8CB06C"^^:RGBHex ;
+  skos:notation "140/176/108"^^:RGB ;
+  skos:notation "45/15/55/0"^^:CMYK ;
+  skos:prefLabel "Tournaisian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Tremadocian
+  a skos:Concept ;
+  dcterms:identifier "Tremadocian" ;
+  skos:definition "Colour for Tremadocian" ;
+  skos:notation "#33A97E"^^:RGBHex ;
+  skos:notation "51/169/126"^^:RGB ;
+  skos:notation "80/0/50/0"^^:CMYK ;
+  skos:prefLabel "Tremadocian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Triassic
+  a skos:Concept ;
+  dcterms:identifier "Triassic" ;
+  skos:definition "Colour for Triassic" ;
+  skos:notation "#812B92"^^:RGBHex ;
+  skos:notation "129/43/146"^^:RGB ;
+  skos:notation "50/80/0/0"^^:CMYK ;
+  skos:prefLabel "Triassic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Turonian
+  a skos:Concept ;
+  dcterms:identifier "Turonian" ;
+  skos:definition "Colour for Turonian" ;
+  skos:notation "#BFE35D"^^:RGBHex ;
+  skos:notation "191/227/93"^^:RGB ;
+  skos:notation "25/0/65/0"^^:CMYK ;
+  skos:prefLabel "Turonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperCretaceous
+  a skos:Concept ;
+  dcterms:identifier "UpperCretaceous" ;
+  skos:definition "Colour for Upper Cretaceous" ;
+  skos:notation "#A6D84A"^^:RGBHex ;
+  skos:notation "166/216/74"^^:RGB ;
+  skos:notation "35/0/75/0"^^:CMYK ;
+  skos:prefLabel "Upper Cretaceous"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperDevonian
+  a skos:Concept ;
+  dcterms:identifier "UpperDevonian" ;
+  skos:definition "Colour for Upper Devonian" ;
+  skos:notation "#F1E19D"^^:RGBHex ;
+  skos:notation "241/225/157"^^:RGB ;
+  skos:notation "5/10/35/0"^^:CMYK ;
+  skos:prefLabel "Upper Devonian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperHolocene
+  a skos:Concept ;
+  dcterms:identifier "UpperHolocene" ;
+  skos:definition "Colour for Upper/Late Holocene" ;
+  skos:notation "#FDEDEC"^^:RGBHex ;
+  skos:notation "0/10/5/0"^^:CMYK ;
+  skos:notation "253/237/236"^^:RGB ;
+  skos:prefLabel "Upper/Late Holocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperJurassic
+  a skos:Concept ;
+  dcterms:identifier "UpperJurassic" ;
+  skos:definition "Colour for Upper Jurassic" ;
+  skos:notation "#B3E3EE"^^:RGBHex ;
+  skos:notation "179/227/238"^^:RGB ;
+  skos:notation "30/0/0/0"^^:CMYK ;
+  skos:prefLabel "Upper Jurassic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperMississippian
+  a skos:Concept ;
+  dcterms:identifier "UpperMississippian" ;
+  skos:definition "Colour for Upper Mississippian" ;
+  skos:notation "#B3BE6C"^^:RGBHex ;
+  skos:notation "179/190/108"^^:RGB ;
+  skos:notation "25/15/55/0"^^:CMYK ;
+  skos:prefLabel "Upper Mississippian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperOrdovician
+  a skos:Concept ;
+  dcterms:identifier "UpperOrdovician" ;
+  skos:definition "Colour for Upper Ordovician" ;
+  skos:notation "#7FCA93"^^:RGBHex ;
+  skos:notation "127/202/147"^^:RGB ;
+  skos:notation "50/0/40/0"^^:CMYK ;
+  skos:prefLabel "Upper Ordovician"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperPennsylvanian
+  a skos:Concept ;
+  dcterms:identifier "UpperPennsylvanian" ;
+  skos:definition "Colour for Upper Pennsylvanian" ;
+  skos:notation "#BFD0BA"^^:RGBHex ;
+  skos:notation "191/208/186"^^:RGB ;
+  skos:notation "25/10/20/0"^^:CMYK ;
+  skos:prefLabel "Upper Pennsylvanian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperPleistocene
+  a skos:Concept ;
+  dcterms:identifier "UpperPleistocene" ;
+  skos:definition "Colour for Upper/Middle Pleistocene" ;
+  skos:notation "#FFF2D3"^^:RGBHex ;
+  skos:notation "0/5/15/0"^^:CMYK ;
+  skos:notation "255/242/211"^^:RGB ;
+  skos:prefLabel "Upper/Middle Pleistocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperPleistoceneStage
+  a skos:Concept ;
+  dcterms:identifier "UpperPleistoceneStage" ;
+  skos:definition "Colour for Upper Pleistocene" ;
+  skos:notation "#FFF2D3"^^:RGBHex ;
+  skos:notation "0/5/15/0"^^:CMYK ;
+  skos:notation "255/242/211"^^:RGB ;
+  skos:prefLabel "Upper Pleistocene"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:UpperTriassic
+  a skos:Concept ;
+  dcterms:identifier "UpperTriassic" ;
+  skos:definition "Colour for Upper Triassic" ;
+  skos:notation "#BD8CC3"^^:RGBHex ;
+  skos:notation "189/140/195"^^:RGB ;
+  skos:notation "25/40/0/0"^^:CMYK ;
+  skos:prefLabel "Upper Triassic"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Valanginian
+  a skos:Concept ;
+  dcterms:identifier "Valanginian" ;
+  skos:definition "Colour for Valanginian" ;
+  skos:notation "#99D36A"^^:RGBHex ;
+  skos:notation "153/211/106"^^:RGB ;
+  skos:notation "40/0/60/0"^^:CMYK ;
+  skos:prefLabel "Valanginian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Visean
+  a skos:Concept ;
+  dcterms:identifier "Visean" ;
+  skos:definition "Colour for Visean" ;
+  skos:notation "#A6B96C"^^:RGBHex ;
+  skos:notation "166/185/108"^^:RGB ;
+  skos:notation "35/15/55/0"^^:CMYK ;
+  skos:prefLabel "Visean"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Wenlock
+  a skos:Concept ;
+  dcterms:identifier "Wenlock" ;
+  skos:definition "Colour for Wenlock" ;
+  skos:notation "#B3E1C2"^^:RGBHex ;
+  skos:notation "179/225/194"^^:RGB ;
+  skos:notation "30/0/20/0"^^:CMYK ;
+  skos:prefLabel "Wenlock"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Wordian
+  a skos:Concept ;
+  dcterms:identifier "Wordian" ;
+  skos:definition "Colour for Wordian" ;
+  skos:notation "#FB8D76"^^:RGBHex ;
+  skos:notation "0/45/40/0"^^:CMYK ;
+  skos:notation "251/141/118"^^:RGB ;
+  skos:prefLabel "Wordian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Wuchiapingian
+  a skos:Concept ;
+  dcterms:identifier "Wuchiapingian" ;
+  skos:definition "Colour for Wuchiapingian" ;
+  skos:notation "#FCB4A2"^^:RGBHex ;
+  skos:notation "0/30/25/0"^^:CMYK ;
+  skos:notation "252/180/162"^^:RGB ;
+  skos:prefLabel "Wuchiapingian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Wuliuan
+  a skos:Concept ;
+  dcterms:identifier "Wuliuan" ;
+  skos:definition "Colour for Wuliuan" ;
+  skos:notation "#B3D492"^^:RGBHex ;
+  skos:notation "179/212/146"^^:RGB ;
+  skos:notation "30/5/40/0"^^:CMYK ;
+  skos:prefLabel "Wuliuan"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Ypresian
+  a skos:Concept ;
+  dcterms:identifier "Ypresian" ;
+  skos:definition "Colour for Ypresian" ;
+  skos:notation "#FCA773"^^:RGBHex ;
+  skos:notation "0/35/45/0"^^:CMYK ;
+  skos:notation "252/167/115"^^:RGB ;
+  skos:prefLabel "Ypresian"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+isc:Zanclean
+  a skos:Concept ;
+  dcterms:identifier "Zanclean" ;
+  skos:definition "Colour for Zanclean" ;
+  skos:notation "#FFFFB3"^^:RGBHex ;
+  skos:notation "0/0/30/0"^^:CMYK ;
+  skos:notation "255/255/179"^^:RGB ;
+  skos:prefLabel "Zanclean"@en ;
+  skos:topConceptOf cs: ;
+  skos:inScheme cs: ;
+.
+<https://linked.data.gov.au/org/ics>
+  a sdo:Organization ;
+  sdo:name "International Commission on Stratigraphy" ;
+  sdo:url "https://stratigraphy.org"^^xsd:anyURI ;
+.
